@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Linux命令 | Zan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="目录和管理文件命令显示当前目录：pwd 查看当前目录：ls 查看全部文件，包括隐藏：ls -a 查看文件细节：ls -l 查看文件类型：ls -f 改变所在目录到根目录：cd 到指定目录：cd 文件名 返回上一级目录：cd .. 返回上两极目录：cd ..&#x2F;.. 显示文件内容：cat 在文件中查找字符：grep 内容 文件名 创建文件：touch 复制文件：cp 复制文件到目录：cp 文件名 目录">
+<meta name="keywords" content="Linux">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux命令">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;16&#x2F;Linux%E5%91%BD%E4%BB%A4&#x2F;index.html">
+<meta property="og:site_name" content="Zan">
+<meta property="og:description" content="目录和管理文件命令显示当前目录：pwd 查看当前目录：ls 查看全部文件，包括隐藏：ls -a 查看文件细节：ls -l 查看文件类型：ls -f 改变所在目录到根目录：cd 到指定目录：cd 文件名 返回上一级目录：cd .. 返回上两极目录：cd ..&#x2F;.. 显示文件内容：cat 在文件中查找字符：grep 内容 文件名 创建文件：touch 复制文件：cp 复制文件到目录：cp 文件名 目录">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-28T13:37:27.433Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/" title
+        
+        >施工中</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-Linux命令" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      Linux命令
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/10/16/Linux%E5%91%BD%E4%BB%A4/" class="article-date">
+  <time datetime="2019-10-16T12:00:00.000Z" itemprop="datePublished">2019-10-16</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h2 id="目录和管理文件命令"><a href="#目录和管理文件命令" class="headerlink" title="目录和管理文件命令"></a>目录和管理文件命令</h2><p>显示当前目录：<code>pwd</code></p>
+<p>查看当前目录：<code>ls</code></p>
+<p>查看全部文件，包括隐藏：<code>ls -a</code></p>
+<p>查看文件细节：<code>ls -l</code></p>
+<p>查看文件类型：<code>ls -f</code></p>
+<h2 id="改变所在目录"><a href="#改变所在目录" class="headerlink" title="改变所在目录"></a>改变所在目录</h2><p>到根目录：<code>cd</code></p>
+<p>到指定目录：<code>cd 文件名</code></p>
+<p>返回上一级目录：<code>cd ..</code></p>
+<p>返回上两极目录：<code>cd ../..</code></p>
+<p>显示文件内容：<code>cat</code></p>
+<p>在文件中查找字符：<code>grep 内容 文件名</code></p>
+<p>创建文件：<code>touch</code></p>
+<p>复制文件：<code>cp</code></p>
+<p>复制文件到目录：<code>cp 文件名 目录</code></p>
+<p>移动文件：<code>mv 文件名 目录</code></p>
+<p>如果覆盖会提示：<code>mv -i</code></p>
+<p>不提示：<code>mv -f</code></p>
+<p>显示文件移动速度：<code>mv -v</code></p>
+<h2 id="删除"><a href="#删除" class="headerlink" title="删除"></a>删除</h2><p>删除文件：<code>rm</code></p>
+<p>提示确认删除：<code>rm -i</code></p>
+<p>不提示删除：<code>rm -f</code></p>
+<p>显示删除进度：<code>rm -v</code></p>
+<p>删除某个目录和目录中所有文件：<code>rm -r</code></p>
+<p>删除目录：<code>rmdir</code></p>
+<h2 id="磁盘空间命令"><a href="#磁盘空间命令" class="headerlink" title="磁盘空间命令"></a>磁盘空间命令</h2><p>挂载文件系统：<code>mount</code></p>
+<p>卸载已挂载文件：<code>umont</code></p>
+<p>检查各个硬盘分区和已挂载的文件系统磁盘空间：df</p>
+<p>显示文件目录和大小：du</p>
+<p>检查和修复Linux文件系统：fsck</p>
+<h2 id="文件备份和压缩"><a href="#文件备份和压缩" class="headerlink" title="文件备份和压缩"></a>文件备份和压缩</h2><p>zip压缩命令：</p>
+<p>压缩：<code>zip 压缩文件名 源文件</code></p>
+<p>解压：<code>unzip</code></p>
+<h2 id="有关关机和查看系统信息的命令"><a href="#有关关机和查看系统信息的命令" class="headerlink" title="有关关机和查看系统信息的命令"></a>有关关机和查看系统信息的命令</h2><p>关机：shutdown</p>
+<p>不是真正关机，只是发出警告：<code>-k</code></p>
+<p>将系统的服务停掉后就重启：<code>-r</code></p>
+<p>将系统的服务停掉后就关机：<code>-h</code></p>
+<p>取消已经在进行的shutdown命令内容：<code>-c</code></p>
+<p>重启：reboot</p>
+<p>换机器：网管！</p>
+<p>查看目前程序执行的情况：<code>ps</code></p>
+<p>查看目前程序执行的情景和内存使用情况：<code>top</code></p>
+<p>终止一个进程：<code>kill</code></p>
+<p>查看日期：<code>date</code></p>
+<p>设置时间：<code>date -s</code></p>
+<p>查看月历：<code>cal</code></p>
+<h2 id="管理使用者和设立权限的命令"><a href="#管理使用者和设立权限的命令" class="headerlink" title="管理使用者和设立权限的命令"></a>管理使用者和设立权限的命令</h2><p>改变权限：<code>chmod</code></p>
+<p><code>chmod 使用者增减权限 文件名</code></p>
+<table>
+<thead>
+<tr>
+<th>文件使用者</th>
+<th>说明</th>
+<th>增减</th>
+<th>说明</th>
+<th>权限</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>u</td>
+<td>拥有文件的用户</td>
+<td>+</td>
+<td>添加权限</td>
+<td>r</td>
+<td>读取权</td>
+</tr>
+<tr>
+<td>g</td>
+<td>所有者所在的组群</td>
+<td>-</td>
+<td>删除权限</td>
+<td>w</td>
+<td>写入权</td>
+</tr>
+<tr>
+<td>o</td>
+<td>其他人</td>
+<td>=</td>
+<td>使他成为唯一权限</td>
+<td>x</td>
+<td>执行权</td>
+</tr>
+<tr>
+<td>a</td>
+<td>以上全部</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<p>删除文件的所有权限：<code>chmod a-rwx 文件名</code></p>
+<p>为文件所有者添加权限：<code>chmod u+rwx 文件名</code></p>
+<p>增加用户：<code>useradd 用户名</code></p>
+<p>修改用户：<code>su 用户名</code></p>
+<h2 id="线上查询的命令"><a href="#线上查询的命令" class="headerlink" title="线上查询的命令"></a>线上查询的命令</h2><p>查询一个命令的使用方法：<code>man</code></p>
+<p>定位文件和目录：<code>locate</code></p>
+<p>寻找某个命令的含义：<code>whatis</code></p>
+<h2 id="文件阅读命令"><a href="#文件阅读命令" class="headerlink" title="文件阅读命令"></a>文件阅读命令</h2><p>查看文件开头部分：<code>head</code></p>
+<p>查看文件结尾部分：<code>tail</code></p>
+<p>分页查看工具：</p>
+<p>方向键移动，q退出：<code>less</code></p>
+<p>空格健和b移动，q推出：<code>more</code></p>
+<h2 id="网络操作命令"><a href="#网络操作命令" class="headerlink" title="网络操作命令"></a>网络操作命令</h2><p>传送文件：<code>ftp</code></p>
+<p>结束连线并结束程序：<code>bye</code></p>
+<p>检测主机：<code>ping</code></p>
+<p>远端登录：<code>telnet</code></p>
+<p>远端等入：<code>rlogin</code></p>
+<p>显示网络状态：<code>netstat</code></p>
+<h2 id="定位，查找文件的命令"><a href="#定位，查找文件的命令" class="headerlink" title="定位，查找文件的命令"></a>定位，查找文件的命令</h2><p>从path环境变量所列的目录中找出command的位置，并显示完整路径的名称：<code>which</code></p>
+<p>找出特定程序的可执行文件，源代码文件以及manpage的路径：<code>whereis</code></p>
+<p>按条件搜索，并执行一定的动作：<code>find</code></p>
+<p>带记忆的文件搜索：<code>locate</code></p>
+<p>更新slocate的索引数据库：<code>updatedb</code></p>
+<h2 id="其他命令"><a href="#其他命令" class="headerlink" title="其他命令"></a>其他命令</h2><p>显示字符串：<code>echo</code></p>
+<p>清除显示其：<code>clear</code></p>
+<p>修改密码：<code>passwd</code></p>
+<p>打印：<code>lpr</code></p>
+<p>查看在打印机列中等待的作业：<code>lpq</code></p>
+<p>取消打印列队中的作业：<code>lprm</code></p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/10/17/%E7%AC%AC%E4%BA%94%E5%A4%A9/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            第五天
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/10/16/%E7%AC%AC%E5%9B%9B%E5%A4%A9/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">第四天</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自米路可缇书"></img>
+    <h3 class="avatar-name">
+      
+        一颗酸菜
+      
+    </h3>
+    <p class="avatar-slogan">
+      又酸又菜，未来铲屎官，FF14er，治好多年颈椎病。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E6%8A%A5/">日报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/28/%E7%AC%AC%E5%8D%81%E5%9B%9B%E5%A4%A9/">第十四天</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/26/JavaScript%E5%B0%8F%E7%AC%94%E8%AE%B0/">JavaScript小笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/26/%E7%AC%AC%E5%8D%81%E4%B8%89%E5%A4%A9/">第十三天</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/25/%E7%AC%AC%E5%8D%81%E4%BA%8C%E5%A4%A9/">第十二天</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/25/%E5%8D%9A%E5%AE%A2%E9%87%8D%E5%BB%BA/">博客重建</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://weibo.com/yorukosama?refer_flag=1005050005_&is_all=1" title target='_blank'
+        >米路可缇书</a>
+      
+        <a style="display: block;" href="https://victorfengming.github.io/" title target='_blank'
+        >小明同学</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Cai Suan &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/" class="mobile-nav-link">施工中</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

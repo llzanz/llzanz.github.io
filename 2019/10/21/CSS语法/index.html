@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>CSS语法 | Zan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明： p {color:red;text-align:center;} 选择器通常是需要改变样式的HTML元素。每条声明由一个属性和一个值组成。 声明总是以分号;结束，以大括号{}括起来。 CSS注释以&#x2F;*开始，以*&#x2F;结束。">
+<meta name="keywords" content="CSS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CSS语法">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;21&#x2F;CSS%E8%AF%AD%E6%B3%95&#x2F;index.html">
+<meta property="og:site_name" content="Zan">
+<meta property="og:description" content="CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明： p {color:red;text-align:center;} 选择器通常是需要改变样式的HTML元素。每条声明由一个属性和一个值组成。 声明总是以分号;结束，以大括号{}括起来。 CSS注释以&#x2F;*开始，以*&#x2F;结束。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-10-28T13:36:12.042Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/" title
+        
+        >施工中</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-CSS语法" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      CSS语法
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/10/21/CSS%E8%AF%AD%E6%B3%95/" class="article-date">
+  <time datetime="2019-10-21T12:00:00.000Z" itemprop="datePublished">2019-10-21</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>CSS 规则由两个主要的部分构成：选择器，以及一条或多条声明：</p>
+<p><code>p {color:red;text-align:center;}</code></p>
+<p>选择器通常是需要改变样式的HTML元素。每条声明由一个属性和一个值组成。</p>
+<p>声明总是以分号<code>;</code>结束，以大括号<code>{}</code>括起来。</p>
+<p>CSS注释以<code>/*</code>开始，以<code>*/</code>结束。</p>
+<a id="more"></a>
+
+<h2 id="id选择器和class选择器"><a href="#id选择器和class选择器" class="headerlink" title="id选择器和class选择器"></a>id选择器和class选择器</h2><p>id选择器在CSS中以<code>#</code>来定义：</p>
+<p><code>&lt;style&gt; #para1{color:red;} &lt;style&gt;</code></p>
+<p><code>&lt;p id=&quot;para1&quot;&gt;Hello World &lt;/p&gt;</code></p>
+<p>class选择器在CSS中以<code>.</code>显示：</p>
+<p><code>&lt;style&gt;.center{text-align:center} &lt;style&gt;</code></p>
+<p><code>&lt;h1 class=&quot;center&quot;&gt;标题居中&lt;/h1&gt;</code></p>
+<p>类名的第一个字符不能使用数字。</p>
+<h2 id="CSS的创建"><a href="#CSS的创建" class="headerlink" title="CSS的创建"></a>CSS的创建</h2><p>插入样式表有三种方法：</p>
+<p>外部样式表</p>
+<p>内部样式表</p>
+<p>内联样式</p>
+<h3 id="外部样式表"><a href="#外部样式表" class="headerlink" title="外部样式表"></a>外部样式表</h3><p>当样式需要应用到多个页面时使用。可以通过改变样式来改变所有使用的页面。每个页面使用<code>&lt;link&gt;</code>标签链接到样式表。<code>&lt;link&gt;</code>表在在<code>&lt;head&gt;</code>内。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;mystyle.css&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p>浏览器会从文件 <code>mystyle.css</code>中读到样式声明，并根据它来格式文档。</p>
+<h2 id="内部样式表"><a href="#内部样式表" class="headerlink" title="内部样式表"></a>内部样式表</h2><p>当单个文档需要特殊的样式时，就应该使用内部样式表。你可以使用 <code>&lt;style&gt;</code> 标签在文档头部定义内部样式表，就像这样:</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;head&gt;</span><br><span class="line">&lt;style&gt;</span><br><span class="line">hr &#123;color:sienna;&#125;</span><br><span class="line">p &#123;margin-left:20px;&#125;</span><br><span class="line">body &#123;background-image:url(&quot;images/back40.gif&quot;);&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">&lt;/head&gt;</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="内联样式"><a href="#内联样式" class="headerlink" title="内联样式"></a>内联样式</h3><p>根内容混杂在一起：</p>
+<p><code>&lt;p style=&quot;color:sienna;margin-left:20px&quot;&gt;这是一个段落。&lt;/p&gt;</code></p>
+<h3 id="多重样式优先级"><a href="#多重样式优先级" class="headerlink" title="多重样式优先级"></a>多重样式优先级</h3><p>内联样式&gt;内部样式&gt;外部样式&gt;浏览器默认样式</p>
+<hr>
+<h2 id="CSS背景"><a href="#CSS背景" class="headerlink" title="CSS背景"></a>CSS背景</h2><p>颜色背景：<code>{background-color:#b0c4de;}</code></p>
+<p>背景图像：<code>{background-image:url(&#39;paper.gif&#39;);}</code></p>
+<p>背景图像只在水平方向平铺：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">background-image:url(&apos;gradient2.png&apos;);</span><br><span class="line">background-repeat:repeat-x;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+<p>repeat属性值：</p>
+<table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">repeat</td>
+<td align="left">背景图像将向垂直和水平方向重复。这是默认</td>
+</tr>
+<tr>
+<td align="left">repeat-x</td>
+<td align="left">只有水平位置会重复背景图像</td>
+</tr>
+<tr>
+<td align="left">repeat-y</td>
+<td align="left">只有垂直位置会重复背景图像</td>
+</tr>
+<tr>
+<td align="left">no-repeat</td>
+<td align="left">background-image不会重复</td>
+</tr>
+<tr>
+<td align="left">inherit</td>
+<td align="left">指定background-repeat属性设置应该从父元素继承</td>
+</tr>
+</tbody></table>
+<p>背景图像起始位置：<code>{background-position:}</code></p>
+<p>背景图像是否固定或者随着页面部分滚动：<code>{background-attachment:}</code></p>
+<table>
+<thead>
+<tr>
+<th>值</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>scroll</td>
+<td>背景图片随着页面的滚动而滚动，这是默认的。</td>
+</tr>
+<tr>
+<td>fixed</td>
+<td>背景图片不会随着页面的滚动而滚动。</td>
+</tr>
+</tbody></table>
+<h2 id="CSS文本格式"><a href="#CSS文本格式" class="headerlink" title="CSS文本格式"></a>CSS文本格式</h2><p>文本颜色：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">body &#123;color:red;&#125;</span><br><span class="line">h1 &#123;color:#00ff00;&#125;</span><br><span class="line">h2 &#123;color:rgb(255,0,0);&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>文本的对齐方式：分别为居中，靠右，两边对齐。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">h1 &#123;text-align:center;&#125;</span><br><span class="line">p.date &#123;text-align:right;&#125;</span><br><span class="line">p.main &#123;text-align:justify;&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>文本修饰：</p>
+<p>text-decoration 属性用来设置或删除文本的装饰。从设计的角度看 text-decoration属性主要是用来删除链接的下划线：<code>a {text-decoration:none;}</code></p>
+<p>上滑线，中划线，下划线：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">h1 &#123;text-decoration:overline;&#125;</span><br><span class="line">h2 &#123;text-decoration:line-through;&#125;</span><br><span class="line">h3 &#123;text-decoration:underline;&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>文本缩进：<code>p {text-indent:50px;}</code></p>
+<h2 id="CSS字体"><a href="#CSS字体" class="headerlink" title="CSS字体"></a>CSS字体</h2><p>CSS字体属性定义字体，加粗，大小，文字样式。</p>
+<p>字体系列</p>
+<p>font-family 属性设置文本的字体系列。font-family 属性应该设置几个字体名称作为一种”后备”机制，如果浏览器不支持第一种字体，他将尝试下一种字体。</p>
+<p><strong>注意</strong>: 如果字体系列的名称超过一个字，它必须用引号，如Font Family：”宋体”。</p>
+<p>多个字体系列是用一个逗号分隔指明：<code>p{font-family:&quot;Times New Roman&quot;, Times, serif;}</code></p>
+<p>字体样式</p>
+<p>下面三个值分别为正常，斜体，倾斜的文字-文字向一边倾斜。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">p.normal &#123;font-style:normal;&#125;</span><br><span class="line">p.italic &#123;font-style:italic;&#125;</span><br><span class="line">p.oblique &#123;font-style:oblique;&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>字体大小</p>
+<p>font-size 属性设置文本的大小。</p>
+<p>值可以用<code>40px</code>也可以用<code>2.5em</code>。1em的默认大小是16px。</p>
+<p>CSS边框</p>
+<p>style属性后的值为边框样式。border后可接color接颜色。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    border-top-style:dotted;</span><br><span class="line">    border-right-style:solid;</span><br><span class="line">    border-bottom-style:dotted;</span><br><span class="line">    border-left-style:solid;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>CSS轮廓（outline）</p>
+<p>轮廓（outline）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。</p>
+<p>CSS outline 属性规定元素轮廓的样式、颜色和宽度。</p>
+<p><code>outline-color</code>设置轮廓颜色<code>outline-style</code>设置轮廓样式<code>outline-width</code>设置轮廓宽度。</p>
+<p>CSS margin（外边据）</p>
+<p>Margin - 单边外边距属性</p>
+<p>使用<code>margin-top:100px</code>来设定边据。</p>
+<p>CSS padding（填充）</p>
+<p>既内边据，同样使用<code>padding-top:100px</code>来设定。</p>
+<p>隐藏元素</p>
+<p><code>{visibility:hidden;}</code>可以隐藏元素但是占用布局，<code>{display:none;}</code>同样可以隐藏元素且不占用布局。</p>
+<p>CSS Position（定位）</p>
+<p>position 属性指定了元素的定位类型。</p>
+<p>position 属性的五个值：</p>
+<p> static</p>
+<p>relative</p>
+<p>fixed</p>
+<p>absolute</p>
+<p>sticky</p>
+<p>staric定位：HTML 元素的默认值，即没有定位，遵循正常的文档流对象。静态定位的元素不会受到 top, bottom, left, right影响</p>
+<p>fixed定位：元素的位置相对于浏览器窗口是固定位置。即使窗口是滚动的它也不会移动：</p>
+ <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">p.pos_fixed</span><br><span class="line">&#123;</span><br><span class="line">position:fixed;</span><br><span class="line">top:30px;</span><br><span class="line">right:5px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>relative定位：为相当定位，根据元素原始位置进行相对移动。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">h2.pos_left</span><br><span class="line">&#123;</span><br><span class="line">position:relative;</span><br><span class="line">left:-20px;</span><br><span class="line">&#125;</span><br><span class="line">h2.pos_right</span><br><span class="line">&#123;</span><br><span class="line">position:relative;</span><br><span class="line">left:20px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>即使元素移动，他的原始位置仍在那不动。</p>
+<p>absolute定位：以夫元素为绝对定位，进行移动定位。</p>
+<p>sticky定位：粘性定位，粘性定位的元素是依赖于用户的滚动，它的行为就像 <strong>position:relative;</strong> 而当页面滚动超出目标区域时，它的表现就像 <strong>position:fixed;</strong>，它会固定在目标位置。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">div.sticky &#123;</span><br><span class="line">    position: -webkit-sticky; /* Safari */</span><br><span class="line">    position: sticky;</span><br><span class="line">    top: 0;</span><br><span class="line">    background-color: green;</span><br><span class="line">    border: 2px solid #4CAF50;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>CSS布局-Overflow</p>
+<p>CSS overflow 属性用于控制内容溢出元素框时显示的方式。CSS overflow 属性可以控制内容溢出元素框时在对应的元素区间内添加滚动条。</p>
+<p>overflow属性有以下值：</p>
+<table>
+<thead>
+<tr>
+<th align="left">值</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">visible</td>
+<td align="left">默认值。内容不会被修剪，会呈现在元素框之外。</td>
+</tr>
+<tr>
+<td align="left">hidden</td>
+<td align="left">内容会被修剪，并且其余内容是不可见的。</td>
+</tr>
+<tr>
+<td align="left">scroll</td>
+<td align="left">内容会被修剪，但是浏览器会显示滚动条以便查看其余的内容。</td>
+</tr>
+<tr>
+<td align="left">auto</td>
+<td align="left">如果内容被修剪，则浏览器会显示滚动条以便查看其余的内容。</td>
+</tr>
+<tr>
+<td align="left">inherit</td>
+<td align="left">规定应该从父元素继承 overflow 属性的值。</td>
+</tr>
+</tbody></table>
+<p>CSS组合选择符</p>
+<p>后代选择器：<code>div p</code>选取div元素后代中的p元素</p>
+<p>子元素选择器：<code>div&gt;p</code>选取div元素中所有直接子元素p</p>
+<p>相邻兄弟选择器：<code>div+p</code>选取紧接着div元素的p元素，紧接着</p>
+<p>后续兄弟选择器：<code>dic~p</code>选取div元素之后的所有相邻p元素，如果中间有别的元素，后续则不选择</p>
+<p>CSS：first-child伪类</p>
+<p>匹配第一个<code>&lt;p&gt;</code>元素：<code>p:first child</code></p>
+<p>匹配所有<code>&lt;p&gt;</code>元素中的第一个<code>&lt;i&gt;</code>元素：<code>p&gt;i:first-child</code></p>
+<p>匹配所有作为第一个子元素的<code>&lt;p&gt;</code>元素中的所有<code>&lt;i&gt;</code>元素：<code>p:first-child i</code></p>
+<p>CSS伪元素</p>
+<p>first-line伪元素：对文本的首行设置特殊样式。</p>
+<p>first-lette伪元素：对文本的首字母设置特殊样式。</p>
+<p>伪元素可以结合CSS类：<code>p.article:first-letter {color:#ff0000;}</code></p>
+<p>也可多个伪元素结合使用。</p>
+<p>before伪元素：可以在元素的内容前面插入新内容。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">h1:before </span><br><span class="line">&#123;</span><br><span class="line">    content:url(smiley.gif);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>上例在h1前面加入图片。</p>
+<p>after伪元素：道理同上可以在内容后面插入新内容。</p>
+<hr>
+<p>CSS导航栏</p>
+<ul>   <li><a href="#home">主页</a></li>   <li><a href="#news">新闻</a></li>   <li><a href="#contact">联系</a></li>   <li><a href="#about">关于</a></li> </ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">  &lt;li&gt;&lt;a href=&quot;#home&quot;&gt;主页&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;&lt;a href=&quot;#news&quot;&gt;新闻&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;&lt;a href=&quot;#contact&quot;&gt;联系&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">  &lt;li&gt;&lt;a href=&quot;#about&quot;&gt;关于&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p>为了让其美观我们可以</p>
+ <div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ul &#123;</span><br><span class="line">    list-style-type: none;</span><br><span class="line">    margin: 0;</span><br><span class="line">    padding: 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><code>list-style-type: none;</code>删除前面的小标记，设置边据和填充为0。</p>
+<p>使用<code>display:inline;</code>可以使导航栏变为横向。</p>
+<hr>
+<p>CSS下拉菜单</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">.dropdown&#123;</span><br><span class="line">position: relative;</span><br><span class="line">&#125;</span><br><span class="line">.dropdown-content&#123;</span><br><span class="line">min-width: 160px;</span><br><span class="line">background-color: #f9f9f9;</span><br><span class="line">padding: 12px 16px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;div class=&quot;dropdown&quot;&gt;</span><br><span class="line">  &lt;span&gt;鼠标移动到我这！&lt;/span&gt;</span><br><span class="line">  &lt;div class=&quot;dropdown-content&quot;&gt;</span><br><span class="line">    &lt;p&gt;下拉菜单内的内容&lt;/p&gt;</span><br><span class="line">  &lt;/div&gt;</span><br></pre></td></tr></table></figure></div>
+
+<p><code>.dropdown</code>内的内容用来修饰下拉按钮部分，<code>.dropdown-content</code>用来修饰下拉出来的内容：大小，背景颜色等。</p>
+<hr>
+<p>CSS提示工具</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.tooltip&#123;</span><br><span class="line">position:relative</span><br><span class="line">&#125;</span><br><span class="line">.tooltip.tooltiptext&#123;</span><br><span class="line">color:#fff;</span><br><span class="line">background-color:black;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><code>.tooltip</code>用来描述鼠标移动到的地方，<code>.tooltip:tooltiptext</code>用来描述显示出来的提示部分。</p>
+<hr>
+<p>CSS透明度</p>
+<p>CSS3中属性的透明度是 <strong>opacity</strong>。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">img</span><br><span class="line">&#123;</span><br><span class="line">	opacity:0.4;</span><br><span class="line">	filter:alpha(opacity=40); /* 适用 IE8 及其更早版本 */</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>opacity属性通常与:hover选择器一起使用，在鼠标移动到图片上后改变图片的透明度。</p>
+<hr>
+<p>CSS媒体类型</p>
+<p>一些 CSS 属性只设计了某些媒体。例如 <strong>voice-family</strong> 属性是专为听觉用户代理。其他一些属性可用于不同的媒体类型。例如， <strong>font-size</strong> 属性可用于屏幕和印刷媒体，但有不同的值。屏幕和纸上的文件不同，通常需要一个更大的字体，<strong>sans-serif</strong> 字体比较适合在屏幕上阅读，而 <strong>serif</strong> 字体更容易在纸上阅读。</p>
+<table>
+<thead>
+<tr>
+<th align="left">媒体类型</th>
+<th align="left">描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">all</td>
+<td align="left">用于所有的媒体设备。</td>
+</tr>
+<tr>
+<td align="left">aural</td>
+<td align="left">用于语音和音频合成器。</td>
+</tr>
+<tr>
+<td align="left">braille</td>
+<td align="left">用于盲人用点字法触觉回馈设备。</td>
+</tr>
+<tr>
+<td align="left">embossed</td>
+<td align="left">用于分页的盲人用点字法打印机。</td>
+</tr>
+<tr>
+<td align="left">handheld</td>
+<td align="left">用于小的手持的设备。</td>
+</tr>
+<tr>
+<td align="left">print</td>
+<td align="left">用于打印机。</td>
+</tr>
+<tr>
+<td align="left">projection</td>
+<td align="left">用于方案展示，比如幻灯片。</td>
+</tr>
+<tr>
+<td align="left">screen</td>
+<td align="left">用于电脑显示器。</td>
+</tr>
+<tr>
+<td align="left">tty</td>
+<td align="left">用于使用固定密度字母栅格的媒体，比如电传打字机和终端。</td>
+</tr>
+<tr>
+<td align="left">tv</td>
+<td align="left">用于电视机类型的设备</td>
+</tr>
+</tbody></table>
+<hr>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/10/22/%E7%AC%AC%E4%B9%9D%E5%A4%A9/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            第九天
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/10/21/%E6%80%9D%E7%BB%B4%E5%AF%BC%E5%9B%BE/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">思维导图</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自米路可缇书"></img>
+    <h3 class="avatar-name">
+      
+        一颗酸菜
+      
+    </h3>
+    <p class="avatar-slogan">
+      又酸又菜，未来铲屎官，FF14er，治好多年颈椎病。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E6%8A%A5/">日报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/10/28/%E7%AC%AC%E5%8D%81%E5%9B%9B%E5%A4%A9/">第十四天</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/26/JavaScript%E5%B0%8F%E7%AC%94%E8%AE%B0/">JavaScript小笔记</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/26/%E7%AC%AC%E5%8D%81%E4%B8%89%E5%A4%A9/">第十三天</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/25/%E7%AC%AC%E5%8D%81%E4%BA%8C%E5%A4%A9/">第十二天</a>
+          </li>
+        
+          <li>
+            <a href="/2019/10/25/%E5%8D%9A%E5%AE%A2%E9%87%8D%E5%BB%BA/">博客重建</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://weibo.com/yorukosama?refer_flag=1005050005_&is_all=1" title target='_blank'
+        >米路可缇书</a>
+      
+        <a style="display: block;" href="https://victorfengming.github.io/" title target='_blank'
+        >小明同学</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Cai Suan &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/" class="mobile-nav-link">施工中</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
