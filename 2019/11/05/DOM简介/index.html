@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>DOM简介 | Zan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="DOM简介什么是DOM 文档对象模型（Document Object Model，简称DOM），是W3C组织推荐的处理可扩展标记语言（HTML或者XML）的标准变成接口。 W3C已经定义了一些了的DOM接口，通过这些DOM接口可以改变页面的内容、结构和样式。">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DOM简介">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;05&#x2F;DOM%E7%AE%80%E4%BB%8B&#x2F;index.html">
+<meta property="og:site_name" content="Zan">
+<meta property="og:description" content="DOM简介什么是DOM 文档对象模型（Document Object Model，简称DOM），是W3C组织推荐的处理可扩展标记语言（HTML或者XML）的标准变成接口。 W3C已经定义了一些了的DOM接口，通过这些DOM接口可以改变页面的内容、结构和样式。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-05T11:12:29.788Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/" title
+        
+        >施工中</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-DOM简介" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      DOM简介
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/11/05/DOM%E7%AE%80%E4%BB%8B/" class="article-date">
+  <time datetime="2019-11-05T11:04:11.000Z" itemprop="datePublished">2019-11-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h2 id="DOM简介"><a href="#DOM简介" class="headerlink" title="DOM简介"></a>DOM简介</h2><p>什么是DOM</p>
+<p>文档对象模型（Document Object Model，简称DOM），是W3C组织推荐的处理可扩展标记语言（HTML或者XML）的标准变成接口。</p>
+<p>W3C已经定义了一些了的DOM接口，通过这些DOM接口可以改变页面的内容、结构和样式。</p>
+<a id="more"></a>
+
+<p>DOM树</p>
+<p>文档：一个页面就是一个文档，DOM中使用document表示</p>
+<p>元素：页面中的所有标签都是元素，DOM中使用element表示</p>
+<p>节点：网页中的所有内容都是节点（标签、属性、文本、注释），DOM中使用node表示</p>
+<p>DOM把以上内容都看作是对象</p>
+<h2 id="如何获取页面元素"><a href="#如何获取页面元素" class="headerlink" title="如何获取页面元素"></a>如何获取页面元素</h2><p>根据ID获取</p>
+<ul>
+<li>使用<code>.getElementById()</code>的方法获取带有ID的元素对象。</li>
+</ul>
+<p>根据标签名获取</p>
+<ul>
+<li>使用<code>.getElementsByTagName()</code>的方法可以返回带有指定标签名的对象的集合</li>
+<li>还可以获取某个元素（父元素）内部所有指定标签名的子元素</li>
+<li><code>.getElementsByTagName(&#39;标签名&#39;)</code></li>
+<li>注意副元素必须是一个对象（必须指明是哪一个元素对象），获取的时候不包括父元素自己。</li>
+</ul>
+<p>通过HTML5新增的方法获取</p>
+<ul>
+<li><code>.getElementsByClassName(类名)</code>根据类名返回元素对象</li>
+<li><code>.querySelector(选择器)</code>根据指定选择器返回的第一个对象</li>
+<li><code>.querySelectorAll(选择器)</code>根据指定选择器返回的所有对象</li>
+</ul>
+<p>特殊元素获取</p>
+<ul>
+<li>获取body元素</li>
+<li><code>doucument.body</code>返回body元素</li>
+<li>获取html元素</li>
+<li><code>doucument.documentElement</code>返回html元素</li>
+</ul>
+<h2 id="事件基础"><a href="#事件基础" class="headerlink" title="事件基础"></a>事件基础</h2><p>事件概述</p>
+<p>JavaScript使我们有能力创建动态页面，而事件是可以被JavaScript侦测到的行为。</p>
+<p>网页中的每个元素都可以产生某些可以触发JavaScript事件，例如，我们可以在用户点击某按钮时生产一个事件，然后去执行某些操作。</p>
+<p>执行事件的步骤</p>
+<ul>
+<li>获取事件源</li>
+<li>注册事件</li>
+<li>执行程序</li>
+</ul>
+<p>常见的鼠标事件</p>
+<table>
+<thead>
+<tr>
+<th>鼠标事件</th>
+<th>触发条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>onclick</td>
+<td>鼠标点击左键触发</td>
+</tr>
+<tr>
+<td>onmouseover</td>
+<td>鼠标经过触发</td>
+</tr>
+<tr>
+<td>onmouseout</td>
+<td>鼠标离开触发</td>
+</tr>
+<tr>
+<td>onfous</td>
+<td>获得鼠标焦点触发</td>
+</tr>
+<tr>
+<td>onblur</td>
+<td>失去鼠标焦点触发</td>
+</tr>
+<tr>
+<td>onmousemove</td>
+<td>鼠标移动触发</td>
+</tr>
+<tr>
+<td>onmouseuo</td>
+<td>鼠标弹起触发</td>
+</tr>
+<tr>
+<td>onmousedown</td>
+<td>鼠标按下触发</td>
+</tr>
+</tbody></table>
+<h2 id="操作元素"><a href="#操作元素" class="headerlink" title="操作元素"></a>操作元素</h2><p>JavaScript的DOM操作可以改变网页内容、结构和样式，我们可以利用DOM操作来改变元素里面的内容、属性等。注意以下都是属性。</p>
+<p>改变元素内容</p>
+<p><code>元素.innerText</code>从起始位置到终止位置的内容，但它去处html标签，同时空格和换行也会去掉。</p>
+<p><code>元素.innerHTML</code>起始位置到终止位置的全部内容，包括html标签，同时保留空格和换行。</p>
+<p>改变元素属性</p>
+<p>普通：<code>src、href、id、alt、title</code>不普通：<code>type、value、cheked、selected、disabled</code></p>
+<p>样式属性操作</p>
+<p>我们可以通过JS修改元素的大小、颜色、位置等样式。</p>
+<p><code>element.style</code>行内样式操作<code>element.className</code>类名样式操作</p>
+<p>display:none隐藏元素 display:block显示元素</p>
+<h2 id="节点操作"><a href="#节点操作" class="headerlink" title="节点操作"></a>节点操作</h2><p>为什么学节点操作</p>
+<p>获取元素通常使用两种方式：</p>
+<p>1.利用DOM提供的方法获取元素</p>
+<ul>
+<li><code>document.getElementById()</code></li>
+<li><code>document.getElementByTagName()</code></li>
+<li><code>document.querySelector</code>等</li>
+<li>繁琐</li>
+</ul>
+<p>2.利用节点层级关系获取元素</p>
+<ul>
+<li>利用父子兄节点关系获取元素</li>
+<li>逻辑性强，但是兼容性稍差</li>
+</ul>
+<p>节点概述</p>
+<p>网页中的所有内容都是节点（标签、属性、文本、注释等），在DOM中，节点使用node来表示。</p>
+<p>HTML DOM树中的所有节点均可通过JavaScript进行访问，所有HTML元素（节点）均可修改，也可以创建或删除。</p>
+<p>一般地，节点至少拥有nodeType（节点类型）、nodeName（节点名称）和nodeValue（节点值）这三个基本属性。</p>
+<ul>
+<li>元素节点 nodeTyoe 为 1</li>
+<li>属性节点 nodeTyoe 为 2</li>
+<li>文本节点 nodeTyoe 为 3 （文本节点包含文字、空格、换行等）</li>
+</ul>
+<p>节点层级</p>
+<p>利用DOM树可以把节点划分为不同层级关系，常见的是父子兄层级关系。</p>
+<p>父级节点</p>
+<p><code>node.parentNode</code></p>
+<ul>
+<li><code>parentNode</code>属性可返回某节点的父节点，注意是最近的一个父节点</li>
+<li>如果指定的节点没有父节点则返回null</li>
+</ul>
+<p>子节点</p>
+<p><code>parentNode.childNodes</code>返回包含指定节点的集合，该集合为即时更新的集合。</p>
+<p>注意：返回值里面包含了所有的子节点，包括元素节点，文本节点等。</p>
+<p>如果只想要获得里面的元素节点，则需要专门处理。所以我么一般不提倡使用chilkNodes</p>
+<p><code>parentNode.children</code>获取所有子元素节点。</p>
+<p><code>parentNode.firstChild</code>返回第一个子节点，找不到则返回null。同样，也是包含所有的节点。</p>
+<p><code>parentNode.lastChild</code>返回最后一个子节点，找不到则返回null。同样，也是包含所有的节点。</p>
+<p><code>parentNode.firstElementChild</code>返回第一个子元素节点，找不到则返回null。</p>
+<p><code>parentNode.lastElementChild</code>返回最后一个子元素节点，找不到则返回null。</p>
+<p>注意：这两个方法有兼容性问题，IE9以上才支持。</p>
+<p>实际开发中如果想要第一个元素节点，可以使用<code>parentNode.chilrem[0]</code></p>
+<p>兄弟节点</p>
+<p><code>node.nextSibling</code>返回当前元素的下一个兄弟节点，找不到则返回null。同样，也是包含所有节点。</p>
+<p><code>node.previousSibling</code>返回当前元素上一个兄弟节点，找不到则返回null。同样，也是包含所有的节点。</p>
+<p><code>node.nextElementSibling</code>返回当前元素下一个兄弟元素节点，找不到则返回null。</p>
+<p><code>node.previousElemrntSibling</code>返回当前元素上一个兄弟节点，找不到则返回mull。</p>
+<p>注意这两个方法有兼容性问题，ID9以上支持。</p>
+<p>创建节点</p>
+<p><code>document.createElement()</code>方法创建由tagName指定的HTML元素。因为这些元素原先不存在，是根据我们的需求动态生成的，所以我们也称为动态创建元素节点。</p>
+<p><code>node.appendChild(Child)</code>方法将一个节点添加到指定父节点的子节点刘表末尾。类似于CSS里面的after伪元素。</p>
+<p><code>node.insertBefore(child,指定元素)</code>方法将一个节点添加到父节点的指定子节点前面。类似于CSS里面的before伪元素。</p>
+<p>删除节点</p>
+<p><code>node.removeChild()</code>方法从DOM中删除一个子节点，返回删除的节点。</p>
+<p>复制节点</p>
+<p><code>node.cloneNode()</code>方法返回调用该方法的节点的一个副本。也成为克隆节点。注意如果括号内参数为空或者为false，则是浅拷贝，即只克隆复制节点本身，不克隆里面的子节点。如果括号参数为true，则是深度拷贝，会复制节点本身以及里面所有的子节点。</p>
+<p>三种动态创建元素区别</p>
+<ul>
+<li><p><code>document.write()</code></p>
+</li>
+<li><p><code>element.innerHTML</code></p>
+</li>
+<li><p><code>document.createElement()</code></p>
+</li>
+</ul>
+<p>区别</p>
+<p>1.<code>document.write</code>是直接将内容写入页面的内容流，但是文档流执行完毕，则它会导致页面全部重绘。</p>
+<p>2.<code>innerHTML</code>是将内容写入某个DOM节点，不会导致页面全部重绘</p>
+<p>3.<code>innerHTML</code>创建多个元素效率高（不要拼接字符串，采取数组形式拼接），结构稍微复杂</p>
+<p>4.<code>createElement()</code>创建多个元素效率稍低一点点，但是结构更清晰</p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/11/05/DOM%E6%A0%B8%E5%BF%83%E9%87%8D%E7%82%B9/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            DOM核心重点
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/11/04/DAY20/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">DAY20</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自米路可缇书"></img>
+    <h3 class="avatar-name">
+      
+        一颗酸菜
+      
+    </h3>
+    <p class="avatar-slogan">
+      又酸又菜，未来铲屎官，FF14er，zhihaoduonianjingzhuibing。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E6%8A%A5/">日报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/">课后练习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/05/DOM%E6%A0%B8%E5%BF%83%E9%87%8D%E7%82%B9/">DOM核心重点</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/05/DOM%E7%AE%80%E4%BB%8B/">DOM简介</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/04/DAY20/">DAY20</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/02/DAY19/">DAY19</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/01/%E7%AE%80%E9%99%8B%E8%81%8A%E5%A4%A9%E5%AE%A4/">简陋聊天室</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://weibo.com/yorukosama?refer_flag=1005050005_&is_all=1" title target='_blank'
+        >米路可缇书</a>
+      
+        <a style="display: block;" href="https://victorfengming.github.io/" title target='_blank'
+        >小明同学</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Cai Suan &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/" class="mobile-nav-link">施工中</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
