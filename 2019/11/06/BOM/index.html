@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>BOM | Zan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="什么是BOM BOM（Browser Object Model）即浏览器对象模型，它提供了独立于内容而与浏览器窗口进行交互的对象，其核心对象是window。">
+<meta name="keywords" content="JavaScript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="BOM">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;06&#x2F;BOM&#x2F;index.html">
+<meta property="og:site_name" content="Zan">
+<meta property="og:description" content="什么是BOM BOM（Browser Object Model）即浏览器对象模型，它提供了独立于内容而与浏览器窗口进行交互的对象，其核心对象是window。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-06T14:13:16.197Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/" title
+        
+        >施工中</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-BOM" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      BOM
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/11/06/BOM/" class="article-date">
+  <time datetime="2019-11-06T14:11:47.000Z" itemprop="datePublished">2019-11-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>什么是BOM</p>
+<p>BOM（Browser Object Model）即浏览器对象模型，它提供了独立于内容而与浏览器窗口进行交互的对象，其核心对象是window。</p>
+<a id="more"></a>
+
+<p>BOM由一系列相关的对象构成，并且每个对象都提供了很多方法与属性。</p>
+<p>BOM缺乏标准，JavaScript语法的标准化组织时ECMA，DOM的标准化组是W3C，BOM最初是Netscape浏览器标准的一部分。</p>
+<p>DOM</p>
+<ul>
+<li>文档对象模型</li>
+<li>DOM就是把『文档』当做一个『对象』来看待</li>
+<li>DOM的顶级对象是document</li>
+<li>DOM主要学习的是操作页面元素</li>
+<li>DOM是W3C标准规范</li>
+</ul>
+<p>BOM</p>
+<ul>
+<li>浏览器对象模型</li>
+<li>BOM就是把『浏览器』当做一个『对象』来看待</li>
+<li>BOM的顶级对象是window</li>
+<li>BOM学习的是浏览器窗口交互的一些对象</li>
+<li>BOM是浏览器厂商的各自浏览器上定义的，兼容性较差</li>
+</ul>
+<p>BOM的构成</p>
+<p>window对象是浏览器的顶级对象，它具有双重角色。</p>
+<p>它是JS访问浏览器窗口的一个接口。</p>
+<p>它是一个全局对象。定义在全局作用域中的变量、函数都会变成window对象的属性和方法。在调用的时候可以省略window，前面学习的对话框都属于window对象方法，如alert()、prompt()等。</p>
+<p>注意：window下的一个特殊属性window.name</p>
+<p>窗口加载事件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">window.onload = function() &#123;&#125;</span><br><span class="line">或者</span><br><span class="line">window.addEventListener(&apos;load&apos;,function()&#123;&#125;);</span><br></pre></td></tr></table></figure></div>
+
+<p>window.onload是窗口（页面）加载事件，当文档内容完全加载完成会触发该事件（包括图像、脚本文件、CSS文件等），就调用的处理函数。</p>
+<p>注意：</p>
+<p>有了window.onload就可以把JS代码写到页面元素的上方，因为onload是等页面内容全部加载完毕，再去执行处理函数。</p>
+<p>window.onload传统注册事件方式只能写一次，如果又多个，会以最后一个window.onload为准。</p>
+<p>如果使用addEventListener则没有限制</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">document.addEventListener(&apos;DOMContentLoaded&apos;,function()&#123;&#125;)</span><br></pre></td></tr></table></figure></div>
+
+<p>DOMContentLoaded事件触发时，仅当DOM加载完成，不包括样式表，图片，flash等等。有兼容问题</p>
+<p>如果页面的图片很多，从用户访问到onload触发可能需要较长的事件，交互效果就不能实现，必然影响用户的体验，此时用DOMContentLoaded事件比较合适。</p>
+<p>调整窗口大小事件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">window.onresize = function() &#123;&#125;</span><br><span class="line">window.addEventListener(&apos;resize&apos;,function()&#123;&#125;)</span><br></pre></td></tr></table></figure></div>
+
+<p>window.onresize是调整窗口大小加载事件，当触发时就调用的处理函数。</p>
+<p>注意：</p>
+<p>只要窗口大小发生像素变化，就会触发这个事件。</p>
+<p>我们经常利用这个事件完成响应式布局。window.innerWidth当前屏幕的宽度</p>
+<p>两种定时器</p>
+<p>window对象给我们提供了2个非常好用的方法-定时器</p>
+<p>setTimeout()定时器</p>
+<p><code>window.setTimeou(调用函数,延迟的毫秒数)</code></p>
+<p>setTimeout()方法用于设置一个定时器，该定时器在定时器到期后执行调用函数。</p>
+<p>注意：window可以省略、这个调用函数可以直接写函数，或者写函数名或者采取字符串’函数名()’三种形式。第三种不推荐、延迟的毫秒数省略默认时0，如果写，必须时毫秒。</p>
+<p>停止setTimeout()定时器</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.clearTimeout(timeoutID)</span><br></pre></td></tr></table></figure></div>
+
+<p>clearTimeout()方法取消了先通过调用setTimeout()建立的定时器。</p>
+<p>注意：window可以省略、里面的参数就是定时器的标识符。</p>
+<p>setInterval()定时器</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.setInterval(回调函数,间隔的毫秒数)</span><br></pre></td></tr></table></figure></div>
+
+<p>setInterval()方法重复调用一个函数，每隔这个时间，就去调用一次回调函数。</p>
+<p>注意：window可以省略、这个调用函数可以直接写函数，或者写函数名或者采取字符串’函数名()’三种形式、间隔的毫秒数省略默认是0，如果写，必须是毫秒，表示每隔多少毫秒就自动调用这个函数、因为定时器可能有很多，所以我们经常给定时器赋值一个标识符。</p>
+<p>停止setInterval()定时器</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">window.clearInterval(intervalID);</span><br></pre></td></tr></table></figure></div>
+
+<p>clearInterval()方法取消了先前通过调用setInterval()建立的定时器。</p>
+<p>注意：window可以省略、里面的参数就是定时器的标识符。</p>
+<p>this</p>
+<p>this的指向在函数定义的时候是确定不了的，只有函数执行的时候才能确定this到底指向谁，一般情况下this的最终指向的是那个调用它的对象</p>
+<p>什么是location对象</p>
+<p>window对象给我提供了一个location属性用于获取或设置窗体的URL，并且可以用于解析URL。因为这个属性返回的是一个对象，所以我们将这个属性也成为location对象。</p>
+<p>URL</p>
+<p>统一资源定位符（Uniform Resource Locator,URL)是互联网上标准资源的地址。互联网上的每个文件都有一个唯一的URL，它包含的信息指出文件的位置以及浏览器应该怎么处理它。</p>
+<p>location对象的属性</p>
+<table>
+<thead>
+<tr>
+<th>location对象属性</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>locatione.href</td>
+<td>获取或者设置整个URL</td>
+</tr>
+<tr>
+<td>location.host</td>
+<td>返回主机域名</td>
+</tr>
+<tr>
+<td>location.port</td>
+<td>返回端口号 如果未写返回空字符串</td>
+</tr>
+<tr>
+<td>location.pathname</td>
+<td>返回路径</td>
+</tr>
+<tr>
+<td>location.search</td>
+<td>返回参数</td>
+</tr>
+<tr>
+<td>location.hash</td>
+<td>返回片段 #后面内容 常见于链接锚点</td>
+</tr>
+</tbody></table>
+<p>重点记住：href和search</p>
+<p>location对象的方法</p>
+<table>
+<thead>
+<tr>
+<th>location对象方法</th>
+<th>返回值</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>location.assign()</td>
+<td>根href一样。可以跳转页面（也称为重定向页面）</td>
+</tr>
+<tr>
+<td>location.replace()</td>
+<td>替换当前页面，因为不纪录历史，所以不能后退页面</td>
+</tr>
+<tr>
+<td>location.reload()</td>
+<td>重新加载页面，相当于刷新按钮或者f5 如果参数 为true 强制刷新 ctrl+f5</td>
+</tr>
+</tbody></table>
+<p>navigator对象</p>
+<p>navigator对象包含有关浏览器的信息，它有很多属性，我们最常用的是userAgent，该属性可以返回由客户机发送服务器的user-agent头部的值。</p>
+<p>history对象</p>
+<p>window对象给我们提供了一个history对象，于浏览器历史记录进行交互。该对象包含用户（在浏览器窗口中）访问过的URL。</p>
+<table>
+<thead>
+<tr>
+<th>history对象方法</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>back()</td>
+<td>可以后退功能</td>
+</tr>
+<tr>
+<td>forward()</td>
+<td>前进功能</td>
+</tr>
+<tr>
+<td>go(参数)</td>
+<td>前进后退功能 参数如果是1 前进1个界面 如果是-1 后退1个页面</td>
+</tr>
+</tbody></table>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/11/06/DAY22/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">DAY22</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自米路可缇书"></img>
+    <h3 class="avatar-name">
+      
+        一颗酸菜
+      
+    </h3>
+    <p class="avatar-slogan">
+      又酸又菜，未来铲屎官，FF14er，zhihaoduonianjingzhuibing。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E6%8A%A5/">日报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/">课后练习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/06/BOM/">BOM</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/06/DAY22/">DAY22</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/05/DAY21/">DAY21</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/05/DOM%E6%A0%B8%E5%BF%83%E9%87%8D%E7%82%B9/">DOM核心重点</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/05/DOM%E7%AE%80%E4%BB%8B/">DOM简介</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://weibo.com/yorukosama?refer_flag=1005050005_&is_all=1" title target='_blank'
+        >米路可缇书</a>
+      
+        <a style="display: block;" href="https://victorfengming.github.io/" title target='_blank'
+        >小明同学</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Cai Suan &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/" class="mobile-nav-link">施工中</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
