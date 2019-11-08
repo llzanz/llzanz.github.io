@@ -5,20 +5,20 @@
   
 
   
-  <title>数组去重 | Zan</title>
+  <title>移动端特效 | Zan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
-  <meta name="description" content="数组去重复">
+  <meta name="description" content="触屏事件概述 移动端浏览器兼容性较好，我们不需要考虑以前JS的兼容性问题，可以放心的使用原生JS书写效果，但是移动端也有自己独特的地方。比如触屏事件touch（也称触摸事件），Android和IOS都有。 touch对象代表一个触摸点。触摸点可能是一根手指，也可能是一根触摸笔。触屏事件可以响应用户手指（或触控笔）对屏幕或者触控板操作。 常见的触屏事件如下：    触屏touch事件 说明    t">
 <meta name="keywords" content="JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="数组去重">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;10&#x2F;29&#x2F;%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D&#x2F;index.html">
+<meta property="og:title" content="移动端特效">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;08&#x2F;%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%89%B9%E6%95%88&#x2F;index.html">
 <meta property="og:site_name" content="Zan">
-<meta property="og:description" content="数组去重复">
+<meta property="og:description" content="触屏事件概述 移动端浏览器兼容性较好，我们不需要考虑以前JS的兼容性问题，可以放心的使用原生JS书写效果，但是移动端也有自己独特的地方。比如触屏事件touch（也称触摸事件），Android和IOS都有。 touch对象代表一个触摸点。触摸点可能是一根手指，也可能是一根触摸笔。触屏事件可以响应用户手指（或触控笔）对屏幕或者触控板操作。 常见的触屏事件如下：    触屏touch事件 说明    t">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-29T11:55:48.177Z">
+<meta property="og:updated_time" content="2019-11-08T13:44:54.533Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
@@ -60,25 +60,25 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="post-数组去重" class="article global-container article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-移动端特效" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
       
   
     <h1 class="article-title" itemprop="name">
-      数组去重
+      移动端特效
     </h1>
   
 
     </header>
   
   <div class="article-meta">
-    <a href="/2019/10/29/%E6%95%B0%E7%BB%84%E5%8E%BB%E9%87%8D/" class="article-date">
-  <time datetime="2019-10-29T11:54:47.000Z" itemprop="datePublished">2019-10-29</time>
+    <a href="/2019/11/08/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%89%B9%E6%95%88/" class="article-date">
+  <time datetime="2019-11-08T13:44:12.000Z" itemprop="datePublished">2019-11-08</time>
 </a>
     
   <div class="article-category">
-    <a class="article-category-link" href="/categories/%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/">课后练习</a>
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
   </div>
 
     
@@ -95,11 +95,56 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <p>数组去重复</p>
-<a id="more"></a>
-
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">    var newArr = [];</span><br><span class="line">    for (i = 0; i &lt; arr.length; i++) &#123;</span><br><span class="line">        if (newArr.indexOf(arr[i]) === -1) &#123;</span><br><span class="line">            newArr.push(arr[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return newArr;</span><br><span class="line">&#125;</span><br><span class="line">var demo = unique([&apos;a&apos;,&apos;a&apos;,&apos;b&apos;,&apos;b&apos;,&apos;c&apos;,&apos;c&apos;])</span><br><span class="line">console.log(demo);      //[&quot;a&quot;, &quot;b&quot;, &quot;c&quot;]</span><br></pre></td></tr></table></figure></div>
-
+        <p>触屏事件概述</p>
+<p>移动端浏览器兼容性较好，我们不需要考虑以前JS的兼容性问题，可以放心的使用原生JS书写效果，但是移动端也有自己独特的地方。比如触屏事件touch（也称触摸事件），Android和IOS都有。</p>
+<p>touch对象代表一个触摸点。触摸点可能是一根手指，也可能是一根触摸笔。触屏事件可以响应用户手指（或触控笔）对屏幕或者触控板操作。</p>
+<p>常见的触屏事件如下：</p>
+<table>
+<thead>
+<tr>
+<th>触屏touch事件</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>touchstart</td>
+<td>手指触摸到一个DOM元素时触发</td>
+</tr>
+<tr>
+<td>touchmove</td>
+<td>手指在一个DOM元素上滑动时触发</td>
+</tr>
+<tr>
+<td>touchend</td>
+<td>手指从一个DOM元素上移开时触发</td>
+</tr>
+</tbody></table>
+<p>触摸事件对象（TouchEvent）</p>
+<p>TouchEvent是一类描述手指在触摸平面（触摸屏、触摸板等）的状态变化的事件。这类事件用于描述一个或多个触电，使开发者可以检测触点的移动，触点的增加和减少，等等</p>
+<p>touchstart、touchmove、touchend三个事件都会各自有事件对象。</p>
+<p>触摸事件对象重点我们看三个常见对象列表：</p>
+<table>
+<thead>
+<tr>
+<th>触摸列表</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>touches</td>
+<td>正在触摸屏幕的所有手指的一个列表</td>
+</tr>
+<tr>
+<td>targetTouches</td>
+<td>正在触摸当前DOM元素上的手指的一个列表</td>
+</tr>
+<tr>
+<td>changedTouches</td>
+<td>手指状态发生了改变的列表，从无到有，从有到无变化</td>
+</tr>
+</tbody></table>
+<p>移动端拖动元素</p>
+<p>touchstart、touchmove、touchend可以实现拖动元素</p>
 
       
     </div>
@@ -114,20 +159,11 @@
 <nav id="article-nav">
   <div class="article-nav-block">
     
-      <a href="/2019/10/29/%E6%95%B0%E7%BB%84%E6%8E%92%E5%BA%8F/" id="article-nav-newer" class="article-nav-link-wrap">
-        <strong class="article-nav-caption"></strong>
-        <div class="article-nav-title">
-          
-            数组排序
-          
-        </div>
-      </a>
-    
   </div>
   <div class="article-nav-block">
     
-      <a href="/2019/10/29/%E8%BE%93%E5%85%A5%E5%BC%B9%E7%AA%97%E5%92%8C%E8%BE%93%E5%87%BA%E5%BC%B9%E7%AA%97/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">输入弹窗和输出弹窗</div>
+      <a href="/2019/11/08/DAY24/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">DAY24</div>
         <strong class="article-nav-caption"></strong>
       </a>
     
