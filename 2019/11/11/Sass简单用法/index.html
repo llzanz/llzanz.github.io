@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>sass简单用法 | Zan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="Sass是什么 Sass 是一款强化 CSS 的辅助工具，它在 CSS 语法的基础上增加了变量 (variables)、嵌套 (nested rules)、混合 (mixins)、导入 (inline imports) 等高级功能，这些拓展令 CSS 更加强大与优雅。使用 Sass 以及 Sass 的样式库（如 Compass）有助于更好地组织管理样式文件，以及更高效地开发项目。">
+<meta name="keywords" content="sass">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sass简单用法">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;11&#x2F;Sass%E7%AE%80%E5%8D%95%E7%94%A8%E6%B3%95&#x2F;index.html">
+<meta property="og:site_name" content="Zan">
+<meta property="og:description" content="Sass是什么 Sass 是一款强化 CSS 的辅助工具，它在 CSS 语法的基础上增加了变量 (variables)、嵌套 (nested rules)、混合 (mixins)、导入 (inline imports) 等高级功能，这些拓展令 CSS 更加强大与优雅。使用 Sass 以及 Sass 的样式库（如 Compass）有助于更好地组织管理样式文件，以及更高效地开发项目。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-11T13:01:50.527Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/" title
+        
+        >施工中</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-Sass简单用法" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      sass简单用法
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/11/11/Sass%E7%AE%80%E5%8D%95%E7%94%A8%E6%B3%95/" class="article-date">
+  <time datetime="2019-11-11T12:24:39.000Z" itemprop="datePublished">2019-11-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/sass/" rel="tag">sass</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <p>Sass是什么</p>
+<p>Sass 是一款强化 CSS 的辅助工具，它在 CSS 语法的基础上增加了变量 (variables)、嵌套 (nested rules)、混合 (mixins)、导入 (inline imports) 等高级功能，这些拓展令 CSS 更加强大与优雅。使用 Sass 以及 Sass 的样式库（如 Compass）有助于更好地组织管理样式文件，以及更高效地开发项目。</p>
+<a id="more"></a>
+
+<p>自助编译命令：sass –watch (scss文件夹):(css文件名)</p>
+<p>变量：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SCSS"><figure class="iseeu highlight /scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$primary-color</span>:<span class="number">#ff0000</span>;</span><br><span class="line"><span class="variable">$primary-border</span>:<span class="number">#cccccc</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span><span class="selector-class">.box</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="variable">$primary-color</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h1</span><span class="selector-class">.page-header</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="variable">$primary-border</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>编译结果</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span><span class="selector-class">.box</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#ff0000</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">h1</span><span class="selector-class">.page-header</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">#cccccc</span>; &#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>嵌套</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SCSS"><figure class="iseeu highlight /scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.nav</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line"></span><br><span class="line">    <span class="selector-tag">ul</span> &#123;</span><br><span class="line">        <span class="attribute">margin</span>: <span class="number">0px</span>;</span><br><span class="line"></span><br><span class="line">        <span class="selector-tag">li</span> &#123;</span><br><span class="line">            <span class="attribute">float</span>: left;</span><br><span class="line">            <span class="attribute">list-style</span>: none;</span><br><span class="line">            <span class="attribute">padding</span>: <span class="number">10px</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>编译结果</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.nav</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>; &#125;</span><br><span class="line">  <span class="selector-class">.nav</span> <span class="selector-tag">ul</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0px</span>; &#125;</span><br><span class="line">    <span class="selector-class">.nav</span> <span class="selector-tag">ul</span> <span class="selector-tag">li</span> &#123;</span><br><span class="line">      <span class="attribute">float</span>: left;</span><br><span class="line">      <span class="attribute">list-style</span>: none;</span><br><span class="line">      <span class="attribute">padding</span>: <span class="number">10px</span>; &#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>嵌套属性</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SCSS"><figure class="iseeu highlight /scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">font</span>: &#123;</span><br><span class="line">        family: Helvetica;</span><br><span class="line">        size: <span class="number">15px</span>;</span><br><span class="line">        weight: normal;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.nav</span> &#123;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">border-right</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>编译结果</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: Helvetica;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">15px</span>;</span><br><span class="line">  <span class="attribute">font-weight</span>: normal; &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.nav</span> &#123;</span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#ccc</span>;</span><br><span class="line">  <span class="attribute">border-left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">border-right</span>: <span class="number">0</span>; &#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>mixin</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SCSS"><figure class="iseeu highlight /scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">mixin</span> style &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">color</span>: red;</span><br><span class="line"></span><br><span class="line">    <span class="selector-tag">a</span> &#123;</span><br><span class="line">        <span class="attribute">color</span>: pink;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">    @<span class="keyword">include</span> style;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>编译结果</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">div</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">color</span>: red; &#125;</span><br><span class="line">  <span class="selector-tag">div</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">color</span>: pink; &#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>继承和扩展extend</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SCSS"><figure class="iseeu highlight /scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">import</span> <span class="string">"base"</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.alert</span> &#123;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.alert</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.alert-info</span> &#123;</span><br><span class="line">    @<span class="keyword">extend</span> .alert;</span><br><span class="line">    <span class="attribute">background-color</span>: pink;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>_base.scss</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SCSS"><figure class="iseeu highlight /scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>编译结果</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">margin</span>: <span class="number">0px</span>;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0px</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.alert</span>, <span class="selector-class">.alert-info</span> &#123;</span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">15px</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.alert</span> <span class="selector-tag">a</span>, <span class="selector-class">.alert-info</span> <span class="selector-tag">a</span> &#123;</span><br><span class="line">  <span class="attribute">font-weight</span>: bold; &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.alert-info</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: pink; &#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>interpolation</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SCSS"><figure class="iseeu highlight /scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$version</span>: <span class="string">"0.0.1"</span>;</span><br><span class="line"><span class="comment">/* 项目当前的版本是：#&#123;$version&#125; */</span></span><br><span class="line"></span><br><span class="line"><span class="variable">$name</span>:<span class="string">"info"</span>;</span><br><span class="line"><span class="variable">$attr</span>:<span class="string">"border"</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.alert-</span>#&#123;<span class="variable">$name</span>&#125; &#123;</span><br><span class="line">    #&#123;<span class="variable">$attr</span>&#125;-<span class="attribute">color</span>: <span class="number">#ccc</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>编译结果</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">@<span class="keyword">charset</span> <span class="string">"UTF-8"</span>;</span><br><span class="line"><span class="comment">/* 项目当前的版本是：0.0.1 */</span></span><br><span class="line"><span class="selector-class">.alert-info</span> &#123;</span><br><span class="line">  <span class="attribute">border-color</span>: <span class="number">#ccc</span>; &#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>if</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SCSS"><figure class="iseeu highlight /scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$use-prefixes</span>: true;</span><br><span class="line"><span class="variable">$theme</span>:<span class="string">"dark"</span>;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    @<span class="keyword">if</span> <span class="variable">$theme</span>==dark &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: black;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @<span class="keyword">else</span> if <span class="variable">$theme</span>==light &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: white;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    @<span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="attribute">background-color</span>: grey;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.rounded</span> &#123;</span><br><span class="line">    @<span class="keyword">if</span>  <span class="variable">$use-prefixes</span> &#123;</span><br><span class="line">        <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">        <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">15px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>编译结果</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: black; &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.rounded</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">5px</span>;</span><br><span class="line">  <span class="attribute">border-radius</span>: <span class="number">15px</span>; &#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>for</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SCSS"><figure class="iseeu highlight /scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$columns</span>: <span class="number">4</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">for</span> <span class="variable">$i</span> from 1 through <span class="variable">$columns</span> &#123;</span><br><span class="line">    <span class="selector-class">.col-</span>#&#123;<span class="variable">$i</span>&#125; &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100%</span> / <span class="variable">$columns</span> * <span class="variable">$i</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">for</span> <span class="variable">$i</span> from 1 to <span class="variable">$columns</span> &#123;</span><br><span class="line">    <span class="selector-class">.col-</span>#&#123;<span class="variable">$i</span>&#125; &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100%</span> / <span class="variable">$columns</span> * <span class="variable">$i</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>编译结果</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.col-1</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">25%</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.col-2</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.col-3</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">75%</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.col-4</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">100%</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.col-1</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">25%</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.col-2</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">50%</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.col-3</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">75%</span>; &#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>each</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SCSS"><figure class="iseeu highlight /scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$icons</span>: success error warning;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">each</span> <span class="variable">$icon</span> in <span class="variable">$icons</span> &#123;</span><br><span class="line">    <span class="selector-class">.icon-</span>#&#123;<span class="variable">$icon</span>&#125; &#123;</span><br><span class="line">        <span class="attribute">background-image</span>: url(../images/icons/#&#123;<span class="variable">$icon</span>&#125;.png);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>编译结果</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.icon-success</span> &#123;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(../images/icons/success.png); &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.icon-error</span> &#123;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(../images/icons/error.png); &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.icon-warning</span> &#123;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(../images/icons/warning.png); &#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>while</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SCSS"><figure class="iseeu highlight /scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$i</span> : <span class="number">6</span>;</span><br><span class="line"></span><br><span class="line">@<span class="keyword">while</span> <span class="variable">$i</span>&gt;<span class="number">0</span> &#123;</span><br><span class="line">    <span class="selector-class">.item-</span>#&#123;<span class="variable">$i</span>&#125; &#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">5px</span> * <span class="variable">$i</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="variable">$i</span> : <span class="variable">$i</span> - <span class="number">2</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>编译结果</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.item-6</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">30px</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.item-4</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">20px</span>; &#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-class">.item-2</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">10px</span>; &#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>自定义函数</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="SCSS"><figure class="iseeu highlight /scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$colors</span>: (light:<span class="number">#ffffff</span>, dark:<span class="number">#000000</span>);</span><br><span class="line"></span><br><span class="line">@function color (<span class="variable">$key</span>) &#123;</span><br><span class="line">    @return map-get(<span class="variable">$colors</span>, <span class="variable">$key</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">    <span class="attribute">background-color</span>: color(light);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p>编译结果</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="CSS"><figure class="iseeu highlight /css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#ffffff</span>; &#125;</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<p>警告与错误</p>
+<p><code>@warn</code>显示在控制台</p>
+<p><code>@error</code>显示再编译后的文件内</p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/11/11/DAY26/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">DAY26</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自米路可缇书"></img>
+    <h3 class="avatar-name">
+      
+        一颗酸菜
+      
+    </h3>
+    <p class="avatar-slogan">
+      又酸又菜，未来铲屎官，FF14er，zhihaoduonianjingzhuibing。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E6%8A%A5/">日报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/">课后练习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/" rel="tag">sass</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/11/Sass%E7%AE%80%E5%8D%95%E7%94%A8%E6%B3%95/">sass简单用法</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/11/DAY26/">DAY26</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/09/DAY25/">DAY25</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/08/%E7%A7%BB%E5%8A%A8%E7%AB%AF%E7%89%B9%E6%95%88/">移动端特效</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/08/DAY24/">DAY24</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://weibo.com/yorukosama?refer_flag=1005050005_&is_all=1" title target='_blank'
+        >米路可缇书</a>
+      
+        <a style="display: block;" href="https://victorfengming.github.io/" title target='_blank'
+        >小明同学</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Cai Suan &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/" class="mobile-nav-link">施工中</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
