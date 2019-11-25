@@ -1,0 +1,591 @@
+/* 公共样式 */
+
+@font-face {
+    font-family: 'iconfont';
+    /* project id 1523278 */
+    src: url('http://at.alicdn.com/t/font_1523278_rqh1a90q9sf.eot');
+    src: url('http://at.alicdn.com/t/font_1523278_rqh1a90q9sf.eot?#iefix') format('embedded-opentype'), url('http://at.alicdn.com/t/font_1523278_rqh1a90q9sf.woff2') format('woff2'), url('http://at.alicdn.com/t/font_1523278_rqh1a90q9sf.woff') format('woff'), url('http://at.alicdn.com/t/font_1523278_rqh1a90q9sf.ttf') format('truetype'), url('http://at.alicdn.com/t/font_1523278_rqh1a90q9sf.svg#iconfont') format('svg');
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.style-red {
+    color: #f10215;
+}
+
+.dt {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.bgc {
+    background: #f4f4f4;
+}
+
+
+/* 版心 */
+
+.w {
+    width: 1190px;
+    margin: auto;
+}
+
+
+/* 顶部导航样式 */
+
+
+/* 左侧位置样式开始 */
+
+.shortcut {
+    border-bottom: 1px solid #ddd;
+    background-color: #e3e4e5;
+}
+
+.shortcut .w {
+    height: 30px;
+    line-height: 30px;
+    color: #999;
+}
+
+.shortcut-ul {
+    z-index: 999;
+}
+
+.ui-areamini-text-wrap {
+    padding-left: 7px;
+    padding-right: 7px;
+}
+
+.shortcut_btn {
+    position: relative;
+    border: 1px;
+}
+
+.shortcut_btn:hover {
+    padding-bottom: 2px;
+    border-color: #ccc;
+    border-bottom: none;
+    background-color: #fff;
+    z-index: 999;
+}
+
+.shortcut_btn:hover .dropdown-layer {
+    display: block;
+}
+
+.shortcut_btn:hover .ui-areamini-text-wrap {
+    color: #e33333;
+}
+
+.dropdown-layer {
+    display: none;
+    position: absolute;
+    width: 120px;
+    padding: 10px;
+    top: 30px;
+    left: -1px;
+    background-color: #fff;
+    /*     box-shadow: 0px 0px 7px 1px gray; */
+    border: 1px solid #ccc;
+    border-top: none;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.shortcut_btn .iconfont {
+    font-size: 14px;
+    color: #f10215;
+}
+
+
+/* .shortcut_btn:hover .dropdown-layer {
+    display: block;
+} */
+
+.shortcut .item:hover {
+    background-color: #f4f4f4;
+}
+
+.shortcut .item a {
+    display: block;
+    width: 100%;
+    margin-left: 10px;
+}
+
+
+/* 左侧位置样式结束 */
+
+
+/* 右侧位置样式开始 */
+
+.shortcut li {
+    float: left;
+}
+
+.shortcut .spacer {
+    width: 1px;
+    height: 10px;
+    margin: 11px 5px 0;
+    background-color: #999;
+}
+
+.li_shortcut_btn_gd {
+    position: relative;
+}
+
+.li_shortcut_btn_gd:hover {
+    padding-bottom: 2px;
+    border-color: #ccc;
+    border-bottom: none;
+    background-color: #fff;
+    z-index: 999;
+}
+
+.li_shortcut_btn_gd:hover .gd-text {
+    color: #e33333;
+}
+
+.dropdown-layer-gd {
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: 90px;
+    padding: 10px;
+    top: 30px;
+    right: -1px;
+    background-color: #fff;
+    /*     box-shadow: 0px 0px 7px 1px gray; */
+    border: 1px solid #ccc;
+    overflow: hidden;
+    z-index: -1;
+}
+
+
+/* .li_shortcut_btn_gd:hover .dropdown-layer-gd {
+    display: block;
+} */
+
+.dropdown-layer-gd .fore1,
+.dropdown-layer-gd .fore2 {
+    width: 90px;
+    float: left;
+}
+
+.shortcut_btn_kh {
+    position: relative;
+}
+
+.shortcut_btn_kh:hover {
+    padding-bottom: 2px;
+    border-color: #ccc;
+    border-bottom: none;
+    background-color: #fff;
+}
+
+.shortcut_btn_kh:hover .kf-text {
+    color: #e33333;
+}
+
+.dropdown-layer-kh {
+    display: none;
+    position: absolute;
+    width: 172px;
+    padding: 10px;
+    top: 30px;
+    right: 0px;
+    background-color: #fff;
+    box-shadow: 0px 0px 7px 1px gray;
+    overflow: hidden;
+    z-index: -1;
+}
+
+
+/* .shortcut_btn_kh:hover .dropdown-layer-kh {
+    display: block;
+} */
+
+.dropdown-layer-kh .item {
+    width: 80px;
+    display: inline-block;
+}
+
+.item-client {
+    display: block;
+    padding-left: 15px;
+    color: #333;
+}
+
+.item-business {
+    margin-top: 5px;
+    border-top: 1px dotted #eee;
+}
+
+
+/* 右侧样式结束 */
+
+
+/* 头部开始 */
+
+.header {
+    border-bottom: 1px solid #f30213
+}
+
+.header .w {
+    height: 190px;
+    position: relative;
+}
+
+.header .logo {
+    position: absolute;
+    width: 240px;
+    height: 140px;
+}
+
+.header .logo-tt {
+    width: 100%;
+    height: 100%;
+}
+
+.header .logo-tt a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(../img/fflogo.png);
+    background-size: 100% 100%;
+    font-size: 0px;
+}
+
+.header .search {
+    position: relative;
+    width: 100%;
+    background: #f4f4f4;
+}
+
+.header .search-m {
+    position: absolute;
+    left: 300px;
+    top: 56px;
+    width: 546px;
+    height: 32px;
+    border: 2px solid #e2231a;
+}
+
+.header .search-m .text {
+    left: 0;
+    padding: 2px 44px 2px 17px;
+    width: 425px;
+    height: 26px;
+    border: 1px solid transparent;
+    line-height: 26px;
+    font-size: 12px;
+    float: left;
+    color: #ccc;
+}
+
+.search-m span {
+    position: absolute;
+    right: 70px;
+    top: 4px;
+    width: 19px;
+    height: 19px;
+    overflow: hidden;
+}
+
+.search-m button {
+    border-radius: 0;
+    right: 0;
+    width: 58px;
+    height: 32px;
+    line-height: 32px;
+    border: none;
+    background-color: #e1251b;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    float: left;
+}
+
+.header .hotwords {
+    position: absolute;
+    left: 300px;
+    top: 93px;
+    width: 550px;
+    height: 20px;
+    line-height: 20px;
+}
+
+.hotwords a {
+    float: left;
+    margin-right: 10px;
+}
+
+.shopcar {
+    position: absolute;
+    right: 110px;
+    top: 56px;
+    width: 130px;
+    height: 34px;
+    text-align: center;
+    line-height: 34px;
+    border-color: #eee;
+    border: 1px solid #e3e4e5;
+}
+
+.shopcar i {
+    margin-right: 13px;
+    font-size: 16px;
+}
+
+.shopcar .ci-count {
+    position: absolute;
+    top: 1px;
+    left: 31px;
+    right: auto;
+    display: inline-block;
+    padding: 1px 3px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #fff;
+    background-color: #e1251b;
+    border-radius: 7px 7px 7px 0;
+    min-width: 12px;
+    text-align: center;
+}
+
+.navitems {
+    position: absolute;
+    left: 275px;
+    bottom: 0;
+    height: 40px;
+}
+
+.navitems a {
+    float: left;
+    position: relative;
+    display: block;
+    height: 40px;
+    line-height: 50px;
+    font-size: 15px;
+    font-weight: 700;
+    padding: 0 6px;
+    margin: 0 5px;
+}
+
+.dropdown {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background: pink;
+}
+
+.dropdown .dt {
+    width: 240px;
+    height: 40px;
+    padding: 0px;
+}
+
+.dropdown .dt a {
+    display: block;
+    height: 100%;
+    width: 100%;
+    background: #f30213;
+    line-height: 40px;
+    font-size: 16px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+.dropdown .dd {
+    position: absolute;
+    width: 100%;
+    height: 470px;
+    top: 41px;
+    background: #fff;
+}
+
+.dd-inner {
+    padding: 12px 0;
+}
+
+.dd-inner .item {
+    height: 26px;
+    line-height: 26px;
+    padding: 0 20px;
+}
+
+.dd-inner .item:hover {
+    background: #ccc;
+}
+
+.dd-inner .item a {
+    line-height: 27px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+
+.dd-inner .item a:hover {
+    color: #e33333
+}
+
+.dd-inner .item i {
+    float: right;
+    font-size: 12px;
+}
+
+
+/* 头部结束 */
+
+
+/* jio开始 */
+
+
+/* .footer {
+    float: left;
+} */
+
+.mod-service {
+    padding: 30px 0;
+    border-bottom: 1px solid #dedede;
+    background: #f4f4f4;
+}
+
+.mod-service-list {
+    overflow: hidden;
+    height: 42px;
+}
+
+.mod-service-item {
+    float: left;
+    width: 297px;
+    height: 100%;
+}
+
+.mod-service-unit {
+    position: relative;
+    margin: 0 auto;
+    padding-left: 45px;
+    width: 180px;
+}
+
+.mod-service-tit {
+    overflow: hidden;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 36px;
+    height: 42px;
+    display: block;
+}
+
+.mod-service-txt {
+    overflow: hidden;
+    width: 100%;
+    height: 42px;
+    line-height: 42px;
+    font-size: 18px;
+    font-weight: 700;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #444;
+}
+
+.mod-service-duo {
+    background-repeat: no-repeat;
+    background: url(../img/jlt.png);
+    background-position: 0 -192px;
+}
+
+.mod-service-kuai {
+    background-repeat: no-repeat;
+    background: url(../img/jlt.png);
+    background-position: -41px -192px;
+}
+
+.mod-service-hao {
+    background-repeat: no-repeat;
+    background: url(../img/jlt.png);
+    background-position: -82px -192px;
+}
+
+.mod-service-sheng {
+    background-repeat: no-repeat;
+    background: url(../img/jlt.png);
+    background-position: -123px -192px;
+}
+
+.mod-help {
+    padding: 20px 0;
+    background-color: #f4f4f4;
+}
+
+.mod-help-inner {
+    margin: 0 auto;
+    width: 1190px;
+}
+
+.mod-help-list {
+    overflow: hidden;
+    height: 160px;
+}
+
+.mod-help-nav {
+    float: left;
+    width: 198px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.mod-help-nav-tit {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.mod-help-cover {
+    position: relative;
+    float: right;
+    width: 200px;
+    height: 160px;
+}
+
+.mod-help-cover-tit {
+    margin-bottom: 15px;
+    font-size: 14px;
+    text-align: center;
+}
+
+.mod-help-cover-bgimg {
+    position: absolute;
+    left: 36px;
+    width: 128px;
+    height: 128px;
+    background: url(../img/你还真扫了.png);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-size: 128px 128px;
+}
+
+.mod-copyright {
+    background-color: #f4f4f4;
+}
+
+.mod-copyright-inner {
+    padding: 15px 0;
+    border-top: 1px solid #e1e1e1;
+    text-align: center;
+}
+
+.mod-copyright-split {
+    margin: 0 10px;
+    color: #ccc;
+}
+
+
+/* jio结束 */
