@@ -5,17 +5,20 @@
   
 
   
-  <title>标签 | Zan</title>
+  <title>运算和运算符 | Zan</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   
   
-  <meta property="og:type" content="website">
-<meta property="og:title" content="标签">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;tags&#x2F;index.html">
+  <meta name="description" content="运算和运算符算数运算** 幂运算  一个数的n次方 &#x2F;&#x2F; 地板除  取商 %  取余">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="运算和运算符">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;27&#x2F;%E8%BF%90%E7%AE%97%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6&#x2F;index.html">
 <meta property="og:site_name" content="Zan">
+<meta property="og:description" content="运算和运算符算数运算** 幂运算  一个数的n次方 &#x2F;&#x2F; 地板除  取商 %  取余">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-10-28T13:17:08.000Z">
+<meta property="og:updated_time" content="2019-11-27T13:40:44.077Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
@@ -61,24 +64,30 @@
   </div>
 </header>
       <div id="middlecontent" title class="global-width sidebar-right">
-        <section id="main"><article id="page-" class="article global-container article-type-page" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-运算和运算符" class="article global-container article-type-post" itemscope itemprop="blogPost">
   
     <header class="article-header">
       
   
     <h1 class="article-title" itemprop="name">
-      标签
+      运算和运算符
     </h1>
   
 
     </header>
   
   <div class="article-meta">
-    <a href="/tags/index.html" class="article-date">
-  <time datetime="2019-10-16T13:16:37.000Z" itemprop="datePublished">2019-10-16</time>
+    <a href="/2019/11/27/%E8%BF%90%E7%AE%97%E5%92%8C%E8%BF%90%E7%AE%97%E7%AC%A6/" class="article-date">
+  <time datetime="2019-11-27T13:33:03.000Z" itemprop="datePublished">2019-11-27</time>
 </a>
     
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
     
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
   </div>
   
     <span id="busuanzi_container_page_pv">
@@ -90,7 +99,37 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        
+        <h3 id="运算和运算符"><a href="#运算和运算符" class="headerlink" title="运算和运算符"></a>运算和运算符</h3><h4 id="算数运算"><a href="#算数运算" class="headerlink" title="算数运算"></a>算数运算</h4><p>** 幂运算  一个数的n次方</p>
+<p>// 地板除  取商</p>
+<p>%  取余</p>
+<a id="more"></a>
+
+<h4 id="逻辑运算"><a href="#逻辑运算" class="headerlink" title="逻辑运算"></a>逻辑运算</h4><p>and 与  有假则假</p>
+<p>or 或   有真则真</p>
+<p>not 非</p>
+<h4 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h4><p>&amp; 按位与运算：先转为二进制，按位进行与运算</p>
+<p>| 按位或运算</p>
+<p>~ 按位非运算</p>
+<p>^ 按位异或运算：异或运算，不同为真，相同为假</p>
+<p>&lt;&lt; 左移运算</p>
+<p>&gt;&gt; 右移运算</p>
+<h4 id="身份运算"><a href="#身份运算" class="headerlink" title="身份运算"></a>身份运算</h4><p>什么是身份运算：检测两个数据在内存中是否是同一个值</p>
+<p>就是检测数据的id 用<code>id()</code>命令可以查看数据的id</p>
+<p>is 检测是同一个值</p>
+<p>is not 检测不是用一个值</p>
+<h4 id="成员检测运算"><a href="#成员检测运算" class="headerlink" title="成员检测运算"></a>成员检测运算</h4><p>in 检测一个数据是否存在于一个容器中</p>
+<p>not in 检测一个数据是否不存在于一个容器中</p>
+<p>字典检测只检测键不检测值</p>
+<h3 id="流程控制语句"><a href="#流程控制语句" class="headerlink" title="流程控制语句"></a>流程控制语句</h3><p>while </p>
+<p>for in </p>
+<p>if elif else</p>
+<p>break 结束循环</p>
+<p>continue 跳过本次循环，开始下次循环</p>
+<p>pass 占位 莫得意义</p>
+<h4 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h4><p>遍历字典</p>
+<pre><code>键：`for k in var.keys():`
+值：`for v in var.values():`
+一起：`for k,v in var.items():`</code></pre>
       
     </div>
     
@@ -101,6 +140,29 @@
   </div>
   
     
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/11/27/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            数据类型
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/11/27/DAY40/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">DAY40</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
     <link rel="stylesheet" href="/css/gitment.css"> 
 <script src="/js/gitment.js"></script>
 
