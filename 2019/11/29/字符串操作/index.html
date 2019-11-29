@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>字符串操作 | Zan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="分片截取字符串格式1：变量[开始索引:结束索引]从开始索引截取到结束索引，不包含结束索引 格式2：变量[:结束索引]从索引0开始截取到结束索引，不包含结束索引 格式3：变量[开始索引:]从开始索引截取到字符串结尾 格式4：跳步分片，变量[::索引增加值]从索引0开始到字符串结束，索引每次增加索引增加值">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字符串操作">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;29&#x2F;%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C&#x2F;index.html">
+<meta property="og:site_name" content="Zan">
+<meta property="og:description" content="分片截取字符串格式1：变量[开始索引:结束索引]从开始索引截取到结束索引，不包含结束索引 格式2：变量[:结束索引]从索引0开始截取到结束索引，不包含结束索引 格式3：变量[开始索引:]从开始索引截取到字符串结尾 格式4：跳步分片，变量[::索引增加值]从索引0开始到字符串结束，索引每次增加索引增加值">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-11-29T11:11:07.404Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/play.html" title
+        
+        >打飞机</a>
+      
+        <a class="nav-item" href="/gd-index.html" title
+        
+        >光之快递员</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-字符串操作" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      字符串操作
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/11/29/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/" class="article-date">
+  <time datetime="2019-11-29T11:01:55.000Z" itemprop="datePublished">2019-11-29</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h4 id="分片截取字符串"><a href="#分片截取字符串" class="headerlink" title="分片截取字符串"></a>分片截取字符串</h4><p>格式1：变量[开始索引:结束索引]从开始索引截取到结束索引，不包含结束索引</p>
+<p>格式2：变量[:结束索引]从索引0开始截取到结束索引，不包含结束索引</p>
+<p>格式3：变量[开始索引:]从开始索引截取到字符串结尾</p>
+<p>格式4：跳步分片，变量[::索引增加值]从索引0开始到字符串结束，索引每次增加索引增加值</p>
+<a id="more"></a>
+
+<h4 id="字符串函数"><a href="#字符串函数" class="headerlink" title="字符串函数"></a>字符串函数</h4><p>与英文相关的字符串函数</p>
+<p>小写变大写：<code>字符串.upper()</code></p>
+<p>大写变小写：<code>字符串.lower()</code></p>
+<p>大小写互换：<code>字符串.swapcase()</code></p>
+<p>标题化字母：<code>字符串.title()</code>就是首字母大写，其余小写</p>
+<p>首字母大写：<code>字符串.capitalize()</code></p>
+<h4 id="字符串查找相关的函数"><a href="#字符串查找相关的函数" class="headerlink" title="字符串查找相关的函数"></a>字符串查找相关的函数</h4><pre><code>1.index()   从字符串左侧开始向右查找指定字符第一次出现的位置（找不到字符串报错）
+    字符串.index(查找的字符串)
+    字符串.index(查找的字符串,开始索引,结束索引)
+    字符串.index(查找的字符串,开始索引)
+2.rindex() 从字符串右侧开始向左查找指定字符第一次出现的位置（找不到字符串报错）
+    字符串.rindex(查找的字符串)
+    字符串.rindex(查找的字符串,开始索引,结束索引)
+    字符串.rindex(查找的字符串,开始索引)
+3.find()   和index一样（找不到字符串返回-1）
+    字符串.find(查找的字符串)
+    字符串.find(查找的字符串,开始索引,结束索引)
+    字符串.find(查找的字符串,开始索引)
+4.rfind()  和rindex一样（找不到字符串返回-1）
+    字符串.rfind(查找的字符串)
+    字符串.rfind(查找的字符串,开始索引,结束索引)
+    字符串.rfind(查找的字符串,开始索引)</code></pre><h4 id="判断相关字符串"><a href="#判断相关字符串" class="headerlink" title="判断相关字符串"></a>判断相关字符串</h4><pre><code>1.isupper() 检测字符串是否都是大写字母组成
+    变量.isupper()
+2.islower() 检测字符串是否都是小写字母组成
+    变量.islower()
+3.istitle() 检测字符串是否符合标题要求
+    变量.istitle()
+4.isalnum() 检测字符串是否由数字和字母及文字组成
+    变量.isalnum()
+5.isalpha() 检测字符串是否由字母和文字组成
+    变量.isalpha()
+6.isdigit() 检测字符串是否由10进制字符组成（数字）
+    变量.isdigit()
+7.isnumeric()检测字符串是否由数字字符组成（数字）
+    变量.isnumeric()
+8.isspace() 检测字符串是是否由空白字符(不可见字符)组成
+    变量.isspace()
+9.startswith() 检测字符串是否以指定的字符串开头
+    变量.startswith(&apos;检测的字符串&apos;)
+10.endswith()  检测字符串是否以指定的字符串结尾
+    变量.endswith(&apos;检测的字符串&apos;)</code></pre><h4 id="字符串操作相关函数"><a href="#字符串操作相关函数" class="headerlink" title="字符串操作相关函数"></a>字符串操作相关函数</h4><pre><code>1.split() 使用特定的字符串切割字符串
+    变量.split(切割的字符)
+    变量.split(切割的字符,切割次数)
+2.join() 使用特定字符串将容器数据连接成一个字符串
+    特定字符串.join(容器)
+3.zfill()  zero fill 零填充效果
+    变量.zfill(整个字符串的长度)
+4.center()  使用指定的字符将字符串填充到指定的长度,原有内容居中对齐
+    变量.center(填充长度)
+    变量.center(填充长度,填充字符)
+5.ljust()使用指定的字符将字符串填充到指定的长度,原有内容靠左对齐
+    变量.ljust(填充长度)
+    变量.ljust(填充长度,填充字符)
+6.rjust()使用指定的字符将字符串填充到指定的长度,原有内容靠右对齐
+    变量.rjust(填充长度)
+    变量.rjust(填充长度,填充字符)
+7.strip() 去除字符串左右两侧指定的连续字符
+    变量.strip() 默认去除左右两侧空格字符
+    变量.strip(去除的指定字符串)
+8.lstrip()去除字符串左侧指定的连续字符
+    变量.lstrip() 默认去除左侧空格字符
+    变量.lstrip(去除的指定字符串)
+9.rstrp()去除字符串右侧指定的连续字符
+    变量.rstrip() 默认去除右侧空格字符
+    变量.rstrip(去除的指定字符串)
+10.replace() 字符串的替换操作
+    变量.replace(&apos;被替换的字符串&apos;,&apos;替换成的字符串&apos;)
+    变量.replace(&apos;被替换的字符串&apos;,&apos;替换成的字符串&apos;,替换次数)</code></pre><h4 id="字符串格式化操作"><a href="#字符串格式化操作" class="headerlink" title="字符串格式化操作"></a>字符串格式化操作</h4><pre><code>% 格式化操作
+    基本格式：字符串 % 格式化使用的数据</code></pre><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'这是%d个新的知识 (＾－＾)V'</span> % <span class="number">1231</span>)    <span class="comment">#这是1231个新的知识 (＾－＾)V</span></span><br></pre></td></tr></table></figure></div>
+
+<pre><code>占位符号：
+    %d   要格式化一个整型
+    %f   要格式化一个浮点型（默认小数点后6位）
+    %s   要格式化一个字符串
+    %c   要格式化一个ascii码
+    %u   要格式化一个无符号整型 效果同%d
+    %o   要格式化一个无符号的八进制整型
+    %x   要格式化一个无符号的十六进制数
+    %X   要格式化一个无符号的十六进制数(大写)
+    %e   要格式化一个科学记数法的浮点型
+    %E   效果和%e一样
+    %p   使用十六进制格式化变量地址
+
+精度设定：（例子）
+    %.5f   表示精确到小数点后5位
+宽度设定:（例子）
+    %8s    表示格式化之后的字符是8位不够位数填充空格
+对其方式设定：（例子）
+    %长度s   不设定的时候左侧填充，内容靠右
+    %-长度s  设定-，右侧填充，内容靠左
+零填充效果：（例子）
+    %0长度d  不够的长度使用0填充而不是默认的空格
+正负号显示效果：
+     %+d   表示整数显示 +值，负数显示-值
+
+[.],[-],[+],[0] 这些符号有个名称，叫做标表</code></pre><h4 id="format函数"><a href="#format函数" class="headerlink" title="format函数"></a>format函数</h4><p>   format函数格式化操作（3.6以上）<br>       基本格式：<br>       变量.format(参数,参数,….)</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">'我的爱好是&#123;&#125;'</span></span><br><span class="line">str2 = <span class="string">'玩游戏'</span></span><br><span class="line">result = str1.format(str2)</span><br><span class="line">print(result)   <span class="comment">#我的爱好是玩游戏</span></span><br><span class="line"></span><br><span class="line">str1 = <span class="string">'我喜欢的游戏有：&#123;&#125;，&#123;&#125;，&#123;&#125;'</span></span><br><span class="line">result = str1.format(<span class="string">'尼尔'</span>, <span class="string">'ff14'</span>, <span class="string">'炉石'</span>)</span><br><span class="line">print(result)   <span class="comment">#我喜欢的游戏有：尼尔，ff14，炉石</span></span><br><span class="line"></span><br><span class="line">str1 = <span class="string">'小明身高：&#123;0&#125;,小红身高：&#123;2&#125;,小白身高：&#123;1&#125;'</span></span><br><span class="line">result = str1.format(<span class="number">170</span>, <span class="number">180</span>, <span class="number">160</span>)</span><br><span class="line">print(result)   <span class="comment">#小明身高：170,小红身高：160,小白身高：180</span></span><br><span class="line"></span><br><span class="line">str1 = <span class="string">'小明身高：&#123;xm&#125;,小红身高：&#123;xh&#125;,小白身高：&#123;xb&#125;'</span></span><br><span class="line">result = str1.format(xm=<span class="number">170</span>, xb=<span class="number">180</span>, xh=<span class="number">160</span>)</span><br><span class="line">print(result)   <span class="comment">#小明身高：170,小红身高：160,小白身高：180</span></span><br><span class="line"></span><br><span class="line">str1 = <span class="string">'小明身高：&#123;0[0]&#125;,小红身高：&#123;0[2]&#125;,小白身高：&#123;0[1]&#125;'</span></span><br><span class="line">heights = [<span class="number">170</span>, <span class="number">180</span>, <span class="number">160</span>]</span><br><span class="line">result = str1.format(heights)</span><br><span class="line">print(result)   <span class="comment">#小明身高：170,小红身高：160,小白身高：180</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="限定符号"><a href="#限定符号" class="headerlink" title="限定符号"></a>限定符号</h4><pre><code>限定符号：（必须在:后面使用）
+    对齐相关：参数位置:填充符号对齐符号总长度   1:#&gt;20
+    &lt;   左对齐
+    ^   居中对齐
+    &gt;   右对齐</code></pre><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">'我喜欢的游戏是&#123;0:@^10&#125;'</span></span><br><span class="line">result = str1.format(<span class="string">'尼尔'</span>)</span><br><span class="line">print(result)   <span class="comment">#我喜欢的游戏是@@@@尼尔@@@@</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="进制转换符号："><a href="#进制转换符号：" class="headerlink" title="进制转换符号："></a>进制转换符号：</h4><pre><code>d   十进制
+b   二进制
+o   八进制
+x   十六进制</code></pre><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">'小明的体重是&#123;0:x&#125;公斤'</span></span><br><span class="line">result = str1.format(<span class="number">90</span>)</span><br><span class="line">print(result)   <span class="comment">#小明的体重是5a公斤</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="精度限定符号："><a href="#精度限定符号：" class="headerlink" title="精度限定符号："></a>精度限定符号：</h4><pre><code>.2f  表示小数点后保留2位</code></pre><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">'圆周率的值是&#123;0:.3f&#125;'</span></span><br><span class="line">result = str1.format(<span class="number">3.1415926</span>)</span><br><span class="line">print(result)   <span class="comment">#圆周率的值是3.142</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="金融限定符号："><a href="#金融限定符号：" class="headerlink" title="金融限定符号："></a>金融限定符号：</h5><pre><code>,  表示数字从右向左，每三位数添加一个逗号(整数部分)</code></pre><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">'我希望有这么多钱&#123;0:,&#125;'</span></span><br><span class="line">result = str1.format(<span class="number">100000000000</span>)</span><br><span class="line">print(result)   <span class="comment">#我希望有这么多钱100,000,000,000</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="关于字符串和bytes类型转换"><a href="#关于字符串和bytes类型转换" class="headerlink" title="关于字符串和bytes类型转换"></a>关于字符串和bytes类型转换</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">'一'</span></span><br><span class="line">str1by = str1.encode()</span><br><span class="line">print(str1by)    <span class="comment">#b'\xe4\xb8\x80'</span></span><br><span class="line"></span><br><span class="line">str2 = <span class="string">b'\xe4\xb8\x80'</span></span><br><span class="line">str2st = str2.decode()</span><br><span class="line">print(str2st)    <span class="comment">#一</span></span><br></pre></td></tr></table></figure></div>
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/11/29/%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">变量作用域</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自米路可缇书"></img>
+    <h3 class="avatar-name">
+      
+        一颗酸菜
+      
+    </h3>
+    <p class="avatar-slogan">
+      又酸又菜，未来铲屎官，FF14er，zhihaoduonianjingzhuibing。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E6%8A%A5/">日报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/">课后练习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/" rel="tag">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/" rel="tag">sass</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/11/29/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/">字符串操作</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/29/%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/">变量作用域</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/29/DAY42/">DAY42</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/28/%E5%87%BD%E6%95%B0/">函数</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/28/DAY41/">DAY41</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://weibo.com/yorukosama?refer_flag=1005050005_&is_all=1" title target='_blank'
+        >米路可缇书</a>
+      
+        <a style="display: block;" href="https://victorfengming.github.io/" title target='_blank'
+        >小明同学</a>
+      
+        <a style="display: block;" href="https://caoyang7.github.io/" title target='_blank'
+        >我班一位可爱的同学说把她加上</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Cai Suan &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/play.html" class="mobile-nav-link">打飞机</a>
+  
+    <a href="/gd-index.html" class="mobile-nav-link">光之快递员</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
