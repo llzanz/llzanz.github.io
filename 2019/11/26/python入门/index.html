@@ -10,15 +10,15 @@
   
   
   
-  <meta name="description" content="注释单行用# 多行用 ‘’’内容’’’ 或者 “””内容”””">
+  <meta name="description" content="注释单行注释：# 1#这是一段注释  多行注释：三个&amp;#39;&amp;#39;&amp;#39;或者&amp;quot;&amp;quot;&amp;quot; 1234&amp;apos;&amp;apos;&amp;apos;我是注释我也是注释&amp;apos;&amp;apos;&amp;apos;">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="python入门">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;26&#x2F;python%E5%85%A5%E9%97%A8&#x2F;index.html">
 <meta property="og:site_name" content="Zan">
-<meta property="og:description" content="注释单行用# 多行用 ‘’’内容’’’ 或者 “””内容”””">
+<meta property="og:description" content="注释单行注释：# 1#这是一段注释  多行注释：三个&amp;#39;&amp;#39;&amp;#39;或者&amp;quot;&amp;quot;&amp;quot; 1234&amp;apos;&amp;apos;&amp;apos;我是注释我也是注释&amp;apos;&amp;apos;&amp;apos;">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-26T13:04:35.744Z">
+<meta property="og:updated_time" content="2019-12-02T14:23:08.067Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
@@ -99,20 +99,53 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <h3 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h3><p>单行用#</p>
-<p>多行用 ‘’’内容’’’ 或者 “””内容”””</p>
+        <h2 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h2><p>单行注释：<code>#</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#这是一段注释</span></span><br></pre></td></tr></table></figure></div>
+
+<p>多行注释：三个<code>&#39;&#39;&#39;</code>或者<code>&quot;&quot;&quot;</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">我是注释</span></span><br><span class="line"><span class="string">我也是注释</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure></div>
+
+<hr>
 <a id="more"></a>
 
-<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>变量名加等号直接赋值</p>
-<h5 id="命名规范"><a href="#命名规范" class="headerlink" title="命名规范"></a>命名规范</h5><ul>
-<li>禁止中文，推荐英文，其次拼音</li>
-<li>不能使用数字开头</li>
-<li>不能使用特殊符号，可以使用下划线_</li>
+<h2 id="语句分类"><a href="#语句分类" class="headerlink" title="语句分类"></a>语句分类</h2><p>单行语句</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(<span class="string">'hello world'</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>代码组/代码块</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> <span class="literal">True</span>:</span><br><span class="line">    print(<span class="string">'阿西bug，度日如年：指日子每天像过年一样开心'</span>)</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h2 id="命名方式"><a href="#命名方式" class="headerlink" title="命名方式"></a>命名方式</h2><h3 id="规范"><a href="#规范" class="headerlink" title="规范"></a>规范</h3><ul>
+<li>禁止使用中文，推荐英文，可以拼音</li>
+<li>不能以数字开通</li>
+<li>不能使用特殊符号，可以使用下划线<code>_</code></li>
 <li>严格区分大小写</li>
 <li>不能和保留关键字冲突</li>
 <li>要有意义</li>
 </ul>
-<p>如何查看关键字：<code>import keyword</code>导入模块 关键字、<code>print keyword.kwlist</code>打印关键字</p>
+<h3 id="命名方法"><a href="#命名方法" class="headerlink" title="命名方法"></a>命名方法</h3><p>驼峰命名法：</p>
+<p>​    大驼峰：<code>UserInfo</code>,<code>ArticleList</code></p>
+<p>​    小驼峰：<code>goodsList</code>,<code>dataInfo</code></p>
+<p>下划线分隔命名：<code>user_info</code>,<code>data_list</code></p>
+<h3 id="关键字"><a href="#关键字" class="headerlink" title="关键字"></a>关键字</h3><p>查看关键字：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> keyword</span><br><span class="line">print(keyword.kwlist)</span><br><span class="line"><span class="string">'''</span></span><br><span class="line"><span class="string">['False', 'None', 'True', 'and', 'as', 'assert', 'async', 'await', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'nonlocal', 'not', 'or', 'pass', 'raise', 'return', 'try', 'while', 'with', 'yield']</span></span><br><span class="line"><span class="string">'''</span></span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h2 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h2><h3 id="赋值"><a href="#赋值" class="headerlink" title="赋值"></a>赋值</h3><p><code>变量 = 值</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">age = <span class="number">17</span></span><br></pre></td></tr></table></figure></div>
+
+<p>多个变量赋同一个值：<code>变量1 = 变量2 = 变量3 = 值</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">var1 = var2 = var3 = <span class="string">'hellow'</span></span><br></pre></td></tr></table></figure></div>
+
+<p>多个变量同时分别赋不同的值：<code>变量1,变量2,变量3 = 值1,值2,值3</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">name, age, sex = <span class="string">'Y\'shtola'</span>, <span class="number">23</span>, <span class="string">'female'</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="变量交换"><a href="#变量交换" class="headerlink" title="变量交换"></a>变量交换</h4><p><code>变量1,变量2 = 变量2,变量1</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var1 = 17</span><br><span class="line">var2 = 23</span><br><span class="line">var1, var2 = var2, var1</span><br><span class="line">print(var1, var2)   # 23 17</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="常用操作"><a href="#常用操作" class="headerlink" title="常用操作"></a>常用操作</h3><p>获取值：直接通过变量名获取</p>
+<p>查看数据类型：<code>type(name)</code></p>
+<p>查看内存id标识：<code>id(name)</code></p>
 
       
     </div>
@@ -127,11 +160,11 @@
 <nav id="article-nav">
   <div class="article-nav-block">
     
-      <a href="/2019/11/27/DAY40/" id="article-nav-newer" class="article-nav-link-wrap">
+      <a href="/2019/11/26/%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" id="article-nav-newer" class="article-nav-link-wrap">
         <strong class="article-nav-caption"></strong>
         <div class="article-nav-title">
           
-            DAY40
+            数据类型
           
         </div>
       </a>
@@ -210,7 +243,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
     </div>
   </div>
 
@@ -222,23 +255,23 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
-            <a href="/2019/11/29/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/">字符串操作</a>
+            <a href="/2019/12/02/%E5%88%97%E8%A1%A8/">列表</a>
           </li>
         
           <li>
-            <a href="/2019/11/29/%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/">变量作用域</a>
+            <a href="/2019/12/02/DAY44/">DAY44</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/30/DAY43/">DAY43</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/29/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
           </li>
         
           <li>
             <a href="/2019/11/29/DAY42/">DAY42</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/28/%E5%87%BD%E6%95%B0/">函数</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/28/DAY41/">DAY41</a>
           </li>
         
       </ul>

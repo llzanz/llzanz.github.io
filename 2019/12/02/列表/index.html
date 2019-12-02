@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>列表 | Zan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="List列表一组有序数据的组合就是列表">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="列表">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;02&#x2F;%E5%88%97%E8%A1%A8&#x2F;index.html">
+<meta property="og:site_name" content="Zan">
+<meta property="og:description" content="List列表一组有序数据的组合就是列表">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-02T14:24:47.315Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/play.html" title
+        
+        >打飞机</a>
+      
+        <a class="nav-item" href="/gd-index.html" title
+        
+        >光之快递员</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-列表" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      列表
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/12/02/%E5%88%97%E8%A1%A8/" class="article-date">
+  <time datetime="2019-12-02T14:21:08.000Z" itemprop="datePublished">2019-12-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h3 id="List列表"><a href="#List列表" class="headerlink" title="List列表"></a>List列表</h3><p>一组有序数据的组合就是列表</p>
+<a id="more"></a>
+
+<h4 id="创建列表"><a href="#创建列表" class="headerlink" title="创建列表"></a>创建列表</h4><p>空列表：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">listvar = []</span><br><span class="line">print(listvar, type(listvar))   <span class="comment"># [] &lt;class 'list'&gt;</span></span><br><span class="line"></span><br><span class="line">listvar = list()</span><br><span class="line">print(listvar, type(listvar))   <span class="comment"># [] &lt;class 'list'&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>有数值的列表：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">listvar = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">print(listvar, type(listvar))   <span class="comment"># [1, 2, 3] &lt;class 'list'&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>或者将一个其他容器类型转换成列表。</p>
+<h4 id="列表操作"><a href="#列表操作" class="headerlink" title="列表操作"></a>列表操作</h4><h5 id="列表相加"><a href="#列表相加" class="headerlink" title="列表相加"></a>列表相加</h5><p>列表相加操作：<code>+</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var1 = [<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line">var2 = [<span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">var3 = var1 + var2</span><br><span class="line">print(var3)</span><br><span class="line"><span class="comment"># [1, 2, 2, 3]</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="列表相乘"><a href="#列表相乘" class="headerlink" title="列表相乘"></a>列表相乘</h5><p>列表相乘操作：<code>*</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var1 = [<span class="number">1</span>, <span class="number">2</span>]</span><br><span class="line">var2 = var1 * <span class="number">3</span></span><br><span class="line">print(var2)</span><br><span class="line"><span class="comment"># [1, 2, 1, 2, 1, 2]</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="索引操作"><a href="#索引操作" class="headerlink" title="索引操作"></a>索引操作</h5><p>访问列表中的值：<code>变量[索引]</code></p>
+<p>修改列表中的值：<code>变量[索引] = 新值</code></p>
+<p>删除列表中的值：<code>del 变量[索引]</code></p>
+<p>添加列表中的值：不可通过索引直接添加</p>
+<p>删除整个列表：<code>del 变量</code></p>
+<h5 id="列表的分片操作"><a href="#列表的分片操作" class="headerlink" title="列表的分片操作"></a>列表的分片操作</h5><p>分片获取列表</p>
+<p><code>变量[开始索引:结束索引]</code>从开始索引截取到结束索引，不包含结束索引</p>
+<p><code>变量[:结束索引]</code>从索引0开始截取到结束索引，不包含结束索引</p>
+<p><code>变量[开始索引:]</code>从开始索引截取到字符串结尾</p>
+<p>跳步分片，<code>变量[开始索引:结束索引:索引增加值]</code>从索引0开始到字符串结束，索引每次增加索引增加值</p>
+<p>列表分片赋值</p>
+<p>可以实现列表的增删改查操作。</p>
+<p>增加内容</p>
+<p><code>变量[开始索引:结束索引] = 列表数据</code>（注意开始索引与结束索引一致，在指定索引之前增加内容）</p>
+<p>删除内容</p>
+<p><code>变量[开始索引:结束索引] = []</code>（删除了开始索引到结束索引之间的数据，不包含结束索引位置）</p>
+<p>修改内容</p>
+<p><code>变量[开始索引:结束索引] = 列表数据</code>（一般保持删除多少，添加多少，就是修改操作）</p>
+<h5 id="成员检测"><a href="#成员检测" class="headerlink" title="成员检测"></a>成员检测</h5><p>检测一个数据是否在列表中：<code>值 in 列表</code>，结果返回布尔值</p>
+<p>检测一个数据是否不在列表中：<code>值 not in 列表</code>，结果返回布尔值</p>
+<h4 id="列表操作函数"><a href="#列表操作函数" class="headerlink" title="列表操作函数"></a>列表操作函数</h4><p>常用操作</p>
+<p><code>max()</code></p>
+<p>获取列表中的最大值或者多个参数中的最大值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">35</span>, <span class="number">656</span>, <span class="number">78</span>]</span><br><span class="line">result = max(var)</span><br><span class="line">print(result)	<span class="comment"># 656</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>min()</code></p>
+<p>获取列表中的最小值或者多个参数中的最小值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">35</span>, <span class="number">656</span>, <span class="number">78</span>]</span><br><span class="line">result = min(var)</span><br><span class="line">print(result)	<span class="comment"># 1</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>len()</code></p>
+<p>获取容器类数据的长度</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var = [1, 2, 35, 656, 78]</span><br><span class="line">result = len(var)</span><br><span class="line">print(result)	# 5</span><br></pre></td></tr></table></figure></div>
+
+<p><code>list()</code></p>
+<p>声明列表或者将其它容器类数据转换为列表</p>
+<h4 id="遍历列表"><a href="#遍历列表" class="headerlink" title="遍历列表"></a>遍历列表</h4><p><code>for ... in</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="keyword">for</span> v <span class="keyword">in</span> var:</span><br><span class="line">    print(v)</span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment"># 3</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>while</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">i = <span class="number">0</span></span><br><span class="line">var = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line"><span class="keyword">while</span> i &lt; len(var):</span><br><span class="line">    print(var[i])</span><br><span class="line">    i += <span class="number">1</span></span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment"># 3</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="列表内涵-列表推导式-list-content"><a href="#列表内涵-列表推导式-list-content" class="headerlink" title="列表内涵/列表推导式 list content"></a>列表内涵/列表推导式 list content</h4><p>列表推导式就是采用表达式的方式直接过滤数据并且返回新的列表的操作</p>
+<p>基本推导式：</p>
+<p><code>结果变量 = [变量 for 变量 in 列表]</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">listvar = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line">newlist =[i <span class="keyword">for</span> i <span class="keyword">in</span> listvar]</span><br><span class="line">print(newlist)    <span class="comment">#[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>带判断条件的推导式：</p>
+<p><code>结果变量 = [变量 for 变量 in 列表 条件表达式]</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listvar = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span>]</span><br><span class="line">newlist =[i <span class="keyword">for</span> i <span class="keyword">in</span> listvar <span class="keyword">if</span> i % <span class="number">2</span> == <span class="number">0</span>]</span><br><span class="line">print(newlist)</span><br><span class="line"><span class="comment"># [2, 4, 6, 8, 10]</span></span><br></pre></td></tr></table></figure></div>
+
+<p>多循环列表推导式：</p>
+<p><code>结果变量 = [变量1 运算 变量2 for 变量1 in 列表1 for 变量2 in 列表2]</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">listvar1 = [<span class="string">'守序'</span>, <span class="string">'中立'</span>, <span class="string">'混乱'</span>]</span><br><span class="line">listvar2 = [<span class="string">'善良'</span>, <span class="string">'中立'</span>, <span class="string">'邪恶'</span>]</span><br><span class="line">newlist = [i + j <span class="keyword">for</span> i <span class="keyword">in</span> listvar1 <span class="keyword">for</span> j <span class="keyword">in</span> listvar2]</span><br><span class="line">print(newlist)</span><br><span class="line"><span class="comment">#['守序善良', '守序中立', '守序邪恶', '中立善良', '中立中立', '中立邪恶', '混乱善良', '混乱中立', '混乱邪恶']</span></span><br></pre></td></tr></table></figure></div>
+
+<p>带判断条件的多循环推导式：</p>
+<p><code>结果变量 = [变量1 运算 变量2 for 变量1 in 列表1 for 变量2 in 列表2 条件表达式]</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">listvar1 = [<span class="string">'守序'</span>, <span class="string">'中立'</span>, <span class="string">'混乱'</span>]</span><br><span class="line">listvar2 = [<span class="string">'善良'</span>, <span class="string">'中立'</span>, <span class="string">'邪恶'</span>]</span><br><span class="line">newlist = [i + j <span class="keyword">for</span> i <span class="keyword">in</span> listvar1 <span class="keyword">for</span> j <span class="keyword">in</span> listvar2 <span class="keyword">if</span> listvar1.index(i) == listvar2.index(j)]</span><br><span class="line">print(newlist)</span><br><span class="line"><span class="comment"># ['守序善良', '中立中立', '混乱邪恶']</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="列表专用函数"><a href="#列表专用函数" class="headerlink" title="列表专用函数"></a>列表专用函数</h4><p><code>append()</code></p>
+<p>功能：向列表的末尾添加新的元素<br>格式：<code>列表.append(值)</code><br>返回值：None<br>注意：新添加的值在列表的末尾，该函数直接操作原有列表</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listvar = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">result = listvar.append(<span class="number">4</span>)</span><br><span class="line">print(listvar, result)</span><br><span class="line"><span class="comment"># [1, 2, 3, 4] None</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>insert()</code></p>
+<p>功能：在指定位置之前插入元素<br>格式：<code>列表.insert(索引,值)</code><br>返回值：None<br>注意：直接改变原有列表</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listvar = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">result = listvar.insert(<span class="number">2</span>, <span class="number">4</span>)</span><br><span class="line">print(listvar, result)</span><br><span class="line"><span class="comment"># [1, 2, 4, 3] None</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>pop()</code></p>
+<p>功能：在列表中移除一个元素<br>格式：<code>列表.pop(索引)</code><br>返回值：删除的值<br>注意：没有指定索引，默认移除最后一个元素</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listvar = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">result = listvar.pop(<span class="number">1</span>)</span><br><span class="line">print(listvar, result)</span><br><span class="line"><span class="comment"># [1, 3] 2</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>remove()</code></p>
+<p>功能：移除指定的值<br>格式：<code>列表.remove(值)</code><br>返回值：None<br>注意：如果有索引的清空下推荐使用POP移除，效率比remove高</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listvar = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">result = listvar.remove(<span class="number">2</span>)</span><br><span class="line">print(listvar, result)</span><br><span class="line">[<span class="number">1</span>, <span class="number">3</span>] <span class="literal">None</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>clear()</code></p>
+<p>功能：清空列表中所有元素<br>格式：<code>列表.clear()</code><br>返回值：None</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listvar = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">result = listvar.clear()</span><br><span class="line">print(listvar, result)</span><br><span class="line">[] <span class="literal">None</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>copy()</code></p>
+<p>功能：复制列表<br>格式：<code>列表.copy()</code><br>返回值：新的列表</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listvar = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">result = listvar.copy()</span><br><span class="line">print(listvar, result)</span><br><span class="line"><span class="comment"># [1, 2, 3] [1, 2, 3]</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>count()</code></p>
+<p>功能：计算某个元素出现的次数<br>格式：<code>列表.count(值)</code><br>返回值：整数</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listvar = [<span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">result = listvar.count(<span class="number">1</span>)</span><br><span class="line">print(listvar, result)</span><br><span class="line"><span class="comment"># [1, 1, 2, 3] 2</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>extend()</code></p>
+<p>功能：将两个列表合并为一个<br>格式：<code>列表.extend(列表)</code><br>返回值：None<br>注意：直接改变原有列表</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listvar = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">result = listvar.extend([<span class="number">1</span>, <span class="number">2</span>])</span><br><span class="line">print(listvar, result)</span><br><span class="line"><span class="comment"># [1, 2, 3, 1, 2] None</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>reverse()</code></p>
+<p>功能：列表反转操作<br>格式：<code>列表.reverse()</code><br>返回值：None</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listvar = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>]</span><br><span class="line">result = listvar.reverse()</span><br><span class="line">print(listvar, result)</span><br><span class="line"><span class="comment"># [3, 2, 1] None</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>sort()</code></p>
+<p>功能：列表排序</p>
+<p>格式：<code>列表.sort()</code>                                         按照从小到大排序（数字）<br>格式：<code>列表.sort(reverse=True)</code>                    按照从大到小排序（数字）<br>格式：<code>列表.sort(key=函数)</code>                            对值进行指定的函数处理之后在从小到大排序<br>格式：<code>列表.sort(key=函数，reverse=True)</code>    对值进行指定的函数处理之后在从大到小排序</p>
+<p>返回值：None<br>注意：直接改变原有列表</p>
+<p><code>index()</code></p>
+<p>功能：获取某个值在列表中的索引<br>格式：<code>列表.index(值)</code><br>返回值：整数<br>注意：值不存在与列表时抛出异常错误！</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listvar = [1, 2, 3]</span><br><span class="line">result = listvar.index(2)</span><br><span class="line">print(listvar, result)</span><br><span class="line"># [1, 2, 3] 1</span><br></pre></td></tr></table></figure></div>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/02/DAY44/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">DAY44</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自米路可缇书"></img>
+    <h3 class="avatar-name">
+      
+        一颗酸菜
+      
+    </h3>
+    <p class="avatar-slogan">
+      又酸又菜，未来铲屎官，FF14er，zhihaoduonianjingzhuibing。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E6%8A%A5/">日报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/">课后练习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/" rel="tag">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/" rel="tag">sass</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/02/%E5%88%97%E8%A1%A8/">列表</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/02/DAY44/">DAY44</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/30/DAY43/">DAY43</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/29/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/29/DAY42/">DAY42</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://weibo.com/yorukosama?refer_flag=1005050005_&is_all=1" title target='_blank'
+        >米路可缇书</a>
+      
+        <a style="display: block;" href="https://victorfengming.github.io/" title target='_blank'
+        >小明同学</a>
+      
+        <a style="display: block;" href="https://caoyang7.github.io/" title target='_blank'
+        >我班一位可爱的同学说把她加上</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Cai Suan &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/play.html" class="mobile-nav-link">打飞机</a>
+  
+    <a href="/gd-index.html" class="mobile-nav-link">光之快递员</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

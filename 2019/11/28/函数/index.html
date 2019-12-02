@@ -10,15 +10,15 @@
   
   
   
-  <meta name="description" content="定义一个函数123456def buyPC(cpu=&amp;apos;I5&amp;apos;, memory=&amp;apos;4G&amp;apos;, videocard=&amp;apos;2060&amp;apos;):    print(&amp;apos;CPU是&amp;apos; + cpu)    print(&amp;apos;内存是&amp;apos; + memory)    print(&amp;apos;显卡是&amp;apos; + videocard)buyPC()">
+  <meta name="description" content="函数函数是能够实现特定功能的计算机代码，它是一种特定的代码组结构。 函数的作用 提高代码的重复利用率，便面重复开发相同代码 提高程序的开发效率 便于程序维护">
 <meta name="keywords" content="python">
 <meta property="og:type" content="article">
 <meta property="og:title" content="函数">
 <meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;28&#x2F;%E5%87%BD%E6%95%B0&#x2F;index.html">
 <meta property="og:site_name" content="Zan">
-<meta property="og:description" content="定义一个函数123456def buyPC(cpu=&amp;apos;I5&amp;apos;, memory=&amp;apos;4G&amp;apos;, videocard=&amp;apos;2060&amp;apos;):    print(&amp;apos;CPU是&amp;apos; + cpu)    print(&amp;apos;内存是&amp;apos; + memory)    print(&amp;apos;显卡是&amp;apos; + videocard)buyPC()">
+<meta property="og:description" content="函数函数是能够实现特定功能的计算机代码，它是一种特定的代码组结构。 函数的作用 提高代码的重复利用率，便面重复开发相同代码 提高程序的开发效率 便于程序维护">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-11-28T11:59:07.378Z">
+<meta property="og:updated_time" content="2019-12-02T14:24:11.403Z">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
@@ -78,7 +78,7 @@
   
   <div class="article-meta">
     <a href="/2019/11/28/%E5%87%BD%E6%95%B0/" class="article-date">
-  <time datetime="2019-11-28T11:58:06.000Z" itemprop="datePublished">2019-11-28</time>
+  <time datetime="2019-11-28T14:58:06.000Z" itemprop="datePublished">2019-11-28</time>
 </a>
     
   <div class="article-category">
@@ -99,28 +99,112 @@
     
     <div class="article-content article-content-cloud" itemprop="articleBody">
       
-        <h4 id="定义一个函数"><a href="#定义一个函数" class="headerlink" title="定义一个函数"></a>定义一个函数</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">buyPC</span><span class="params">(cpu=<span class="string">'I5'</span>, memory=<span class="string">'4G'</span>, videocard=<span class="string">'2060'</span>)</span>:</span></span><br><span class="line">    print(<span class="string">'CPU是'</span> + cpu)</span><br><span class="line">    print(<span class="string">'内存是'</span> + memory)</span><br><span class="line">    print(<span class="string">'显卡是'</span> + videocard)</span><br><span class="line"></span><br><span class="line">buyPC()</span><br></pre></td></tr></table></figure></div>
-
+        <h2 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h2><p>函数是能够实现特定功能的计算机代码，它是<strong>一种特定的代码组结构</strong>。</p>
+<h3 id="函数的作用"><a href="#函数的作用" class="headerlink" title="函数的作用"></a>函数的作用</h3><ul>
+<li>提高代码的重复利用率，便面重复开发相同代码</li>
+<li>提高程序的开发效率</li>
+<li>便于程序维护</li>
+</ul>
 <a id="more"></a>
 
-<p>函数中的形参可以赋一个默认值</p>
-<p>关键字参数</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">buyPC</span><span class="params">(cpu=<span class="string">'I5'</span>, memory=<span class="string">'4G'</span>, videocard=<span class="string">'2060'</span>)</span>:</span></span><br><span class="line">    print(<span class="string">'CPU是'</span> + cpu)</span><br><span class="line">    print(<span class="string">'内存是'</span> + memory)</span><br><span class="line">    print(<span class="string">'显卡是'</span> + videocard)</span><br><span class="line"></span><br><span class="line">buyPC(videocard=<span class="string">'2080Ti'</span>, memory = <span class="string">'16G'</span>)</span><br></pre></td></tr></table></figure></div>
+<h3 id="函数的定义"><a href="#函数的定义" class="headerlink" title="函数的定义"></a>函数的定义</h3><h4 id="基本格式"><a href="#基本格式" class="headerlink" title="基本格式"></a>基本格式</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> 函数名<span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></div>
 
-<p>指定形参的实参的格式</p>
-<h5 id="收集参数"><a href="#收集参数" class="headerlink" title="收集参数"></a>收集参数</h5><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getsum</span><span class="params">(*allnum)</span>:</span></span><br><span class="line">    a = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> allnum:</span><br><span class="line">        a += i</span><br><span class="line">    print(a)</span><br><span class="line"></span><br><span class="line">getsum(<span class="number">1</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">78</span>, <span class="number">2</span>, <span class="number">7</span>)</span><br></pre></td></tr></table></figure></div>
+<h4 id="调用函数"><a href="#调用函数" class="headerlink" title="调用函数"></a>调用函数</h4><p><font color=#FF0000>函数不调用不执行。</font></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">funName</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">funName()	<span class="comment"># 调用</span></span><br></pre></td></tr></table></figure></div>
 
-<p>收集参数只可接受普通参数，不能接受关键字参数</p>
-<h4 id="关键字收集参数"><a href="#关键字收集参数" class="headerlink" title="关键字收集参数"></a>关键字收集参数</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">showinfo</span><span class="params">(**person)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> k, v <span class="keyword">in</span> person.items():</span><br><span class="line">        print(<span class="string">'参与大会的人有：'</span> + k)</span><br><span class="line">        print(<span class="string">'他的年龄分别是：'</span> + str(v))</span><br><span class="line"></span><br><span class="line">showinfo(xh=<span class="number">18</span>, xm=<span class="number">20</span>, ll=<span class="number">17</span>)</span><br></pre></td></tr></table></figure></div>
+<h4 id="带有参数的函数"><a href="#带有参数的函数" class="headerlink" title="带有参数的函数"></a>带有参数的函数</h4><p>形参：形式上的参数，声明函数时，括号()中的参数，是形参。<br>实参：实际上的参数，调用函数是，括号()中的参数，是实参。<br>实参将值传递给形参的本质过程，本质上就是简单的变量赋值。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">buyPC</span><span class="params">(cpu, videocard)</span>:</span></span><br><span class="line">    print(<span class="string">'CPU是'</span> + cpu)</span><br><span class="line">    print(<span class="string">'显卡是'</span> + videocard)</span><br><span class="line"></span><br><span class="line">buyPC(<span class="string">'I5'</span>, <span class="string">'2060'</span>)</span><br><span class="line"><span class="comment"># CPU是I5</span></span><br><span class="line"><span class="comment"># 显卡是2060</span></span><br></pre></td></tr></table></figure></div>
 
-<p>关键字收集参数只可以收集没有形参接受的有关键字的参数，以字典存储</p>
-<h4 id="多种参数混合存在"><a href="#多种参数混合存在" class="headerlink" title="多种参数混合存在"></a>多种参数混合存在</h4><p>形参：普通形参<code>var</code>，收集参数<code>*var</code>，关键字收集参数<code>**var</code></p>
-<p>实参：普通实参88，关键字参数var=88</p>
-<h3 id="函数的返回值return"><a href="#函数的返回值return" class="headerlink" title="函数的返回值return"></a>函数的返回值return</h3><p>函数执行完毕以后可以得到一个结果，该结果可以被接收或使用</p>
-<p>return会终止函数执行</p>
-<h3 id="函数文档"><a href="#函数文档" class="headerlink" title="函数文档"></a>函数文档</h3><p>函数文档的三个部分：功能、参数、返回值</p>
-<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getsum</span><span class="params">(no1, no2)</span>:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    功能：计算参数1和参数2的和</span></span><br><span class="line"><span class="string">    :param no1:参数1</span></span><br><span class="line"><span class="string">    :param no2:参数2</span></span><br><span class="line"><span class="string">    :return:和</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    sum = no1 + no2</span><br><span class="line">    <span class="keyword">return</span> sum</span><br><span class="line"></span><br><span class="line">help(getsum)</span><br></pre></td></tr></table></figure></div>
+<h4 id="带有默认值的参数的格式"><a href="#带有默认值的参数的格式" class="headerlink" title="带有默认值的参数的格式"></a>带有默认值的参数的格式</h4><p>如果形参有默认值，调用时可以不需要传参，系统会直接使用参数的默认值。<br>调用时给有默认值的参数传参，实参会覆盖形参的默认值。本质上就是变量的重新赋值。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">buyPC</span><span class="params">(cpu=<span class="string">'I5'</span>, videocard=<span class="string">'2060'</span>)</span>:</span></span><br><span class="line">    print(<span class="string">'CPU是'</span> + cpu)</span><br><span class="line">    print(<span class="string">'显卡是'</span> + videocard)</span><br><span class="line"></span><br><span class="line">buyPC()</span><br><span class="line"><span class="comment"># CPU是I5</span></span><br><span class="line"><span class="comment"># 显卡是2060</span></span><br><span class="line">buyPC(<span class="string">'I7'</span>, <span class="string">'2070'</span>)</span><br><span class="line"><span class="comment"># CPU是I7</span></span><br><span class="line"><span class="comment"># 显卡是2070</span></span><br></pre></td></tr></table></figure></div>
 
+<h4 id="使用关键字参数格式"><a href="#使用关键字参数格式" class="headerlink" title="使用关键字参数格式"></a>使用关键字参数格式</h4><p>关键字参数就是调用函数时，在实参前面指定形参的做法，为了防止参数按照位置传递出现的错误。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">buyPC</span><span class="params">(cpu=<span class="string">'I5'</span>, videocard=<span class="string">'2060'</span>)</span>:</span></span><br><span class="line">    print(<span class="string">'CPU是'</span> + cpu)</span><br><span class="line">    print(<span class="string">'显卡是'</span> + videocard)</span><br><span class="line"></span><br><span class="line">buyPC(videocard=<span class="string">'2070'</span>)</span><br><span class="line"><span class="comment"># CPU是I5</span></span><br><span class="line"><span class="comment"># 显卡是2070</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="收集参数使用方法"><a href="#收集参数使用方法" class="headerlink" title="收集参数使用方法"></a>收集参数使用方法</h4><p>收集参数可以收集的参数不收数量限制</p>
+<h5 id="非关键字收集参数"><a href="#非关键字收集参数" class="headerlink" title="非关键字收集参数"></a>非关键字收集参数</h5><p>在形参前添加一个*即可<br>收集的实参会组成一个元组<br>接受没有任何形参接受的非关键字实参<br>可以和普通的形参共存</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getsum</span><span class="params">(*allnum)</span>:</span></span><br><span class="line">    a = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> allnum:</span><br><span class="line">        a += i</span><br><span class="line">    print(a)</span><br><span class="line"></span><br><span class="line">getsum(<span class="number">1</span>, <span class="number">4</span>, <span class="number">6</span>, <span class="number">78</span>, <span class="number">2</span>, <span class="number">7</span>)</span><br><span class="line"><span class="comment"># 98</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="关键字收集参数"><a href="#关键字收集参数" class="headerlink" title="关键字收集参数"></a>关键字收集参数</h5><p>在形参前添加两个*<br>收集的实参会组成一个字典，形参名作为键，值作为值<br>仅接收没有任何形参接收的关键字参数<br>可以和普通的形参共存</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">showinfo</span><span class="params">(**person)</span>:</span></span><br><span class="line">    <span class="keyword">for</span> k, v <span class="keyword">in</span> person.items():</span><br><span class="line">        print(<span class="string">'参与大会的人有：'</span> + k)</span><br><span class="line">        print(<span class="string">'他的年龄分别是：'</span> + str(v))</span><br><span class="line"></span><br><span class="line">showinfo(xh=<span class="number">18</span>, xm=<span class="number">20</span>, ll=<span class="number">17</span>)</span><br><span class="line"><span class="comment"># 参与大会的人有：xh</span></span><br><span class="line"><span class="comment"># 他的年龄分别是：18</span></span><br><span class="line"><span class="comment"># 参与大会的人有：xm</span></span><br><span class="line"><span class="comment"># 他的年龄分别是：20</span></span><br><span class="line"><span class="comment"># 参与大会的人有：ll</span></span><br><span class="line"><span class="comment"># 他的年龄分别是：17</span></span><br></pre></td></tr></table></figure></div>
+
+<p><strong>多种参数混合使用应当注意：</strong> 定义函数时尽量避免多种参数格式混合(普通参数，关键字参数，两种收集参数)</p>
+<ol>
+<li><p>普通参数和关键字参数必须在两种收集参数之前</p>
+</li>
+<li><p>非关键字收集参数，必须在关键字收集参数之前 </p>
+</li>
+<li><p>如果多种参数混合在一起用，必须注意禁止参数多次赋值操作(普通参数赋值在前，关键字参数赋值在后)</p>
+</li>
+</ol>
+<h4 id="返回值函数"><a href="#返回值函数" class="headerlink" title="返回值函数"></a>返回值函数</h4><p>根据执行函数完毕是否可以得到一个结果，我们可以将函数分为两种类型：</p>
+<ol>
+<li>执行过程函数，函数执行完毕之后，接受不到任何返回结果的函数。</li>
+</ol>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'1'</span>)</span><br><span class="line"></span><br><span class="line">var = fun()</span><br><span class="line">print(var)</span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># None</span></span><br></pre></td></tr></table></figure></div>
+
+<ol start="2">
+<li>具有返回值的函数，函数执行完毕之后，会产生一个结果，可以被接受和使用的函数。</li>
+</ol>
+<ul>
+<li><p>函数执行完毕以后可以得到一个结果，该结果可以被接收或使用</p>
+</li>
+<li><p>return会终止函数执行</p>
+</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getsum</span><span class="params">(no1, no2)</span>:</span></span><br><span class="line">    sum = no1 + no2</span><br><span class="line">    <span class="keyword">return</span> sum</span><br><span class="line"></span><br><span class="line">num = getsum(<span class="number">34</span>, <span class="number">67</span>)</span><br><span class="line">print(num)</span><br><span class="line"><span class="comment"># 101</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="递归函数"><a href="#递归函数" class="headerlink" title="递归函数"></a>递归函数</h4><p>在函数内调用函数本身的函数就是递归函数</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">tubie</span><span class="params">(num)</span>:</span></span><br><span class="line">    print(num)</span><br><span class="line">    <span class="keyword">if</span> num &gt; <span class="number">0</span>:</span><br><span class="line">        tubie(num - <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        print(<span class="string">'======='</span>)</span><br><span class="line">    print(num)</span><br><span class="line"></span><br><span class="line">tubie(<span class="number">2</span>)</span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 0</span></span><br><span class="line"><span class="comment"># =======</span></span><br><span class="line"><span class="comment"># 0</span></span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 2</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="函数文档"><a href="#函数文档" class="headerlink" title="函数文档"></a>函数文档</h3><p>函数文档就是用来查看当前函数相关信息介绍的一个特定格式。</p>
+<p>函数文档的三个部分：功能、参数、返回值</p>
+<h4 id="查看函数文档的方法"><a href="#查看函数文档的方法" class="headerlink" title="查看函数文档的方法"></a>查看函数文档的方法</h4><ol>
+<li><p><code>help(函数名)</code>：此方法会直接输出函数文档的内容</p>
+</li>
+<li><p><code>函数名.__doc__</code>：直接输出显示函数文档的内容元字符串</p>
+</li>
+</ol>
+<h4 id="定义函数文档的方法"><a href="#定义函数文档的方法" class="headerlink" title="定义函数文档的方法"></a>定义函数文档的方法</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">getsum</span><span class="params">(no1, no2)</span>:</span></span><br><span class="line">    <span class="string">'''</span></span><br><span class="line"><span class="string">    功能：计算参数1和参数2的和</span></span><br><span class="line"><span class="string">    :param no1:参数1</span></span><br><span class="line"><span class="string">    :param no2:参数2</span></span><br><span class="line"><span class="string">    :return:和</span></span><br><span class="line"><span class="string">    '''</span></span><br><span class="line">    sum = no1 + no2</span><br><span class="line">    <span class="keyword">return</span> sum</span><br><span class="line"></span><br><span class="line">help(getsum)</span><br><span class="line"><span class="comment"># getsum(no1, no2)</span></span><br><span class="line"><span class="comment">#    功能：计算参数1和参数2的和</span></span><br><span class="line"><span class="comment">#    :param no1:参数1</span></span><br><span class="line"><span class="comment">#    :param no2:参数2</span></span><br><span class="line"><span class="comment">#    :return:和</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="变量的作用域"><a href="#变量的作用域" class="headerlink" title="变量的作用域"></a>变量的作用域</h3><p>变量的作用域就是指变量的有效范围</p>
+<p>按照作用范围分为两类：<strong>全局变量</strong>、<strong>局部变量</strong></p>
+<h4 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h4><p>在函数外声明的变量。</p>
+<p>在函数外部可以使用，在函数内部可以<font color=#FF000>访问</font>。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var = <span class="number">1</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">()</span>:</span></span><br><span class="line">        print(var)</span><br><span class="line">    print(var)</span><br><span class="line">    fun1()</span><br><span class="line"></span><br><span class="line">fun()</span><br><span class="line">print(var)</span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 1</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h4><p>在函数内部声明的变量。</p>
+<p>在函数内部可以正常使用，在函数外部不可以访问。</p>
+<h4 id="global关键字"><a href="#global关键字" class="headerlink" title="global关键字"></a>global关键字</h4><p>作用：提升全局变量可以在函数内部使用、提升局部变量为全局变量。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">var = <span class="number">1</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> var</span><br><span class="line">    var += <span class="number">1</span></span><br><span class="line">    print(var)</span><br><span class="line"></span><br><span class="line">fun()</span><br><span class="line"><span class="comment"># 2</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> var</span><br><span class="line">    var = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">fun()</span><br><span class="line">var += <span class="number">1</span></span><br><span class="line">print(var)</span><br><span class="line"><span class="comment"># 1</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="keyword">global</span> var</span><br><span class="line">    var = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="keyword">global</span> var</span><br><span class="line">        var += <span class="number">1</span></span><br><span class="line">        print(var)</span><br><span class="line"></span><br><span class="line">    fun1()</span><br><span class="line"></span><br><span class="line">fun()</span><br><span class="line"><span class="comment"># 1</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="内部函数"><a href="#内部函数" class="headerlink" title="内部函数"></a>内部函数</h3><p>在函数内部声明的函数就是内部函数</p>
+<ul>
+<li><p>内部函数的本质就是局部变量(函数就是一个变量)</p>
+</li>
+<li><p>内部函数在函数外部不可以直接调用</p>
+</li>
+<li><p>内部函数在函数内部调用(当然，必须要定义内部函数之后才能调用)</p>
+</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">outfun</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">infun</span><span class="params">()</span>:</span></span><br><span class="line">        print(<span class="string">'内'</span>)</span><br><span class="line">    </span><br><span class="line">    print(<span class="string">'外'</span>)</span><br><span class="line">    infun()</span><br><span class="line"></span><br><span class="line">outfun()</span><br><span class="line"><span class="comment"># 外</span></span><br><span class="line"><span class="comment"># 内</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h4><p>占时莫得内容</p>
+<h4 id="nonlocal关键字"><a href="#nonlocal关键字" class="headerlink" title="nonlocal关键字"></a>nonlocal关键字</h4><p>nonlocal关键字的意义，不是局部变量，当然他也不是全局变量，通常用于内部函数中使用外部函数的局部变量。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">fun</span><span class="params">()</span>:</span></span><br><span class="line">    var = <span class="number">0</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fun1</span><span class="params">()</span>:</span></span><br><span class="line">        <span class="keyword">nonlocal</span> var</span><br><span class="line">        var += <span class="number">1</span></span><br><span class="line">        print(var)</span><br><span class="line"></span><br><span class="line">    fun1()</span><br><span class="line"></span><br><span class="line">fun()</span><br><span class="line"><span class="comment">#1</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="lambda表达式"><a href="#lambda表达式" class="headerlink" title="lambda表达式"></a>lambda表达式</h3><p>函数的另一种表示方式，本质上还是一个函数。</p>
+<h4 id="基本格式-1"><a href="#基本格式-1" class="headerlink" title="基本格式"></a>基本格式</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">getsum = <span class="keyword">lambda</span> no1, no2: no1 + no2</span><br><span class="line"></span><br><span class="line">print(getsum(<span class="number">34</span>, <span class="number">97</span>))</span><br><span class="line"><span class="comment"># 131</span></span><br></pre></td></tr></table></figure></div>
+
+<p>自带return，功能简单</p>
+<h4 id="带分支格式"><a href="#带分支格式" class="headerlink" title="带分支格式"></a>带分支格式</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">getsex = <span class="keyword">lambda</span> sex: <span class="string">'man'</span> <span class="keyword">if</span> sex == <span class="string">'男'</span> <span class="keyword">else</span> <span class="string">'woman'</span></span><br><span class="line"></span><br><span class="line">print(getsex(<span class="string">'男'</span>))</span><br><span class="line"><span class="comment"># man</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="偏函数"><a href="#偏函数" class="headerlink" title="偏函数"></a>偏函数</h3><p>python中偏函数作用是为了修改一个函数的默认值，而设置的一种特殊函数</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> functools</span><br><span class="line">print2 = functools.partial(<span class="keyword">print</span>, end=<span class="string">''</span>)</span><br><span class="line"></span><br><span class="line">print2(<span class="string">'###'</span>)</span><br><span class="line">print2(<span class="string">'$$$'</span>)</span><br><span class="line"><span class="comment"># ###$$$</span></span><br></pre></td></tr></table></figure></div>
       
     </div>
     
@@ -146,8 +230,8 @@
   </div>
   <div class="article-nav-block">
     
-      <a href="/2019/11/28/DAY41/" id="article-nav-older" class="article-nav-link-wrap">
-        <div class="article-nav-title">DAY41</div>
+      <a href="/2019/11/28/%E6%B5%81%E7%A8%8B%E6%8E%A7%E5%88%B6/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">流程控制</div>
         <strong class="article-nav-caption"></strong>
       </a>
     
@@ -217,7 +301,7 @@ gitment.render('gitmentContainer')
   <div class="widget-box">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
     </div>
   </div>
 
@@ -229,23 +313,23 @@ gitment.render('gitmentContainer')
       <ul>
         
           <li>
-            <a href="/2019/11/29/%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%93%8D%E4%BD%9C/">字符串操作</a>
+            <a href="/2019/12/02/%E5%88%97%E8%A1%A8/">列表</a>
           </li>
         
           <li>
-            <a href="/2019/11/29/%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/">变量作用域</a>
+            <a href="/2019/12/02/DAY44/">DAY44</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/30/DAY43/">DAY43</a>
+          </li>
+        
+          <li>
+            <a href="/2019/11/29/%E5%AD%97%E7%AC%A6%E4%B8%B2/">字符串</a>
           </li>
         
           <li>
             <a href="/2019/11/29/DAY42/">DAY42</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/28/%E5%87%BD%E6%95%B0/">函数</a>
-          </li>
-        
-          <li>
-            <a href="/2019/11/28/DAY41/">DAY41</a>
           </li>
         
       </ul>
