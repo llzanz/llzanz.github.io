@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>集合 | Zan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="Set集合确定的无序的一组数据就是集合。  不重复 无顺序 集合中可以使用整数，浮点数，布尔值，复数，字符串，元组，冰冻集合">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="集合">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;04&#x2F;%E9%9B%86%E5%90%88&#x2F;index.html">
+<meta property="og:site_name" content="Zan">
+<meta property="og:description" content="Set集合确定的无序的一组数据就是集合。  不重复 无顺序 集合中可以使用整数，浮点数，布尔值，复数，字符串，元组，冰冻集合">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-05T13:56:15.902Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/play.html" title
+        
+        >打飞机</a>
+      
+        <a class="nav-item" href="/gd-index.html" title
+        
+        >光之快递员</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-集合" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      集合
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/12/04/%E9%9B%86%E5%90%88/" class="article-date">
+  <time datetime="2019-12-04T13:41:01.000Z" itemprop="datePublished">2019-12-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h3 id="Set集合"><a href="#Set集合" class="headerlink" title="Set集合"></a>Set集合</h3><p>确定的无序的一组数据就是集合。</p>
+<ul>
+<li>不重复</li>
+<li>无顺序</li>
+<li>集合中可以使用整数，浮点数，布尔值，复数，字符串，元组，冰冻集合</li>
+</ul>
+<a id="more"></a>
+
+<h4 id="创建集合"><a href="#创建集合" class="headerlink" title="创建集合"></a>创建集合</h4><p>空集合</p>
+<p><code>变量 = set()</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setvar = set()</span><br><span class="line">print(setvar, type(setvar))</span><br><span class="line"><span class="comment"># set() &lt;class 'set'&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>有数据的集合</p>
+<p><code>变量 = {值,值,值...}</code>，存在相同数据时只保留一个。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setvar = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">print(setvar, type(setvar))</span><br><span class="line"><span class="comment"># &#123;1, 2, 3&#125; &lt;class 'set'&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h4><p>集合没有基本操作</p>
+<h4 id="序列操作"><a href="#序列操作" class="headerlink" title="序列操作"></a>序列操作</h4><h5 id="成员检测"><a href="#成员检测" class="headerlink" title="成员检测"></a>成员检测</h5><p>检测一个数据是否在集合中：<code>值 in 集合</code>，结果返回布尔值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setvar = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">result = <span class="number">1</span> <span class="keyword">in</span> setvar</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># True</span></span><br></pre></td></tr></table></figure></div>
+
+<p>检测一个数据是否不在集合中：<code>值 not in 集合</code>，结果返回布尔值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setvar = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">result = <span class="number">4</span> <span class="keyword">not</span> <span class="keyword">in</span> setvar</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># True</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="序列函数"><a href="#序列函数" class="headerlink" title="序列函数"></a>序列函数</h4><p>获取集合中的最大值：<code>max()</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setvar = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">result = max(setvar)</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># 3</span></span><br></pre></td></tr></table></figure></div>
+
+<p>获取集合中的最小值：<code>min()</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setvar = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">result = min(setvar)</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># 1</span></span><br></pre></td></tr></table></figure></div>
+
+<p>获取集合的长度：<code>len()</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setvar = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">result = len(setvar)</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># 3</span></span><br></pre></td></tr></table></figure></div>
+
+<p>创建空集合或者将其它容器类数据转换为集合：<code>set()</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setvar = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">3</span>]</span><br><span class="line">result = set(setvar)</span><br><span class="line">print(result, type(result))</span><br><span class="line"><span class="comment"># &#123;1, 2, 3&#125; &lt;class 'set'&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="遍历集合"><a href="#遍历集合" class="headerlink" title="遍历集合"></a>遍历集合</h4><p><code>for ... in</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">setvar = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line"><span class="keyword">for</span> v <span class="keyword">in</span> setvar:</span><br><span class="line">    print(v)</span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment"># 3</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="集合推导式"><a href="#集合推导式" class="headerlink" title="集合推导式"></a>集合推导式</h4><p>普通的集合推导式</p>
+<p><code>变量 = {变量 for 变量 in 集合}</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setvar = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">result = &#123;v * <span class="number">3</span> <span class="keyword">for</span> v <span class="keyword">in</span> setvar&#125;</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># &#123;9, 3, 6&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>带有判断条件的推导式</p>
+<p><code>变量 = {变量 for 变量 in 集合 if}</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setvar = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">result = &#123;v * <span class="number">3</span> <span class="keyword">for</span> v <span class="keyword">in</span> setvar <span class="keyword">if</span> v &gt; <span class="number">1</span>&#125;</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># &#123;9, 6&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>多循环推导式</p>
+<p><code>变量 = {变量1 变量2 变量1 for in 集合1 变量2 for in 集合2 }</code>    </p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setvar1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">setvar2 = &#123;<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br><span class="line">result = &#123;v * j <span class="keyword">for</span> v <span class="keyword">in</span> setvar1 <span class="keyword">for</span> j <span class="keyword">in</span> setvar2&#125;</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># &#123;4, 5, 6, 8, 10, 12, 15, 18&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>带有判断条件的多循环推导式</p>
+<p><code>变量 = {变量1 变量2 变量1 for in 集合1 变量2 for in 集合2 if}</code>    </p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setvar1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">setvar2 = &#123;<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br><span class="line">result = &#123;v * j <span class="keyword">for</span> v <span class="keyword">in</span> setvar1 <span class="keyword">for</span> j <span class="keyword">in</span> setvar2 <span class="keyword">if</span> v &gt; <span class="number">1</span> <span class="keyword">and</span> j &gt; <span class="number">4</span>&#125;</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># &#123;10, 18, 12, 15&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="集合专用函数"><a href="#集合专用函数" class="headerlink" title="集合专用函数"></a>集合专用函数</h4><p><code>add()</code></p>
+<p>向集合中添加一个元素<br>格式：<code>集合.add(值)</code><br>返回值：None<br>注意：直接改变原有集合</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setvar = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">result = setvar.add(<span class="number">4</span>)</span><br><span class="line">print(setvar, result)</span><br><span class="line"><span class="comment"># &#123;1, 2, 3, 4&#125; None</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>pop()</code></p>
+<p>随机删除集合中的一个元素<br>格式：<code>集合.pop()</code><br>返回值：删除的那个元素<br>注意：直接改变原有集合</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setvar = &#123;<span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">result = setvar.pop()</span><br><span class="line">print(setvar, result)</span><br><span class="line"><span class="comment"># &#123;2, 3, 4&#125; 1</span></span><br></pre></td></tr></table></figure></div>
+
+<p>remove()</p>
+<p>删除集合中的某个元素<br>格式：<code>集合.remove(值)</code><br>返回值：None<br>注意：直接改变原有集合，如果没有这个值会报错</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setvar = &#123;<span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">result = setvar.remove(<span class="number">3</span>)</span><br><span class="line">print(setvar, result)</span><br><span class="line"><span class="comment"># &#123;1, 2, 4&#125; None</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>discard()</code></p>
+<p>删除集合中的某个元素<br>格式：<code>集合.dicard(值)</code><br>返回值：None<br>注意：直接改变原有集合，如果没有这个值不会报错</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">setvar = &#123;<span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">result = setvar.discard(<span class="number">5</span>)</span><br><span class="line">print(setvar, result)</span><br><span class="line"><span class="comment"># &#123;1, 2, 3, 4&#125; None</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>clear()</code></p>
+<p>清空集合<br>格式：<code>集合.clear()</code><br>返回值：None<br>注意：直接改变原有集合</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">setvar = &#123;<span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">print(id(setvar))</span><br><span class="line">result = setvar.clear()</span><br><span class="line">print(setvar, result)</span><br><span class="line">print(id(setvar))</span><br><span class="line"><span class="comment"># 49607032</span></span><br><span class="line"><span class="comment"># set() None</span></span><br><span class="line"><span class="comment"># 49607032</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>copy()</code></p>
+<p>复制集合<br>格式：<code>集合.copy()</code><br>返回值：复制的一份集合</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">setvar = &#123;<span class="number">2</span>, <span class="number">1</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">result = setvar.copy()</span><br><span class="line">print(setvar, result)</span><br><span class="line">print(id(setvar), id(result))</span><br><span class="line"><span class="comment"># &#123;1, 2, 3, 4&#125; &#123;1, 2, 3, 4&#125;</span></span><br><span class="line"><span class="comment"># 62910840 61411928</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>difference()</code></p>
+<p>差集<br>格式：<code>集合1.difference(集合2)</code><br>返回值：集合<br>操作：获取存在于集合1但是不存在与集合2中的数据的集合</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setvar1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">setvar2 = &#123;<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br><span class="line">result = setvar1.difference(setvar2)</span><br><span class="line">print(result, setvar1, setvar2)</span><br><span class="line"><span class="comment"># &#123;1, 2&#125; &#123;1, 2, 3, 4&#125; &#123;3, 4, 5, 6&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>difference_update()</code></p>
+<p>差集 更新<br>格式：<code>集合1.difference(集合2)</code><br>返回值：无 直接将结果赋值给集合1<br>操作：获取存在于集合1但是不存在与集合2中的数据的集合</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setvar1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">setvar2 = &#123;<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br><span class="line">result = setvar1.difference_update(setvar2)</span><br><span class="line">print(result, setvar1, setvar2)</span><br><span class="line"><span class="comment"># None &#123;1, 2&#125; &#123;3, 4, 5, 6&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>intersection()</code></p>
+<p>交集<br>格式：<code>集合1.intersection(集合2)</code><br>返回值：集合<br>操作：获取即存在于集合1又存在于集合2中的数据组成的集合</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setvar1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">setvar2 = &#123;<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br><span class="line">result = setvar1.intersection(setvar2)</span><br><span class="line">print(result, setvar1, setvar2)</span><br><span class="line"><span class="comment"># &#123;3, 4&#125; &#123;1, 2, 3, 4&#125; &#123;3, 4, 5, 6&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>intersection_update()</code></p>
+<p>交集更新<br>格式：<code>集合1.intersection_update(集合2)</code><br>返回值：None  直接将结果赋值给集合1<br>操作：获取即存在于集合1又存在于集合2中的数据组成的集合</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setvar1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">setvar2 = &#123;<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br><span class="line">result = setvar1.intersection_update(setvar2)</span><br><span class="line">print(result, setvar1, setvar2)</span><br><span class="line"><span class="comment"># None &#123;3, 4&#125; &#123;3, 4, 5, 6&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>union()</code></p>
+<p>并集<br>格式：<code>集合1.union(集合2)</code><br>返回值：集合<br>操作：将集合1和集合2中所有数据新建一个集合（去重）</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setvar1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">setvar2 = &#123;<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br><span class="line">result = setvar1.union(setvar2)</span><br><span class="line">print(result, setvar1, setvar2)</span><br><span class="line"><span class="comment"># &#123;1, 2, 3, 4, 5, 6&#125; &#123;1, 2, 3, 4&#125; &#123;3, 4, 5, 6&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>update()</code></p>
+<p>并集更新<br>格式：<code>集合1.update(集合2)</code><br>返回值：无   直接将结果赋值给集合1<br>操作：将集合1和集合2中所有数据新建一个集合(去重)</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setvar1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>&#125;</span><br><span class="line">setvar2 = &#123;<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br><span class="line">result = setvar1.update(setvar2)</span><br><span class="line">print(result, setvar1, setvar2)</span><br><span class="line"><span class="comment"># None &#123;1, 2, 3, 4, 5, 6&#125; &#123;3, 4, 5, 6&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>issuperset()</code></p>
+<p>检测一个集合是不是另外一个集合的超集<br>格式：<code>集合1.issuperset(集合2)</code><br>返回值：布尔值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setvar1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br><span class="line">setvar2 = &#123;<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br><span class="line">result = setvar1.issuperset(setvar2)</span><br><span class="line">print(result, setvar1, setvar2)</span><br><span class="line"><span class="comment"># True &#123;1, 2, 3, 4, 5, 6&#125; &#123;3, 4, 5, 6&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>issubset()</code></p>
+<p>检测一个集合是不是另外一个集合的字节<br>格式：<code>集合1.issubset(集合2)</code><br>返回值：布尔值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setvar1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br><span class="line">setvar2 = &#123;<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br><span class="line">result = setvar2.issubset(setvar1)</span><br><span class="line">print(result, setvar1, setvar2)</span><br><span class="line"><span class="literal">True</span> &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125; &#123;<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br></pre></td></tr></table></figure></div>
+
+<p><code>isdisjoint()</code></p>
+<p>检测2个集合是否不相交<br>格式：<code>集合1.isdisjoint(集合)</code><br>返回值：布尔值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setvar1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>&#125;</span><br><span class="line">setvar2 = &#123;<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>&#125;</span><br><span class="line">result = setvar2.isdisjoint(setvar1)</span><br><span class="line">print(result, setvar1, setvar2)</span><br><span class="line"><span class="comment"># True &#123;1, 2, 3&#125; &#123;4, 5, 6&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>symmetric_difference()</code></p>
+<p>对称差集操作<br>格式：<code>集合1.symmetric_difference（集合2）</code><br>返回值：集合<br>操作：将集合1和集合2不相交的部分取出组成的新的集合</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setvar1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;</span><br><span class="line">setvar2 = &#123;<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>&#125;</span><br><span class="line">result = setvar2.symmetric_difference(setvar1)</span><br><span class="line">print(result, setvar1, setvar2)</span><br><span class="line"><span class="comment"># &#123;1, 2, 3, 6, 7, 8&#125; &#123;1, 2, 3, 4, 5&#125; &#123;4, 5, 6, 7, 8&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>symmetric_difference_update()</code></p>
+<p>对称差集更新操作<br>格式：<code>集合1.symmetric_difference（集合2）</code><br>返回值：None 直接将结果赋值给集合1<br>操作：将集合1和集合2不相交的部分取出组成的新的集合</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">setvar1 = &#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>&#125;</span><br><span class="line">setvar2 = &#123;<span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>&#125;</span><br><span class="line">result = setvar2.symmetric_difference_update(setvar1)</span><br><span class="line">print(result, setvar1, setvar2)</span><br><span class="line"><span class="comment"># None &#123;1, 2, 3, 4, 5&#125; &#123;1, 2, 3, 6, 7, 8&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="冰冻集合-固定集合"><a href="#冰冻集合-固定集合" class="headerlink" title="冰冻集合/固定集合"></a>冰冻集合/固定集合</h4><p>一旦创建就不可以进行修改。</p>
+<p>作用：为集合的操作提供一个不可以改变的对照集合。</p>
+<h5 id="创建冰冻集合"><a href="#创建冰冻集合" class="headerlink" title="创建冰冻集合"></a>创建冰冻集合</h5><p>空冰冻集合</p>
+<p><code>变量 = frozenset()</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setvar = frozenset()</span><br><span class="line">print(setvar, type(setvar))</span><br><span class="line"><span class="comment"># frozenset() &lt;class 'frozenset'&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>创建有数据冰冻集合</p>
+<p><code>变量 = frozenset(容器类数据)</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listvar = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">6</span>, <span class="number">6</span>]</span><br><span class="line">result = frozenset(listvar)</span><br><span class="line">print(result, type(result))</span><br><span class="line"><span class="comment"># frozenset(&#123;1, 2, 3, 4, 5, 6&#125;) &lt;class 'frozenset'&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a>遍历</h5><p><code>for ... in</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">setvar = frozenset([<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>])</span><br><span class="line"><span class="keyword">for</span> v <span class="keyword">in</span> setvar:</span><br><span class="line">    print(v)</span><br><span class="line"><span class="comment"># 1</span></span><br><span class="line"><span class="comment"># 2</span></span><br><span class="line"><span class="comment"># 3</span></span><br></pre></td></tr></table></figure></div>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/04/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            文件操作
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/03/%E5%AD%97%E5%85%B8/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">字典</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自米路可缇书"></img>
+    <h3 class="avatar-name">
+      
+        一颗酸菜
+      
+    </h3>
+    <p class="avatar-slogan">
+      又酸又菜，未来铲屎官，FF14er，zhihaoduonianjingzhuibing。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E6%8A%A5/">日报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/">课后练习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/" rel="tag">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/" rel="tag">sass</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/05/%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97I/">常用模块I</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/05/DAY47/">DAY47</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/04/DAY46/">DAY46</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/04/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">文件操作</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/04/%E9%9B%86%E5%90%88/">集合</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://weibo.com/yorukosama?refer_flag=1005050005_&is_all=1" title target='_blank'
+        >米路可缇书</a>
+      
+        <a style="display: block;" href="https://victorfengming.github.io/" title target='_blank'
+        >小明同学</a>
+      
+        <a style="display: block;" href="https://caoyang7.github.io/" title target='_blank'
+        >我班一位可爱的同学说把她加上</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Cai Suan &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/play.html" class="mobile-nav-link">打飞机</a>
+  
+    <a href="/gd-index.html" class="mobile-nav-link">光之快递员</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

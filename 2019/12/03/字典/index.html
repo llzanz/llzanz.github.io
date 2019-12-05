@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>字典 | Zan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="Dict字典以键值对方式存在的无序数据的组合就是字典 创建字典创建空字典 变量 = {} 123dictvar = &amp;#123;&amp;#125;print(dictvar, type(dictvar))# &amp;#123;&amp;#125; &amp;lt;class &amp;apos;dict&amp;apos;&amp;gt;">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="字典">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;03&#x2F;%E5%AD%97%E5%85%B8&#x2F;index.html">
+<meta property="og:site_name" content="Zan">
+<meta property="og:description" content="Dict字典以键值对方式存在的无序数据的组合就是字典 创建字典创建空字典 变量 = {} 123dictvar = &amp;#123;&amp;#125;print(dictvar, type(dictvar))# &amp;#123;&amp;#125; &amp;lt;class &amp;apos;dict&amp;apos;&amp;gt;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-05T13:55:53.683Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/play.html" title
+        
+        >打飞机</a>
+      
+        <a class="nav-item" href="/gd-index.html" title
+        
+        >光之快递员</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-字典" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      字典
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/12/03/%E5%AD%97%E5%85%B8/" class="article-date">
+  <time datetime="2019-12-03T13:41:10.000Z" itemprop="datePublished">2019-12-03</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h3 id="Dict字典"><a href="#Dict字典" class="headerlink" title="Dict字典"></a>Dict字典</h3><p>以键值对方式存在的无序数据的组合就是字典</p>
+<h4 id="创建字典"><a href="#创建字典" class="headerlink" title="创建字典"></a>创建字典</h4><p>创建空字典</p>
+<p><code>变量 = {}</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dictvar = &#123;&#125;</span><br><span class="line">print(dictvar, type(dictvar))</span><br><span class="line"><span class="comment"># &#123;&#125; &lt;class 'dict'&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<a id="more"></a>
+
+<p><code>变量 = dict()</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">dictvar = dict()</span><br><span class="line">print(dictvar, type(dictvar))</span><br><span class="line"><span class="comment"># &#123;&#125; &lt;class 'dict'&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>创建多个元素字典</p>
+<p><code>变量 = {键:值,键:值,键:值,键:值...}</code></p>
+<p><code>变量 = dict(形参 = 值,形参=值...)</code></p>
+<p><code>变量 = dict(符合条件的嵌套容器)</code>             #容器必须是列表或者元组</p>
+<p><code>变量 = dict(zip(键的容器,值的容器))</code>    #容器必须是列表或者元组</p>
+<h4 id="基本操作"><a href="#基本操作" class="headerlink" title="基本操作"></a>基本操作</h4><p>访问字典中的值：<code>字典[键]</code></p>
+<p>给字典添加值：<code>字典[新键] = 新值</code></p>
+<p>修改字典中的值：<code>字典[已存在的键] = 新值</code></p>
+<p>删除字典中的值：<code>del 字典[键]</code></p>
+<h4 id="序列操作"><a href="#序列操作" class="headerlink" title="序列操作"></a>序列操作</h4><p>字典没有加法与乘法运算，字典数据类型没有索引，所以无法索引，分片操作</p>
+<h5 id="成员检测"><a href="#成员检测" class="headerlink" title="成员检测"></a>成员检测</h5><p>检测一个数据是否在字典中：<code>值 in 字典</code>，结果返回布尔值</p>
+<p>检测一个数据是否不在字典中：<code>值 not in 字典</code>，结果返回布尔值</p>
+<h4 id="序列函数"><a href="#序列函数" class="headerlink" title="序列函数"></a>序列函数</h4><p>获取字典中键的最大值：<code>max()</code></p>
+<p>获取字典中键的最小值：<code>min()</code></p>
+<p>获取容器类数据的长度：<code>len()</code></p>
+<p>创建字典类型或者将其它数据类型转换为字典：<code>dict()</code></p>
+<h4 id="遍历字典"><a href="#遍历字典" class="headerlink" title="遍历字典"></a>遍历字典</h4><p>基本格式</p>
+<p><code>for 变量 in 字典:</code></p>
+<p>注意：该循环中变量获取的是字典的键而非值，如果要获取值 使用字典[键变量]</p>
+<p>仅遍历键</p>
+<p><code>for 变量 in 字典.keys():</code></p>
+<p>仅遍历值</p>
+<p><code>for 变量 in 字典.values():</code></p>
+<p>同时遍历键和值</p>
+<p><code>for 变量1,变量2 in 字典.items():</code></p>
+<h4 id="字典推导式"><a href="#字典推导式" class="headerlink" title="字典推导式"></a>字典推导式</h4><p>基本推导式</p>
+<p><code>变量 = {变量1:变量2 for 变量1,变量2 in 字典.items()}</code></p>
+<p>带有判断条件的推导式</p>
+<p><code>变量 = {变量1:变量2 for 变量1,变量2 in 字典.items() 条件表达式}</code></p>
+<p>多循环的字典推导式</p>
+<p><code>变量 = {变量1 + 变量a : 变量2 + 变量b for 变量1,变量2 in 字典1.items() for 变量a,变量b in 字典2.items()}</code></p>
+<p>多循环的字典推导式</p>
+<p><code>变量 = {变量1 + 变量a : 变量2 + 变量b for 变量1,变量2 in 字典1.items() for 变量a,变量b in 字典2.items() 条件表达式}</code></p>
+<h4 id="字典专用函数"><a href="#字典专用函数" class="headerlink" title="字典专用函数"></a>字典专用函数</h4><p><code>clear()</code></p>
+<p>功能：清空字典<br>格式：<code>字典.clear()</code><br>返回值：None<br>注意：直接改变原有字典</p>
+<p><code>copy()</code></p>
+<p>功能：复制字典<br>格式：<code>字典.copy()</code><br>返回值：新的字典</p>
+<p><code>fromkeys()</code></p>
+<p>功能：使用指定的序列作为键创建字典<br>格式：<code>字典.fromkeys(序列,值)</code><br>返回值：字典</p>
+<p><code>keys()</code></p>
+<p>功能：将字典的所有键组成一个序列<br>格式：<code>字典.keys()</code><br>返回值：序列</p>
+<p><code>values()</code></p>
+<p>功能：将字典的所有值组成一个序列<br>格式：<code>字典.values()</code><br>返回值：序列</p>
+<p><code>items()</code></p>
+<p>功能：将字典的键值转化成类似元组的形式方便遍历<br>格式：<code>字典.items()</code><br>返回值：类似元组的类型</p>
+<p><code>pop()</code></p>
+<p>功能：移除字典中指定的元素<br>格式：<code>字典.pop(键,默认值)</code><br>返回值：被移除的键对应的值<br>注意：如果键不存在，则报错，如果键不存在，默认值设置，则返回默认值</p>
+<p><code>popitem()</code></p>
+<p>功能：移除字典中的键值对<br>格式：<code>字典.popitem()</code><br>返回值：键值对组成的元组<br>注意：弹一个原字典就少一个，字典为空就不可以弹出，会报错</p>
+<p><code>setdefault()</code></p>
+<p>功能：添加一个元素<br>格式：<code>字典.setdefault(键,值)</code><br>返回值：None<br>注意：添加是键存在则不进行任何操作，键不存在则添加，添加是不写值，默认None值</p>
+<p><code>update()</code></p>
+<p>功能：修改字典中的值</p>
+<p>格式： <code>字典.update(键=值)</code><br>返回值：None<br>注意：此处的键作为关键字参数使用，不可以添加’’</p>
+<p>格式: <code>字典.update({键:值})</code><br>返回值：None</p>
+<p><code>get()</code></p>
+<p>功能：根据键获取指定的值<br>格式：<code>字典.get(键,默认值)</code><br>返回值：值<br>注意：如果键不存在，则使用默认值,如果没有默认值则返回None</p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/04/%E9%9B%86%E5%90%88/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            集合
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/03/%E5%85%83%E7%BB%84/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">元组</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自米路可缇书"></img>
+    <h3 class="avatar-name">
+      
+        一颗酸菜
+      
+    </h3>
+    <p class="avatar-slogan">
+      又酸又菜，未来铲屎官，FF14er，zhihaoduonianjingzhuibing。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E6%8A%A5/">日报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/">课后练习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/" rel="tag">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/" rel="tag">sass</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/05/%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97I/">常用模块I</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/05/DAY47/">DAY47</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/04/DAY46/">DAY46</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/04/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">文件操作</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/04/%E9%9B%86%E5%90%88/">集合</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://weibo.com/yorukosama?refer_flag=1005050005_&is_all=1" title target='_blank'
+        >米路可缇书</a>
+      
+        <a style="display: block;" href="https://victorfengming.github.io/" title target='_blank'
+        >小明同学</a>
+      
+        <a style="display: block;" href="https://caoyang7.github.io/" title target='_blank'
+        >我班一位可爱的同学说把她加上</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Cai Suan &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/play.html" class="mobile-nav-link">打飞机</a>
+  
+    <a href="/gd-index.html" class="mobile-nav-link">光之快递员</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

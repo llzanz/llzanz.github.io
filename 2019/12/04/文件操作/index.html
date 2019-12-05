@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>文件操作 | Zan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="文件操作打开文件 123fp = open(&amp;apos;write.txt&amp;apos;, &amp;apos;w&amp;apos;, encoding=&amp;apos;utf-8&amp;apos;)print(fp, type(fp))# &amp;lt;_io.TextIOWrapper name=&amp;apos;write.txt&amp;apos; mode=&amp;apos;w&amp;apos; encoding=&amp;apos;utf-8&amp;apos;&amp;gt; &amp;lt;class &amp;apos;_io.TextIOWrapper&amp;apos;&amp;gt;">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="文件操作">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;04&#x2F;%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C&#x2F;index.html">
+<meta property="og:site_name" content="Zan">
+<meta property="og:description" content="文件操作打开文件 123fp = open(&amp;apos;write.txt&amp;apos;, &amp;apos;w&amp;apos;, encoding=&amp;apos;utf-8&amp;apos;)print(fp, type(fp))# &amp;lt;_io.TextIOWrapper name=&amp;apos;write.txt&amp;apos; mode=&amp;apos;w&amp;apos; encoding=&amp;apos;utf-8&amp;apos;&amp;gt; &amp;lt;class &amp;apos;_io.TextIOWrapper&amp;apos;&amp;gt;">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-05T13:56:23.970Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/play.html" title
+        
+        >打飞机</a>
+      
+        <a class="nav-item" href="/gd-index.html" title
+        
+        >光之快递员</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-文件操作" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      文件操作
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/12/04/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/" class="article-date">
+  <time datetime="2019-12-04T13:42:01.000Z" itemprop="datePublished">2019-12-04</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h2 id="文件操作"><a href="#文件操作" class="headerlink" title="文件操作"></a>文件操作</h2><p>打开文件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fp = open(<span class="string">'write.txt'</span>, <span class="string">'w'</span>, encoding=<span class="string">'utf-8'</span>)</span><br><span class="line">print(fp, type(fp))</span><br><span class="line"><span class="comment"># &lt;_io.TextIOWrapper name='write.txt' mode='w' encoding='utf-8'&gt; &lt;class '_io.TextIOWrapper'&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<a id="more"></a>
+
+<p>写入内容</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fp.write(<span class="string">'冬天你好'</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>关闭文件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fp.close()</span><br></pre></td></tr></table></figure></div>
+
+<p>读取文件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fp = open(<span class="string">'write.txt'</span>, <span class="string">'r'</span>, encoding=<span class="string">'utf-8'</span>)</span><br><span class="line">data = fp.read()</span><br><span class="line">print(data)</span><br><span class="line">fp.close()</span><br><span class="line"><span class="comment"># 冬天你好</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="文件操作相关的函数"><a href="#文件操作相关的函数" class="headerlink" title="文件操作相关的函数"></a>文件操作相关的函数</h3><h4 id="open"><a href="#open" class="headerlink" title="open()"></a><code>open()</code></h4><p>功能：打开或者建立文件</p>
+<p>格式：<code>open(&#39;文件路径&#39;,打开方式,encoding = &#39;字符集&#39;)</code></p>
+<p>返回值：文件io对象</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fp = open(<span class="string">'write.txt'</span>, <span class="string">'w'</span>, encoding=<span class="string">'utf-8'</span>)</span><br><span class="line">print(fp, type(fp))</span><br><span class="line"><span class="comment"># &lt;_io.TextIOWrapper name='write.txt' mode='w' encoding='utf-8'&gt; &lt;class '_io.TextIOWrapper'&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="打开文件的方式"><a href="#打开文件的方式" class="headerlink" title="打开文件的方式"></a>打开文件的方式</h5><ul>
+<li><p>w模式 写模式          write        文件不存在时会创建文件，如果文件已存在则会清空文件</p>
+</li>
+<li><p>r模式  读模式          read         文件不存在就报错，存在则准备读取文件</p>
+</li>
+<li><p>a模式  追加模式      append   文件不存在则新建，文件存在则在文件末尾追加内容</p>
+</li>
+<li><p>x模式  抑或模式      xor           文件存在则报错，文件 不存在则新建文件</p>
+</li>
+<li><p>b模式  二进制模式  binary     辅助模式不能单独使用</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">fp = open(<span class="string">'write.txt'</span>, <span class="string">'wb'</span>)</span><br><span class="line">fp.write(<span class="string">'圣诞节快乐'</span>.encode())	<span class="comment"># 数据必须是bytes类型</span></span><br><span class="line">fp.close()</span><br></pre></td></tr></table></figure></div>
+</li>
+<li><p>+模式  增强模式      plus         也是辅助模式不能单独使用</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">fp = open(<span class="string">'write.txt'</span>, <span class="string">'w+'</span>, encoding=<span class="string">'utf-8'</span>)</span><br><span class="line">fp.write(<span class="string">'圣诞节快乐'</span>)</span><br><span class="line">fp.seek(<span class="number">0</span>)  <span class="comment"># 将文件指针移动到开头</span></span><br><span class="line">data = fp.read()</span><br><span class="line">print(data)</span><br><span class="line">fp.close()</span><br><span class="line"><span class="comment"># 圣诞节快乐</span></span><br></pre></td></tr></table></figure></div>
+
+</li>
+</ul>
+<h4 id="close"><a href="#close" class="headerlink" title="close()"></a><code>close()</code></h4><p>功能：关闭文件<br>格式：<code>文件io对象.close()</code><br>返回值：None<br>注意：文件打开就要关闭</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fp = open(<span class="string">'write.txt'</span>, <span class="string">'w'</span>, encoding=<span class="string">'utf-8'</span>)</span><br><span class="line">fp.close()</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="read"><a href="#read" class="headerlink" title="read()"></a><code>read()</code></h4><p>功能：读取文件<br>格式：<code>文件io对象.read()</code><br>返回值：整个文件的字符</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fp = open(<span class="string">'write.txt'</span>, <span class="string">'r'</span>, encoding=<span class="string">'utf-8'</span>)</span><br><span class="line">data = fp.read()</span><br><span class="line">print(data)</span><br><span class="line"><span class="comment"># 圣诞节快乐</span></span><br></pre></td></tr></table></figure></div>
+
+<p>格式：<code>文件io对象.read(字符长度)</code><br>返回值：指定长度的字符</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fp = open(<span class="string">'write.txt'</span>, <span class="string">'r'</span>, encoding=<span class="string">'utf-8'</span>)</span><br><span class="line">data = fp.read(<span class="number">3</span>)</span><br><span class="line">print(data)</span><br><span class="line"><span class="comment"># 圣诞节</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="readline"><a href="#readline" class="headerlink" title="readline()"></a><code>readline()</code></h4><p>功能：读取一行文件<br>格式：<code>文件io对象.readline()</code><br>返回值：一行内容的字符串</p>
+<p>格式：<code>文件io对象.readline（字符长度）</code><br>返回值：一行内容的字符串</p>
+<p>注意：字符长度&lt;当前行内内容，则读取指定长度的字符串，并且下次再读取还是在这个一行中获取没有读取的内容。<br>字符长度&gt;=当前行内容，直接读取当前行</p>
+<h4 id="readlines"><a href="#readlines" class="headerlink" title="readlines()"></a><code>readlines()</code></h4><p>功能：将文件中的内容读取到序列当中。<br>格式：<code>文件io对象.readlines()</code><br>返回值：列表</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">fp = open(<span class="string">'write.txt'</span>, <span class="string">'r'</span>, encoding=<span class="string">'utf-8'</span>)</span><br><span class="line">data = fp.readlines()</span><br><span class="line">print(data)</span><br><span class="line"><span class="comment"># ['圣诞节快乐\n', '元旦快乐\n', '春节快乐']</span></span><br></pre></td></tr></table></figure></div>
+
+<p>格式：<code>文件io对象.readlines(字符长度)</code><br>返回值：列表</p>
+<p>注意：读取的行数由字符长度决定，如果字符长度读取了N行后，还有指定长度的字符没有读取，则直接读取下一行进来</p>
+<h4 id="write"><a href="#write" class="headerlink" title="write()"></a><code>write()</code></h4><p>功能：写入文件<br>格式：<code>文件io对象.write(字符串)</code><br>返回值：写入字符串的长度</p>
+<h4 id="writelines"><a href="#writelines" class="headerlink" title="writelines()"></a><code>writelines()</code></h4><p>功能：将序列写入文件中<br>格式：<code>文件io对象.writelines(序列)</code><br>返回值：None</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fp = open(<span class="string">'write.txt'</span>, <span class="string">'w'</span>, encoding=<span class="string">'utf-8'</span>)</span><br><span class="line">fp.writelines([<span class="string">'鹅鹅鹅\n'</span>, <span class="string">'曲项向天歌\n'</span>, <span class="string">'白毛浮绿水'</span>])</span><br><span class="line"><span class="comment"># 鹅鹅鹅</span></span><br><span class="line"><span class="comment"># 曲项向天歌</span></span><br><span class="line"><span class="comment"># 白毛浮绿水</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="truncate"><a href="#truncate" class="headerlink" title="truncate()"></a><code>truncate()</code></h4><p>功能：字符串截取操作<br>格式：<code>文件io对象.truncate(字节长度)</code><br>返回值：截取的字节长度</p>
+<h3 id="与文件指针相关的函数"><a href="#与文件指针相关的函数" class="headerlink" title="与文件指针相关的函数"></a>与文件指针相关的函数</h3><p><code>tell()</code></p>
+<p>功能：查看当前指针的位置<br>格式：<code>文件io对象.tell()</code><br>返回值：整数</p>
+<p><code>seek()</code></p>
+<p>功能：调整指针的位置<br>格式：<code>文件io对象.seek(N)</code>  将指针直接调整到N的位置，从开头计算第N个位置<br>返回值：指针的位置</p>
+<p>格式：<code>文件io对象.seek(偏移位置，参考点方式)</code><br>返回值：指针的位置</p>
+<p>参考点方式：</p>
+<ul>
+<li>0 从文件的最开头计算偏移</li>
+<li>1 从文件的当前指针位置开始计算偏移(实验不通)</li>
+<li>2 从文件末尾开始计算偏移(实验不通)</li>
+</ul>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/04/DAY46/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            DAY46
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/04/%E9%9B%86%E5%90%88/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">集合</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自米路可缇书"></img>
+    <h3 class="avatar-name">
+      
+        一颗酸菜
+      
+    </h3>
+    <p class="avatar-slogan">
+      又酸又菜，未来铲屎官，FF14er，zhihaoduonianjingzhuibing。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E6%8A%A5/">日报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/">课后练习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/" rel="tag">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/" rel="tag">sass</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/05/%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97I/">常用模块I</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/05/DAY47/">DAY47</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/04/DAY46/">DAY46</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/04/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">文件操作</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/04/%E9%9B%86%E5%90%88/">集合</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://weibo.com/yorukosama?refer_flag=1005050005_&is_all=1" title target='_blank'
+        >米路可缇书</a>
+      
+        <a style="display: block;" href="https://victorfengming.github.io/" title target='_blank'
+        >小明同学</a>
+      
+        <a style="display: block;" href="https://caoyang7.github.io/" title target='_blank'
+        >我班一位可爱的同学说把她加上</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Cai Suan &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/play.html" class="mobile-nav-link">打飞机</a>
+  
+    <a href="/gd-index.html" class="mobile-nav-link">光之快递员</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

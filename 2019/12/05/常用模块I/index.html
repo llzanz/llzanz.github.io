@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>常用模块I | Zan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="常用模块IOS模块operate system 操作系统 OS模块不是python启动就加载的模块，需要手动导入">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用模块I">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;05&#x2F;%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97I&#x2F;index.html">
+<meta property="og:site_name" content="Zan">
+<meta property="og:description" content="常用模块IOS模块operate system 操作系统 OS模块不是python启动就加载的模块，需要手动导入">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-05T13:56:37.617Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/play.html" title
+        
+        >打飞机</a>
+      
+        <a class="nav-item" href="/gd-index.html" title
+        
+        >光之快递员</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-常用模块I" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      常用模块I
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/12/05/%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97I/" class="article-date">
+  <time datetime="2019-12-05T13:50:39.000Z" itemprop="datePublished">2019-12-05</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h2 id="常用模块I"><a href="#常用模块I" class="headerlink" title="常用模块I"></a>常用模块I</h2><h3 id="OS模块"><a href="#OS模块" class="headerlink" title="OS模块"></a>OS模块</h3><p>operate system 操作系统</p>
+<p>OS模块不是python启动就加载的模块，需要手动导入</p>
+<a id="more"></a>
+
+<h4 id="OS模块中的函数"><a href="#OS模块中的函数" class="headerlink" title="OS模块中的函数"></a>OS模块中的函数</h4><p><code>getcwd()</code></p>
+<p>功能：获取当前的工作目录<br>格式：<code>os.getcwd()</code><br>返回值：路径字符串</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result = os.getcwd()</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># E:\MyPyCode\mylearn_03</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>chdir()</code></p>
+<p>功能：修改当前工作目录<br>格式：<code>os.chdir()</code><br>返回值：None</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">os.chdir(<span class="string">'E:\MyPyCode\mylearn_02'</span>)</span><br><span class="line">result = os.getcwd()</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># E:\MyPyCode\mylearn_02</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>listdir()</code></p>
+<p>功能：获取指定文件夹中的所有文件和文件夹组成的列表<br>格式：<code>os.listdir(目录路径)</code><br>返回值：目录中内容名称的列表</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result = os.listdir(<span class="string">'E:/MyPyCode'</span>)</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># ['.idea', 'mylearn_01', 'mylearn_02', 'mylearn_03', 'MyNodes', 'venv']</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>mkdir()</code></p>
+<p>功能：创建一个目录/文件夹<br>格式：<code>os.mkdir(目录路径)</code><br>返回值：None</p>
+<p><code>makedirs()</code></p>
+<p>功能：递归创建文件夹<br>格式：<code>os.makedirs(路径)</code><br>返回值：None</p>
+<p><code>rmdir()</code></p>
+<p>功能：移除一个目录（必须是空目录）<br>格式：<code>os.rmdir(目录路径)</code><br>返回值：None</p>
+<p><code>removedirs()</code></p>
+<p>功能：递归删除文件夹<br>格式：<code>os.removedirs(目录路径)</code><br>返回值：None<br>注意：如：删除 D:/a/b/c</p>
+<ul>
+<li>如果abc文件夹中除了路径显示的文件夹之外没有任何其他文件或者文件夹，removedirs会移除掉所有文件夹a，b，c</li>
+<li>如果abc任意文件夹中包含其他文件和文件夹，则该成文件夹不会被删除，如果是最底层的c文件夹则会爆出非空错误！</li>
+</ul>
+<p><code>rename()</code></p>
+<p>功能：修改文件和文件夹的名称<br>格式：<code>os.rename(源文件或文件夹，目标文件或文件夹)</code><br>返回值：None</p>
+<p><code>stat()</code></p>
+<p>功能：获取文件的相关信息<br>格式：<code>os.stat(文件路径)</code><br>返回值：包含文件信息的元组</p>
+<p><code>system()</code></p>
+<p>执行系统命令<br>格式：<code>os.system()</code><br>返回值：整型<br>慎用！ 不小心来个 rm -rf / 欲哭无泪！</p>
+<p><code>getenv()</code></p>
+<p>功能：获取系统环境变量<br>格式：<code>os.getenv(获取的环境变量名称)</code><br>返回值：字符串</p>
+<p><code>putenv()</code></p>
+<p>功能：设置系统环境变量<br>格式：<code>os.putenv(&#39;环境变量名称&#39;,值)</code><br>返回值：无<br>注意：putenv确实可以添加成功，但是无法使用正常的getenv检测到</p>
+<p><code>exit()</code></p>
+<p>功能：推出当前执行命令，直接关闭当前操作<br>格式：<code>exit()</code><br>返回值：无</p>
+<h4 id="OS模块中常用的值"><a href="#OS模块中常用的值" class="headerlink" title="OS模块中常用的值"></a>OS模块中常用的值</h4><p><code>curdir</code></p>
+<p>格式：<code>os.curdir</code><br>功能：获取当前路径   都是.</p>
+<p><code>pardir</code></p>
+<p>格式：<code>os.pardir</code><br>功能：获取上层目录路径 都是..</p>
+<p><code>path</code></p>
+<p>格式：<code>os.path</code><br>功能：os中的一个子模块，操作非常多</p>
+<p><code>name</code></p>
+<p>格式：<code>os.name</code><br>功能：当前系统的内核名称  win-&gt;nt  linux/unix-&gt;posix</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(os.name)</span><br><span class="line"><span class="comment"># nt</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>sep</code></p>
+<p>格式：<code>os.sep</code><br>功能：获取当前系统的路径分割符号 window -&gt; \  linux/unix -&gt; /</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(os.sep)</span><br><span class="line"><span class="comment"># \</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>extsep</code></p>
+<p>格式：<code>os.extsep</code><br>功能：获取当前系统中文件名和后缀之间的分割符号，所有系统都是.</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(os.extsep)</span><br><span class="line"><span class="comment"># .</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>linesep</code></p>
+<p>格式：<code>os.linesep</code><br>功能：获取当前系统的换行符号 window -&gt; \r\n  linux/unix -&gt; \n</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(repr(os.linesep))</span><br><span class="line"><span class="comment"># '\r\n'</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="path子模块"><a href="#path子模块" class="headerlink" title="path子模块"></a>path子模块</h4><p>主要用于路径相关的操作</p>
+<p><code>abspath()</code></p>
+<p>功能：将一个相对路径转化为绝对路径<br>格式：<code>os.path.abspath(相对路径)</code><br>返回值：绝对路径字符串</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(os.path.abspath(<span class="string">'../../'</span>))</span><br><span class="line"><span class="comment"># E:\</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>basename()</code></p>
+<p>功能：获取路径中的文件夹或者文件名称（只要路径的最后一部分）<br>格式：<code>os.path.basename(路径)</code><br>返回值：路径的最后一部分(可能是文件名也可能是文件夹名)</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">result = os.getcwd()</span><br><span class="line">print(result)</span><br><span class="line">print(os.path.basename(result))</span><br><span class="line"><span class="comment"># E:\MyPyCode\mylearn_03</span></span><br><span class="line"><span class="comment"># mylearn_03</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>dirname()</code></p>
+<p>功能：获取路径中的路径部分(出去最后一部分)<br>格式：<code>os.path.dirname(路径)</code><br>返回值：路径中除了最后一部分的内容字符串</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">result = os.getcwd()</span><br><span class="line">print(result)</span><br><span class="line">print(os.path.dirname(result))</span><br><span class="line"><span class="comment"># E:\MyPyCode\mylearn_03</span></span><br><span class="line"><span class="comment"># E:\MyPyCode</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>join()</code></p>
+<p>功能：将2个路径合成一个路径<br>格式：<code>os.path.join(路径1,路径2)</code><br>返回值：合并之后的路径</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result = os.path.join(<span class="string">'E:\\'</span>, <span class="string">'MyPyCode\mylearn_03'</span>)</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># E:\MyPyCode\mylearn_03</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>split()</code></p>
+<p>功能：将一个路径切割成文件夹和文件名部分<br>格式：<code>os.path.split(路径)</code><br>返回值：元组</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">result = os.getcwd()</span><br><span class="line">print(result)</span><br><span class="line">print(os.path.split(result))</span><br><span class="line"><span class="comment"># E:\MyPyCode\mylearn_03</span></span><br><span class="line"><span class="comment"># ('E:\\MyPyCode', 'mylearn_03')</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>splitext()</code></p>
+<p>功能：将一个文件名切成名字和后缀两个部分<br>格式：<code>os.path.splitext(文件名称)</code><br>返回值：元组（名称,后缀）</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">path = <span class="string">'E:\MyPyCode\mylearn_03\mycode_1_1.py'</span></span><br><span class="line">print(os.path.splitext(path))</span><br><span class="line"><span class="comment"># ('E:\\MyPyCode\\mylearn_03\\mycode_1_1', '.py')</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>getsize()</code></p>
+<p>功能：获取一个文件的大小<br>格式：<code>os.path.getsize(路径)</code><br>返回值：整数    字节数</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">path = <span class="string">'E:\MyPyCode\mylearn_03\mycode_1_1.py'</span></span><br><span class="line">print(os.path.getsize(path))</span><br><span class="line"><span class="comment"># 106</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="判断相关"><a href="#判断相关" class="headerlink" title="判断相关"></a>判断相关</h5><p><code>isfile()</code></p>
+<p>功能：检测一个路径是否是一个文件<br>格式：<code>os.path.isfile(路径)</code><br>返回值：布尔值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">path = <span class="string">'E:\MyPyCode\mylearn_03\mycode_1_1.py'</span></span><br><span class="line">print(os.path.isfile(path))</span><br><span class="line"><span class="comment"># True</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>isdir()</code></p>
+<p>功能：检测一个路径是否是一个文件夹<br>格式：<code>os.path.isdir(路径)</code><br>返回值：布尔值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">path = <span class="string">'E:\MyPyCode\mylearn_03\mycode_1_1.py'</span></span><br><span class="line">print(os.path.isdir(path))</span><br><span class="line"><span class="comment"># False</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>islink()</code></p>
+<p>功能：检测一个路径是否是链接（win）无效<br>格式：<code>os.path.islink(路径)</code><br>返回值：布尔值</p>
+<p><code>exists()</code></p>
+<p>功能：检测指定的路径是否存在<br>格式：<code>os.path.exists(路径)</code><br>返回值：布尔值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">path = <span class="string">'E:\MyPyCode\mylearn_03\mycode_1_99.py'</span></span><br><span class="line">print(os.path.exists(path))</span><br><span class="line"><span class="comment"># False</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>isabs()</code></p>
+<p>功能：检测一个路径是否是绝对路径<br>格式：<code>os.path.isabs(路径)</code><br>返回值：布尔值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">path = <span class="string">'E:\MyPyCode\mylearn_03\mycode_1_99.py'</span></span><br><span class="line">print(os.path.isabs(path))</span><br><span class="line"><span class="comment"># True</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>samefile()</code></p>
+<p>功能：检测2个路径是否指向同一个文件<br>格式：<code>os.path.samefile(路径1,路径2)</code><br>返回值：布尔值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">path1 = <span class="string">'E:\MyPyCode\mylearn_02'</span></span><br><span class="line">path2 = <span class="string">'../mylearn_02'</span></span><br><span class="line">print(os.path.samefile(path1, path2))</span><br><span class="line"><span class="comment"># True</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="时间相关"><a href="#时间相关" class="headerlink" title="时间相关"></a>时间相关</h5><p><code>getctime()</code></p>
+<p>功能：获取文件的创建时间 (get create time)<br>格式：<code>os.path.getctime(文件路径)</code><br>返回值：时间戳浮点数</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">path = <span class="string">'E:\MyPyCode\mylearn_03\mycode_1_1.py'</span></span><br><span class="line">print(os.path.getctime(path))</span><br><span class="line"><span class="comment"># 1575356350.1692047</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>getmtime()</code></p>
+<p>功能：获取文件的修改时间（get modify time）<br>格式：<code>os.path.getmtime(文件路径)</code><br>返回值：时间戳浮点数</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">path = <span class="string">'E:\MyPyCode\mylearn_03\mycode_1_1.py'</span></span><br><span class="line">print(os.path.getmtime(path))</span><br><span class="line"><span class="comment"># 1575357444.799594</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>getatime()</code></p>
+<p>功能：获取文件的访问时间（get active time）<br>格式：<code>os.path.getatime(文件路径)</code><br>返回值：时间戳浮点数</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">path = <span class="string">'E:\MyPyCode\mylearn_03\mycode_1_1.py'</span></span><br><span class="line">print(os.path.getatime(path))</span><br><span class="line"><span class="comment"># 1575357450.6821296</span></span><br></pre></td></tr></table></figure></div>
+
+<hr>
+<h3 id="shutil模块"><a href="#shutil模块" class="headerlink" title="shutil模块"></a>shutil模块</h3><p>高级文件操作模块</p>
+<p>文件复制、归档相关操作。</p>
+<p>shutil模块不是python启动就加载的模块，需要手动导入</p>
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><p><code>copy()</code></p>
+<p>功能：复制文件<br>格式：<code>shutil.copy(&#39;来源文件&#39;,&#39;目标地址&#39;)</code><br>返回值：复制之后的路径</p>
+<p><code>copy2()</code></p>
+<p>功能：复制文件，保留元数据<br>格式：<code>shutil.copy2(&#39;来源文件&#39;,&#39;目标地址&#39;)</code><br>返回值：复制之后的路径</p>
+<p><code>copyfile()</code></p>
+<p>功能：将一个文件的内容拷贝的另外一个文件当中<br>格式：<code>shutil.copyfile(来源文件,目标文件)</code><br>返回值：目标文件的路径</p>
+<p><code>copyfileobj()</code></p>
+<p>功能：将一个文件的内容拷贝的另外一个文件当中<br>格式：<code>shutil.copyfileobj(open(来源文件,&#39;r&#39;),open（&#39;目标文件&#39;,&#39;w&#39;）)</code><br>返回值：None</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">fsrc = open(<span class="string">'D:\\MyPycode\\test.txt'</span>, <span class="string">'r'</span>)</span><br><span class="line">fdst = open(<span class="string">'D:\\MyPyCode\\demo.ext'</span>, <span class="string">'w'</span>)</span><br><span class="line">result = shutil.copyfileobj(fsrc, fdst)</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># None</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>copystat()</code></p>
+<p>功能：拷贝元数据（状态）<br>格式：<code>shutil.copystat(来源文件,目标文件)</code><br>返回值：None</p>
+<p><code>copymode()</code></p>
+<p>功能：拷贝权限<br>格式：<code>shutil.copymode(来源文件,目标文件)</code><br>返回值：None</p>
+<p><code>copytree()</code></p>
+<p>功能：复制整个文件目录<br>格式：<code>shutil.copytree(来源目录,目标目录)</code><br>返回值：目标目录的路径<br>注意：无论文件夹是否为空，均可以复制，而且会复制文件夹中的所有内容</p>
+<p><code>rmtree()</code></p>
+<p>功能：移除整个目录，无论是否空<br>格式：<code>shutil.rmtree(目录路径)</code><br>返回值：无</p>
+<p><code>move()</code></p>
+<p>功能：移动文件或者文件夹，也可以用来改名<br>格式：<code>shutil.move(来源地址,目标地址)</code><br>返回值：目标地址</p>
+<p><code>which()</code></p>
+<p>功能：检测命令对应的文件路径<br>格式：<code>shutil.which(‘命令字符串’)</code><br>返回值：命令文件所在位置<br>注意：window和linux不太一样。 window的命令都是.exe结尾，linux则不是</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(shutil.which(<span class="string">'calc'</span>))</span><br><span class="line"><span class="comment"># C:\Windows\system32\calc.EXE</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>disk_usage()</code></p>
+<p>功能：检测磁盘使用信息<br>格式：<code>disk_usage(‘盘符’)</code><br>返回值：元组</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(shutil.disk_usage(<span class="string">'e:'</span>))</span><br><span class="line"><span class="comment"># usage(total=327155707904, used=126378721280, free=200776986624)</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="归档和解包操作"><a href="#归档和解包操作" class="headerlink" title="归档和解包操作"></a>归档和解包操作</h4><p>归档：将一个<strong>文件夹</strong>中所有内容转换成一个文件（压缩文件）。主要用于方便文件的转移。</p>
+<p>解包：将归档文件释放。</p>
+<p>压缩：将<strong>多个文件</strong>使用或者不使用压缩算法，合并到一个压缩文件中。</p>
+<p>解压缩：压缩的反向操作</p>
+<p>注意：压缩属于归档</p>
+<p>函数</p>
+<p><code>make_archive()</code></p>
+<p>功能：归档函数，归档操作<br>格式：<code>shutil.make_archive(&#39;目标文件路径&#39;,&#39;归档文件后缀&#39;,&#39;需要归档的目录&#39;)</code><br>返回值：归档文件的最终路径</p>
+<p><code>unpack_archive()</code></p>
+<p>功能：解包操作<br>格式：<code>shutil.unpack_archive(&#39;归档文件路径&#39;,&#39;解包目标文件夹&#39;)</code>0<br>返回值:None<br>注意：文件夹不存在会新建文件夹</p>
+<p><code>get_archive_formats()</code></p>
+<p>功能：获取当前系统已注册的归档文件格式（后缀）<br>格式：<code>shutil.get_archive_formats()</code><br>返回值：列表   [(后缀,解释),(后缀,解释),(后缀,解释)…]</p>
+<p><code>get_unpack_formats()</code></p>
+<p>功能：获取当前系统已经注册的解包文件格式(后缀)<br>格式：<code>shutil.get_unpack_formats()</code><br>返回值：列表   [(后缀,解释),(后缀,解释),(后缀,解释)…]</p>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/05/DAY47/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">DAY47</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自米路可缇书"></img>
+    <h3 class="avatar-name">
+      
+        一颗酸菜
+      
+    </h3>
+    <p class="avatar-slogan">
+      又酸又菜，未来铲屎官，FF14er，zhihaoduonianjingzhuibing。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E6%8A%A5/">日报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/">课后练习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/" rel="tag">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/" rel="tag">sass</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/05/%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97I/">常用模块I</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/05/DAY47/">DAY47</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/04/DAY46/">DAY46</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/04/%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C/">文件操作</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/04/%E9%9B%86%E5%90%88/">集合</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://weibo.com/yorukosama?refer_flag=1005050005_&is_all=1" title target='_blank'
+        >米路可缇书</a>
+      
+        <a style="display: block;" href="https://victorfengming.github.io/" title target='_blank'
+        >小明同学</a>
+      
+        <a style="display: block;" href="https://caoyang7.github.io/" title target='_blank'
+        >我班一位可爱的同学说把她加上</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Cai Suan &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/play.html" class="mobile-nav-link">打飞机</a>
+  
+    <a href="/gd-index.html" class="mobile-nav-link">光之快递员</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
