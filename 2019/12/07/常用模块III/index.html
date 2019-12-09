@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>常用模块III | Zan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="随机模块import random">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用模块III">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;07&#x2F;%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97III&#x2F;index.html">
+<meta property="og:site_name" content="Zan">
+<meta property="og:description" content="随机模块import random">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-09T08:53:27.050Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/play.html" title
+        
+        >打飞机</a>
+      
+        <a class="nav-item" href="/gd-index.html" title
+        
+        >光之快递员</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-常用模块III" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      常用模块III
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/12/07/%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97III/" class="article-date">
+  <time datetime="2019-12-07T08:47:01.000Z" itemprop="datePublished">2019-12-07</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h3 id="随机模块"><a href="#随机模块" class="headerlink" title="随机模块"></a>随机模块</h3><p><code>import random</code></p>
+<a id="more"></a>
+
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><p><code>random()</code></p>
+<p>功能：获取0～1之间的随机小数包含0不包含1<br>格式：<code>random.random()</code><br>返回值：浮点数</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(random.random())</span><br><span class="line"><span class="comment"># 0.18907537571472455</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>randrange()</code></p>
+<p>功能：获取指定范围内指定间隔的随机整数数（左闭右开）<br>格式：<code>random.randrange([开始值,]结束值[,间隔值])</code><br>返回值：整数</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(random.randrange(<span class="number">0</span>, <span class="number">10</span>, <span class="number">3</span>))</span><br><span class="line"><span class="comment"># 3</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>randint()</code></p>
+<p>功能：获取指定范围内指定间隔的随机整数数（闭区间）<br>格式：<code>random.randint([开始值,]结束值)</code><br>返回值：整数</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(random.randint(<span class="number">0</span>, <span class="number">6</span>))</span><br><span class="line"><span class="comment"># 6</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>uniform()</code></p>
+<p>功能：随机获取指定范围内的所有数值包括小数<br>格式：<code>random.uniform(开始值，结束值)</code><br>返回值：随机返回范围内的所有数值（浮点型）</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(random.uniform(<span class="number">0</span>, <span class="number">4</span>))</span><br><span class="line"><span class="comment"># 1.059278372786467</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>choice()</code></p>
+<p>功能：随机获取列表中的值<br>格式：<code>random.choice(序列)</code><br>返回值：序列中的某个值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(random.choice([1, 2, 3, 4, 5]))</span><br><span class="line"># 5</span><br></pre></td></tr></table></figure></div>
+
+<p><code>shuffle()</code></p>
+<p>功能：随机打乱原列表<br>格式：<code>random.shuffle(列表)</code><br>返回值：None</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">listvar = [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>]</span><br><span class="line">print(random.shuffle(listvar))</span><br><span class="line">print(listvar)</span><br><span class="line"><span class="comment"># [3, 4, 2, 1, 5]</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="pickle模块"><a href="#pickle模块" class="headerlink" title="pickle模块"></a>pickle模块</h3><p> <code>import pickle</code></p>
+<p><code>pickle,dumps()</code></p>
+<p>功能：将任意对象序列化成一个bytes<br>格式：<code>pickle.dumps(数据)</code><br>返回值：bytes</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">'先天下之忧而忧，后天下之乐而乐'</span></span><br><span class="line">result = pickle.dumps(str1)</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># b'\x80\x04\x951\x00\x00\x00\x00\x00\x00\x00\x8c-\xe5\x85\x88\xe5\xa4\xa9\xe4\xb8\x8b\xe4\xb9\x8b\xe5\xbf\xa7\xe8\x80\x8c\xe5\xbf\xa7\xef\xbc\x8c\xe5\x90\x8e\xe5\xa4\xa9\xe4\xb8\x8b\xe4\xb9\x8b\xe4\xb9\x90\xe8\x80\x8c\xe4\xb9\x90\x94.'</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>pickle.loads()</code></p>
+<p>功能：将bytes返序列化<br>格式：<code>pickle.loads(bytes)</code><br>返回值：数据</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">byte = <span class="string">b'\x80\x04\x951\x00\x00\x00\x00\x00\x00\x00\x8c-\xe5\x85\x88\xe5\xa4\xa9\xe4\xb8\x8b\xe4\xb9\x8b\xe5\xbf\xa7\xe8\x80\x8c\xe5\xbf\xa7\xef\xbc\x8c\xe5\x90\x8e\xe5\xa4\xa9\xe4\xb8\x8b\xe4\xb9\x8b\xe4\xb9\x90\xe8\x80\x8c\xe4\xb9\x90\x94.'</span></span><br><span class="line">result = pickle.loads(byte)</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># 先天下之忧而忧，后天下之乐而乐</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>pickle.dump()</code></p>
+<p>功能：把对象序列化后写入到文件对象</p>
+<p><code>pickle.load()</code></p>
+<p>功能：把文件对象反序列化为数据</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">str1 = <span class="string">'先天下之忧而忧，后天下之乐而乐'</span></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'1.txt'</span>, <span class="string">'wb'</span>) <span class="keyword">as</span> fb:</span><br><span class="line">    pickle.dump(str1, fb)</span><br><span class="line"></span><br><span class="line"><span class="keyword">with</span> open(<span class="string">'1.txt'</span>, <span class="string">'rb'</span>) <span class="keyword">as</span> fb:</span><br><span class="line">    print(pickle.load(fb))</span><br><span class="line">    </span><br><span class="line"><span class="comment"># 先天下之忧而忧，后天下之乐而乐</span></span><br></pre></td></tr></table></figure></div>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/07/DAY49/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">DAY49</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自米路可缇书"></img>
+    <h3 class="avatar-name">
+      
+        一颗酸菜
+      
+    </h3>
+    <p class="avatar-slogan">
+      又酸又菜，未来铲屎官，FF14er，zhihaoduonianjingzhuibing。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E6%8A%A5/">日报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/">课后练习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/" rel="tag">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/" rel="tag">sass</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/07/%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97III/">常用模块III</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/07/DAY49/">DAY49</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/06/%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97II/">常用模块II</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/06/DAY48/">DAY48</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/05/%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97I/">常用模块I</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://weibo.com/yorukosama?refer_flag=1005050005_&is_all=1" title target='_blank'
+        >米路可缇书</a>
+      
+        <a style="display: block;" href="https://victorfengming.github.io/" title target='_blank'
+        >小明同学</a>
+      
+        <a style="display: block;" href="https://caoyang7.github.io/" title target='_blank'
+        >我班一位可爱的同学说把她加上</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Cai Suan &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/play.html" class="mobile-nav-link">打飞机</a>
+  
+    <a href="/gd-index.html" class="mobile-nav-link">光之快递员</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

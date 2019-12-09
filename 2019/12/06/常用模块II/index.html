@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>常用模块II | Zan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="zip压缩模块模块名称：zipfile zip文件格式是通用的文档压缩标准，在ziplib模块中，使用ZipFile类来操作zip文件。">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="常用模块II">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;06&#x2F;%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97II&#x2F;index.html">
+<meta property="og:site_name" content="Zan">
+<meta property="og:description" content="zip压缩模块模块名称：zipfile zip文件格式是通用的文档压缩标准，在ziplib模块中，使用ZipFile类来操作zip文件。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-09T08:53:04.772Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/play.html" title
+        
+        >打飞机</a>
+      
+        <a class="nav-item" href="/gd-index.html" title
+        
+        >光之快递员</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-常用模块II" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      常用模块II
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/12/06/%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97II/" class="article-date">
+  <time datetime="2019-12-06T14:46:17.000Z" itemprop="datePublished">2019-12-06</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h3 id="zip压缩模块"><a href="#zip压缩模块" class="headerlink" title="zip压缩模块"></a>zip压缩模块</h3><p>模块名称：<code>zipfile</code></p>
+<p>zip文件格式是通用的文档压缩标准，在<code>ziplib</code>模块中，使用<code>ZipFile</code>类来操作zip文件。</p>
+<a id="more"></a>
+
+<h4 id="压缩流程"><a href="#压缩流程" class="headerlink" title="压缩流程"></a>压缩流程</h4><p><code>zipfile.ZipFile(file, mode, compression, allowZip64)</code></p>
+<p>功能：创建一个<code>ZipFile</code>对象，表示一个zip文件。<br>参数：</p>
+<ul>
+<li><code>file</code>    表示文件的路径或类文件对象(file-like object)</li>
+<li><code>mode</code>    指示打开zip文件的模式，默认值为r<br>r    表示读已经存在的zip文件<br>w    表示新建一个zip文档或覆盖一个已经存在的zip文档<br>a    表示将数据附加到一个现存的zip文档中。</li>
+<li><code>compression</code>    表示在写zip文档时使用的压缩方法<br>zipfile.ZIP_STORED      只是存储模式，不会对文件进行压缩，这个是默认值<br>zipfile.ZIP_DEFLATED    对文件进行压缩</li>
+<li><code>allowZip64</code>    如果要操作的zip文件大小超过2G，应该将allowZip64设置为True。</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">zp = zipfile.ZipFile(<span class="string">'./zip01.zip'</span>, <span class="string">'w'</span>)</span><br><span class="line">print(zp)</span><br><span class="line"><span class="comment"># &lt;zipfile.ZipFile filename='./zip01.zip' mode='w'&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>ZipFile.write(filename, arcname, compress_type)</code></p>
+<p>功能：将指定文件添加到zip文档中。<br>参数：</p>
+<ul>
+<li><code>filename</code>    文件路径</li>
+<li><code>arcname</code>    添加到zip文档之后保存的名称</li>
+<li><code>compress_type</code>    压缩方法，它的值可以是zipfile.ZIP_STORED 或zipfile.ZIP_DEFLATED</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zp.write(<span class="string">'E:\MyPyCode\mylearn_03\jisuansize.py'</span>, <span class="string">'jisuan.py'</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p><code>ZipFile.close()</code></p>
+<p>功能：关闭压缩文件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">zp.close()</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="解压流程"><a href="#解压流程" class="headerlink" title="解压流程"></a>解压流程</h4><p>创建对象和关闭压缩文件同压缩流程一样。</p>
+<p>解压方法：</p>
+<p><code>ZipFile.extract(member, path, pwd)</code></p>
+<p>功能：将zip文档内的指定文件解压到当前目录。<br>参数：</p>
+<ul>
+<li><code>member</code>      指定要解压的文件名称或对应的ZipInfo对象，要解压的文件</li>
+<li><code>path</code>        指定解析文件保存的文件夹，解压到哪</li>
+<li><code>pwd</code>        解压密码</li>
+</ul>
+<p>下面一个例子将保存在程序根目录下的txt.zip内的所有文件解压到D:/Work目录：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> zipfile, os</span><br><span class="line">zipFile = zipfile.ZipFile(os.path.join(os.getcwd(), <span class="string">'txt.zip'</span>))</span><br><span class="line"><span class="keyword">for</span> file <span class="keyword">in</span> zipFile.namelist():</span><br><span class="line">    zipFile.extract(file, <span class="string">r'd:/Work'</span>)</span><br><span class="line">zipFile.close()</span><br></pre></td></tr></table></figure></div>
+
+<p><code>ZipFile.extractall(path, members, pwd)</code></p>
+<p>功能：解压zip文档中的所有文件到当前目录。<br>参数：</p>
+<ul>
+<li>members      默认值为zip文档内的所有文件名称列表，也可以自己设置，选择要解压的文件名称。</li>
+</ul>
+<h3 id="tar模块"><a href="#tar模块" class="headerlink" title="tar模块"></a>tar模块</h3><p>tar模块也是压缩模块的一种（使用tarfile模块）</p>
+<p>打开创建压缩文件：</p>
+<p><code>open(name=None, mode=&#39;r&#39;, fileobj=None, bufsize=10240, **kwargs)</code></p>
+<p>参数：</p>
+<ul>
+<li><code>name</code>  压缩文件的路径</li>
+<li><code>mode</code>  设置操作模式<br>r 读取  <code>r:bz2</code>以bz2格式进行读取<br>w 写入  <code>w:bz2</code>以bz2格式进行写入压缩<br>x 异或  …<br>a 追加  …</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tp = tarfile.open(<span class="string">'tar01.tar.bz2'</span>,<span class="string">'w:bz2'</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>添加文件：</p>
+<p><code>add( name, arcname=None, recursive=True, *, filter=None)</code></p>
+<p>参数：</p>
+<ul>
+<li><code>name</code>  添加的文件路径</li>
+<li><code>arcname</code>  添加到压缩文件中使用的路径和名称</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tp.add(<span class="string">'C:\\Windows\\system32\\calc.exe'</span>,<span class="string">'jsq.exe'</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p>关闭：</p>
+<p><code>close()</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tp.close()</span><br></pre></td></tr></table></figure></div>
+
+<p>解压文件</p>
+<p><code>extract(name, path)</code></p>
+<p>解压指定文件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tp.extract(<span class="string">'jsq.exe'</span>,<span class="string">'c:\\test'</span>)</span><br></pre></td></tr></table></figure></div>
+
+<p><code>extractall(path)</code></p>
+<p>解压所有文件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tp.extractall(<span class="string">'c:\\test2'</span>)</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="时间日期相关的模块"><a href="#时间日期相关的模块" class="headerlink" title="时间日期相关的模块"></a>时间日期相关的模块</h3><ul>
+<li><code>calendar</code>　日历模块</li>
+<li><code>time</code>　　　时间模块</li>
+<li><code>datetime</code>　日期时间模块</li>
+<li><code>timeit</code>　　 时间检测模块</li>
+</ul>
+<h4 id="calendar日历模块"><a href="#calendar日历模块" class="headerlink" title="calendar日历模块"></a><code>calendar</code>日历模块</h4><p><code>import calendar</code></p>
+<p>日历模块不会随着python启动而加载。</p>
+<p><code>calendar()</code></p>
+<p>功能：获取指定年份的日历字符串<br>格式：<code>calendar.calendar（年份,w=2,l=1，c=6,m=3）</code><br>返回值：字符串<br>参数：</p>
+<ul>
+<li>w表示 2个日期之间的间隔字符长度</li>
+<li>l表示 一个周占用几个行高度</li>
+<li>c表示2个月份之间的空白间隔</li>
+<li>m表示一行显示几个月</li>
+</ul>
+<p><code>month()</code></p>
+<p>功能：获取指定年月的日历字符串<br>格式：<code>calendar.month(年，月，w=2，l=1)</code><br>返回值：字符串A</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">print(calendar.month(<span class="number">2020</span>, <span class="number">1</span>))</span><br><span class="line"><span class="comment">#     January 2020</span></span><br><span class="line"><span class="comment"># Mo Tu We Th Fr Sa Su</span></span><br><span class="line"><span class="comment">#        1  2  3  4  5</span></span><br><span class="line"><span class="comment">#  6  7  8  9 10 11 12</span></span><br><span class="line"><span class="comment"># 13 14 15 16 17 18 19</span></span><br><span class="line"><span class="comment"># 20 21 22 23 24 25 26</span></span><br><span class="line"><span class="comment"># 27 28 29 30 31</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>monthcalendar()</code></p>
+<p>功能：获取一个年月的矩阵列表<br>格式：<code>calendar.monthcalendar(年，月)</code><br>返回值：二级列表</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">print(calendar.monthcalendar(<span class="number">2020</span>, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment"># [</span></span><br><span class="line"><span class="comment"># [ 0,  0,  1,  2,  3,  4,  5], </span></span><br><span class="line"><span class="comment"># [ 6,  7,  8,  9, 10, 11, 12], </span></span><br><span class="line"><span class="comment"># [13, 14, 15, 16, 17, 18, 19], </span></span><br><span class="line"><span class="comment"># [20, 21, 22, 23, 24, 25, 26], </span></span><br><span class="line"><span class="comment"># [27, 28, 29, 30, 31,  0,  0]</span></span><br><span class="line"><span class="comment"># ]</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>isleap()</code></p>
+<p>功能：检测指定年份是不是闰年<br>格式：<code>calendar.isleap(年份)</code><br>返回值：布尔值</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(calendar.isleap(<span class="number">2020</span>))</span><br><span class="line"><span class="comment"># True</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>leapdays()</code></p>
+<p>功能：检测指定年份之间的闰年个数<br>格式：<code>calendar.leapdays(开始年份，结束年份)</code><br>返回值：整数<br>注意：包含开始年份不包含结束年份</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(calendar.leapdays(<span class="number">2000</span>, <span class="number">2400</span>))</span><br><span class="line"><span class="comment"># 97</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>monthrange()</code></p>
+<p>功能：获取一个月的周几开始及当月天数<br>格式：<code>calendar.monthrange(年，月)</code><br>返回值：元组(周几，天数)<br>注意：0-6表示周一到周天</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(calendar.monthrange(<span class="number">2020</span>, <span class="number">1</span>))</span><br><span class="line"><span class="comment"># (2, 31)</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>weekday()</code></p>
+<p>功能：根据年月日计算周几<br>格式：<code>calendar.weekday(年，月，日)</code><br>返回值：整型  0-6 表示周一到周天</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(calendar.weekday(<span class="number">2020</span>, <span class="number">1</span>, <span class="number">1</span>))</span><br><span class="line"><span class="comment"># 2</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>timegm()</code></p>
+<p>功能：将时间元组转化为时间戳<br>格式：<code>calendar.timegm(时间元组)</code><br>返回值：时间戳</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(calendar.timegm((<span class="number">2020</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)))</span><br><span class="line"><span class="comment"># 1577836800</span></span><br></pre></td></tr></table></figure></div>
+
+<p>其它方法</p>
+<p><code>firstweekday()</code></p>
+<p>功能：获取每周开始日期</p>
+<p><code>setfirstweekday()</code></p>
+<p>功能：设置日历开始星期<br>格式：<code>calendar.setfirstweekday(开始星期0~6)</code><br>返回值：None</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">print(calendar.month(<span class="number">2020</span>, <span class="number">1</span>))</span><br><span class="line">result = calendar.setfirstweekday(<span class="number">4</span>)</span><br><span class="line">print(result)</span><br><span class="line">print(calendar.month(<span class="number">2020</span>, <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line"><span class="comment">#     January 2020</span></span><br><span class="line"><span class="comment"># Mo Tu We Th Fr Sa Su</span></span><br><span class="line"><span class="comment">#        1  2  3  4  5</span></span><br><span class="line"><span class="comment">#  6  7  8  9 10 11 12</span></span><br><span class="line"><span class="comment"># 13 14 15 16 17 18 19</span></span><br><span class="line"><span class="comment"># 20 21 22 23 24 25 26</span></span><br><span class="line"><span class="comment"># 27 28 29 30 31</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># None</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#     January 2020</span></span><br><span class="line"><span class="comment"># Fr Sa Su Mo Tu We Th</span></span><br><span class="line"><span class="comment">#                 1  2</span></span><br><span class="line"><span class="comment">#  3  4  5  6  7  8  9</span></span><br><span class="line"><span class="comment"># 10 11 12 13 14 15 16</span></span><br><span class="line"><span class="comment"># 17 18 19 20 21 22 23</span></span><br><span class="line"><span class="comment"># 24 25 26 27 28 29 30</span></span><br><span class="line"><span class="comment"># 31</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>prmonth()</code></p>
+<p>功能：获取并打印指定年月的日历<br>格式：<code>calendar.prmonth(年, 月)</code><br>返回值：None</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">calendar.prmonth(<span class="number">2020</span>, <span class="number">1</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#     January 2020</span></span><br><span class="line"><span class="comment"># Mo Tu We Th Fr Sa Su</span></span><br><span class="line"><span class="comment">#        1  2  3  4  5</span></span><br><span class="line"><span class="comment">#  6  7  8  9 10 11 12</span></span><br><span class="line"><span class="comment"># 13 14 15 16 17 18 19</span></span><br><span class="line"><span class="comment"># 20 21 22 23 24 25 26</span></span><br><span class="line"><span class="comment"># 27 28 29 30 31</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>prcal()</code></p>
+<p>功能：获取并打印指定年份的日历<br>合适：<code>calendar.prcal()</code><br>返回值：None</p>
+<h5 id="Calendar类"><a href="#Calendar类" class="headerlink" title="Calendar类"></a>Calendar类</h5><p>当前类的信息都是为了程序员根据自己的业务逻辑处理的内容</p>
+<p><code>itermonthdates()</code></p>
+<p>功能：返回指定年月的信息的生成器</p>
+<p><code>itermonthdays()</code></p>
+<p>功能：返回指定年月的信息的生成器</p>
+<p><code>itermonthdays2()</code></p>
+<p>功能：返回指定年月的信息的生成器</p>
+<p><code>itermonthdays3()</code></p>
+<p>功能：返回指定年月的信息的生成器</p>
+<p><code>itermonthdays4()</code></p>
+<p>功能：返回指定年月的信息的生成器</p>
+<p><code>monthdatescalendar()</code></p>
+<p>功能：返回指定年月的生成器</p>
+<h5 id="HTMLCalendar类"><a href="#HTMLCalendar类" class="headerlink" title="HTMLCalendar类"></a>HTMLCalendar类</h5><p>当前类的所有内容都是为web开发准备的</p>
+<p><code>formatyear()</code></p>
+<p>功能：获取一年的日历<br>返回值：html代码组成</p>
+<p><code>formatmonth()</code></p>
+<p>功能：获取一个月的日历<br>返回值：html代码组成</p>
+<p><code>formatyearpage()</code></p>
+<p>功能：获取一年的日历<br>返回值：html代码组成,可以指定css样式</p>
+<h5 id="TextCalendar类"><a href="#TextCalendar类" class="headerlink" title="TextCalendar类"></a>TextCalendar类</h5><p>当前类的所有内容仅仅是文本信息，不包含html代码,效果可以使用方法替代</p>
+<p><code>formatyear()</code></p>
+<p>功能：获取一年的日历</p>
+<p><code>formatmonth()</code></p>
+<p>功能：获取一个月的日历</p>
+<p><code>formatyearpage()</code></p>
+<p>功能：获取一年的日历</p>
+<h4 id="Time模块"><a href="#Time模块" class="headerlink" title="Time模块"></a>Time模块</h4><p><code>import time</code></p>
+<h5 id="时间戳"><a href="#时间戳" class="headerlink" title="时间戳"></a>时间戳</h5><p>时间戳是一种用于表示时间的方式。从1970年1月1日0时0分0秒0毫秒开始到指定时间的秒数。世间戳也叫做unix时间戳，1970年1月1日成为unix元年。</p>
+<p>作用:是为了方便时间的统一运算。<br>1.从1970年1月1日开始计算。<br>2.能够使用到2038年的某一天<br>3.如果使用太远的未来或者1970年以前的时间可能出现异常</p>
+<h5 id="UTC时间"><a href="#UTC时间" class="headerlink" title="UTC时间"></a>UTC时间</h5><p>UTC时间又称之为世界协调时间。特指格林尼治天文台所在位置的时间也叫做格林尼治时间。<br>中国的时区是东八区，和世界协调时间差了8个小时，多个八个小时</p>
+<h5 id="夏令时"><a href="#夏令时" class="headerlink" title="夏令时"></a>夏令时</h5><p>夏令时就是通过在夏季将时间调快一小时，来提醒大家早睡早起身体好，节省蜡烛！<br>每天的时钟变成了25个小时，注意本质还是24个小时</p>
+<h5 id="时间元组"><a href="#时间元组" class="headerlink" title="时间元组"></a>时间元组</h5><h6 id="struct-time类"><a href="#struct-time类" class="headerlink" title="struct_time类"></a>struct_time类</h6><p>时间元组就是一个用于表示时间格式的元组数据而已，他是time模块操作时间的主要方式。</p>
+<p><code>(tm_year=2017, tm_mon=7, tm_mday=4, tm_hour=9, tm_min=4, tm_sec=21, tm_wday=1, tm_yday=185, tm_isdst=0)</code></p>
+<p>格式：（年，月，日，时，分，秒，周几，一年中的第几天，是否是夏令时）</p>
+<table>
+<thead>
+<tr>
+<th>索引</th>
+<th>名称</th>
+<th>内容</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td><code>tm_year</code></td>
+<td>年</td>
+<td>4位数年份</td>
+</tr>
+<tr>
+<td>1</td>
+<td><code>tm_month</code></td>
+<td>月</td>
+<td>1~12</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>tm_day</code></td>
+<td>日</td>
+<td>1~31</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>tm_hour</code></td>
+<td>时</td>
+<td>0~23</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>tm_min</code></td>
+<td>分</td>
+<td>0~59</td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>tm_sec</code></td>
+<td>秒</td>
+<td>0~61    60是闰秒   61是历史保留</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>tm_wday</code></td>
+<td>周几</td>
+<td>0<del>6    周一</del>周日</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>tm_yday</code></td>
+<td>一年中的第几天</td>
+<td>1~366</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>tm_isdst</code></td>
+<td>夏令时</td>
+<td>0  是  其它不是</td>
+</tr>
+</tbody></table>
+<h6 id="相关方法"><a href="#相关方法" class="headerlink" title="相关方法"></a>相关方法</h6><p><code>asctime()</code></p>
+<p>功能：返回一个正常的可读的时间字符串<br>格式：<code>time.asctime(时间元组)</code><br>返回值：时间字符串</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result = time.asctime((<span class="number">2020</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>))</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># Mon Jan  1 00:00:00 2020</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>localtime()</code></p>
+<p>功能：获取当前时间元组<br>格式：<code>time.localtime()</code><br>返回值：本地时间元组</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result = time.localtime()</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># time.struct_time(tm_year=2019, tm_mon=12, tm_mday=5, tm_hour=11, tm_min=5, tm_sec=5, tm_wday=3, tm_yday=339, tm_isdst=0)</span></span><br></pre></td></tr></table></figure></div>
+
+<p>格式：<code>time.localtime(时间戳)</code><br>返回值：指定时间戳的本地时间元组</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result = time.localtime(<span class="number">0</span>)</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># time.struct_time(tm_year=1970, tm_mon=1, tm_mday=1, tm_hour=8, tm_min=0, tm_sec=0, tm_wday=3, tm_yday=1, tm_isdst=0)</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>gmtime()</code></p>
+<p>功能：获取当前UTC时间元组<br>格式：<code>time.gmtime()</code><br>返回值：当前UTC时间元组</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result = time.gmtime()</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># time.struct_time(tm_year=2019, tm_mon=12, tm_mday=5, tm_hour=3, tm_min=8, tm_sec=32, tm_wday=3, tm_yday=339, tm_isdst=0)</span></span><br></pre></td></tr></table></figure></div>
+
+<p>格式：<code>time.gmtime(时间戳)</code><br>返回值：指定时间戳的UTC时间元组</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result = time.gmtime(<span class="number">0</span>)</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># time.struct_time(tm_year=1970, tm_mon=1, tm_mday=1, tm_hour=0, tm_min=0, tm_sec=0, tm_wday=3, tm_yday=1, tm_isdst=0)</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>ctime()</code></p>
+<p>功能：获取本地时间的字符串格式<br>格式：<code>time.ctime()</code><br>返回值：时间格式字符串 相当于 <code>asctime(localtime())</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result = time.ctime()</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># Thu Dec  5 11:12:15 2019</span></span><br></pre></td></tr></table></figure></div>
+
+<p>格式：<code>time.ctime(时间戳)</code><br>返回值：时间格式字符串 相当于<code>asctime(localtime(时间戳))</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result = time.ctime(<span class="number">0</span>)</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># Thu Jan  1 08:00:00 1970</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>mktime()</code></p>
+<p>功能：使用时间元组制作时间戳<br>格式：<code>time.mktime(时间元组)</code><br>返回值:时间戳<br>注意：按照本地时间来进行计算，如果想按照UTC时间计算，则是<code>calendar.timegm()</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">timetuple = (<span class="number">2020</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">result = time.mktime(timetuple)</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># 1577808000.0</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>time()</code></p>
+<p>功能：获取当前本地的时间戳<br>格式：<code>time.time()</code><br>返回值：浮点数时间戳</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">result = time.time()</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># 1575516145.4562347</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>strftime()</code></p>
+<p>功能：格式化输出时间字符串（str foramt time）<br>格式：<code>time.strftime(&#39;字符串格式&#39;[,时间元组])</code><br>返回值：格式化之后的哦字符串<br>格式    含义        备注<br>%a    本地（locale）简化星期名称<br>%A    本地完整星期名称<br>%b    本地简化月份名称<br>%B    本地完整月份名称<br>%c    本地相应的日期和时间表示<br>%d    一个月中的第几天（01 - 31）<br>%H    一天中的第几个小时（24 小时制，00 - 23）<br>%I    一天中的第几个小时（12 小时制，01 - 12）<br>%j    一年中的第几天（001 - 366）<br>%m    月份（01 - 12）<br>%M    分钟数（00 - 59）<br>%p    本地 am 或者 pm 的相应符    注1<br>%S    秒（01 - 61）    注2<br>%U    一年中的星期数（00 - 53 星期天是一个星期的开始）第一个星期天之前的所有天数都放在第 0 周    注3<br>%w    一个星期中的第几天（0 - 6，0 是星期天）    注3<br>%W    和 %U 基本相同，不同的是 %W 以星期一为一个星期的开始<br>%X    本地相应时间<br>%y    去掉世纪的年份（00 - 99）<br>%Y    完整的年份<br>%z    用 +HHMM 或 -HHMM 表示距离格林威治的时区偏移（H 代表十进制的小时数，M 代表十进制的分钟数）<br>%%    %号本身</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">timetuple = (<span class="number">2020</span>, <span class="number">1</span>, <span class="number">1</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>)</span><br><span class="line">ttpformat = <span class="string">'%Y年%m月%d日 %H：%M：%S'</span></span><br><span class="line"></span><br><span class="line">result = time.strftime(ttpformat, timetuple)</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># 2020年01月01日 00：00：00</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>strptime()</code></p>
+<p>功能：解析时间字符串成一个元组，strftime的逆向操作（str parse time）<br>格式：<code>time.strptime(&#39;时间字符串&#39;,&#39;时间字符串格式&#39;)</code><br>返回值：时间元组</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">ttpformat = <span class="string">'%Y年%m月%d日 %H：%M：%S'</span></span><br><span class="line">ttpstr = <span class="string">'2020年01月01日 00：00：00'</span></span><br><span class="line"></span><br><span class="line">result = time.strptime(ttpstr, ttpformat)</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># time.struct_time(tm_year=2020, tm_mon=1, tm_mday=1, tm_hour=0, tm_min=0, tm_sec=0, tm_wday=2, tm_yday=1, tm_isdst=-1)</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>clock()</code></p>
+<p>功能：获取CPU时间，用于计算代码执行时间<br>格式：<code>time.clock()</code><br>返回值：浮点数时间戳<br>注意：主要用于计算程序执行时间，开始获取一次，程序执行完毕在获取一次，相减获得执行总时间，仅py3.3以下，<strong>3.8版本已经移除了</strong></p>
+<p><code>perf_counter()</code></p>
+<p>功能：获取CPU时间用于计算时间差<br>格式：<code>time.perf_counter()</code><br>返回值：浮点数时间戳<br>注意：主要用于计算程序执行时间，开始获取一次，程序执行完毕在获取一次，相减获得执行总时间，仅py3.3以上</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">start = time.perf_counter()</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(<span class="number">10000000</span>):</span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line">end = time.perf_counter()</span><br><span class="line">result = end - start</span><br><span class="line">print(str(result))</span><br><span class="line"><span class="comment"># 0.394306</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>sleep()</code></p>
+<p>功能：程序睡眠，使得程序在此处等待指定的时间<br>格式：<code>time.sleep(时间秒数)</code><br>返回值：无</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line">print(<span class="string">'##########'</span>)</span><br><span class="line">time.sleep(<span class="number">3</span>)   <span class="comment"># 程序暂停3秒</span></span><br><span class="line">print(<span class="string">'**********'</span>)</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="时间模块的值"><a href="#时间模块的值" class="headerlink" title="时间模块的值"></a>时间模块的值</h5><p><code>timezone</code></p>
+<p>获取当前时区与格林尼治所在时区的相差的秒数（推荐）</p>
+<p><code>altzone</code></p>
+<p>获取当前时区与格林尼治所在时区的相差的秒数，在有夏令时的情况下</p>
+<p><code>daylight</code></p>
+<p>检测是否是夏令时的状态  0 夏令时 非0就不是</p>
+<h5 id="进度条实例"><a href="#进度条实例" class="headerlink" title="进度条实例"></a>进度条实例</h5><p>模拟一个骗人的进度条</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line">nums = <span class="number">50</span></span><br><span class="line">print(<span class="string">'----------程序开始----------'</span>)</span><br><span class="line">start = time.perf_counter()</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> range(nums + <span class="number">1</span>):</span><br><span class="line">    star = i * <span class="string">'*'</span></span><br><span class="line">    point = (nums - i) * <span class="string">'.'</span></span><br><span class="line">    val = i / nums</span><br><span class="line">    usetime = time.perf_counter() - start</span><br><span class="line">    print(<span class="string">'\r&#123;0:.1f&#125;% [&#123;1&#125;-&gt;&#123;2&#125;]&#123;3:.2f&#125;s'</span>.format(val * <span class="number">100</span>, star, point, usetime), end=<span class="string">''</span>)</span><br><span class="line">    time.sleep(<span class="number">0.1</span>)</span><br><span class="line"></span><br><span class="line">print(<span class="string">'\n----------程序结束----------'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># ----------程序开始----------</span></span><br><span class="line"><span class="comment"># 100.0% [**************************************************-&gt;]5.02s</span></span><br><span class="line"><span class="comment"># ----------程序结束----------</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="数学模块"><a href="#数学模块" class="headerlink" title="数学模块"></a>数学模块</h3><p><code>import math</code></p>
+<h4 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h4><p><code>ceil()</code></p>
+<p>功能：向上取整操作<br>格式：<code>math.ceil(数值)</code><br>返回值：整型</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(math.ceil(<span class="number">6.2</span>))</span><br><span class="line"><span class="comment"># 7</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>floor()</code></p>
+<p>功能：向下取整操作<br>格式：<code>math.floor(数值)</code><br>返回值：整型</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(math.floor(<span class="number">6.6</span>))</span><br><span class="line"><span class="comment"># 6</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>pow()</code></p>
+<p>功能：计算一个数值的N次方<br>格式：<code>math.pow(底数,幂)</code><br>返回值：浮点类型      注意：该操作相当于**运算但是结果为浮点型</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">print(pow(<span class="number">2</span>, <span class="number">3</span>))</span><br><span class="line">print(math.pow(<span class="number">2</span>, <span class="number">3</span>))</span><br><span class="line"><span class="comment"># 8</span></span><br><span class="line"><span class="comment"># 8.0</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>sqrt()</code></p>
+<p>功能：开平方<br>格式：<code>math.sqrt(数值)</code><br>返回值：浮点数</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(math.sqrt(<span class="number">16</span>))</span><br><span class="line"><span class="comment"># 4</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>fabs()</code></p>
+<p>功能：对一个数值获取其绝对值操作<br>格式：<code>math.fabs(数值)</code><br>返回值：浮点数</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(math.fabs(<span class="number">-16</span>))</span><br><span class="line"><span class="comment"># 16.0</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>abs()</code></p>
+<p>功能：对一个数值获取其绝对值操作<br>格式：<code>abs(数值)</code><br>返回值：可能是整数可以能浮点数<br>注意：abs() 他是内建函数 同时返回值根据原类型决定</p>
+<p><code>modf()</code></p>
+<p>功能：将一个浮点数拆成整数和小数部分组成的元组<br>格式：<code>math.modf(数值)</code><br>返回值：元组（小数部分,整数部分）</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(math.modf(<span class="number">-16.66</span>))</span><br><span class="line"><span class="comment"># (0.6600000000000001, 16.0)</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>copysign()</code></p>
+<p>功能：将第二个数的正负号复制给第一个数<br>格式：<code>math.copysign(值1，值2)</code><br>返回值：值1 符号是值2的正负号</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(math.copysign(<span class="number">-6</span>, <span class="number">7.77</span>))</span><br><span class="line"><span class="comment"># 6</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>fsum()</code></p>
+<p>功能：将一个序列的数值进行相加求和<br>格式：<code>math.fsum(序列)</code><br>返回值：浮点数</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(math.fsum((<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>)))</span><br><span class="line"><span class="comment"># 10.0</span></span><br></pre></td></tr></table></figure></div>
+
+
+<p><code>sum()</code></p>
+<p>功能：将一个序列的数值进行相加求和<br>格式：<code>sum(序列)</code><br>返回值：数值类型</p>
+<h4 id="模块提供的常见值"><a href="#模块提供的常见值" class="headerlink" title="模块提供的常见值"></a>模块提供的常见值</h4><p><code>pi</code></p>
+<p>圆周率：3.141592653589793</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(math.pi)</span><br><span class="line"><span class="comment"># 3.141592653589793</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>e</code></p>
+<p>自然对数：2.718281828459045</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(math.e)</span><br><span class="line"><span class="comment"># 2.718281828459045</span></span><br></pre></td></tr></table></figure></div>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/07/DAY49/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            DAY49
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/06/DAY48/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">DAY48</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自米路可缇书"></img>
+    <h3 class="avatar-name">
+      
+        一颗酸菜
+      
+    </h3>
+    <p class="avatar-slogan">
+      又酸又菜，未来铲屎官，FF14er，zhihaoduonianjingzhuibing。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E6%8A%A5/">日报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/">课后练习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/" rel="tag">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/" rel="tag">sass</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/07/%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97III/">常用模块III</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/07/DAY49/">DAY49</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/06/%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97II/">常用模块II</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/06/DAY48/">DAY48</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/05/%E5%B8%B8%E7%94%A8%E6%A8%A1%E5%9D%97I/">常用模块I</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://weibo.com/yorukosama?refer_flag=1005050005_&is_all=1" title target='_blank'
+        >米路可缇书</a>
+      
+        <a style="display: block;" href="https://victorfengming.github.io/" title target='_blank'
+        >小明同学</a>
+      
+        <a style="display: block;" href="https://caoyang7.github.io/" title target='_blank'
+        >我班一位可爱的同学说把她加上</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Cai Suan &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/play.html" class="mobile-nav-link">打飞机</a>
+  
+    <a href="/gd-index.html" class="mobile-nav-link">光之快递员</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
