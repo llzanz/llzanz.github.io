@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>魔术方法 | Zan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="魔术方法常用魔术方法">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="魔术方法">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;13&#x2F;%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95&#x2F;index.html">
+<meta property="og:site_name" content="Zan">
+<meta property="og:description" content="魔术方法常用魔术方法">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-12T08:57:59.376Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/play.html" title
+        
+        >打飞机</a>
+      
+        <a class="nav-item" href="/gd-index.html" title
+        
+        >光之快递员</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-魔术方法" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      魔术方法
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/12/13/%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95/" class="article-date">
+  <time datetime="2019-12-13T08:50:09.000Z" itemprop="datePublished">2019-12-13</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h2 id="魔术方法"><a href="#魔术方法" class="headerlink" title="魔术方法"></a>魔术方法</h2><h3 id="常用魔术方法"><a href="#常用魔术方法" class="headerlink" title="常用魔术方法"></a>常用魔术方法</h3><a id="more"></a>
+
+<p><code>__init__</code></p>
+<p>初始化魔术方法</p>
+<p>触发时机：初始化对象时触发（不是实例化触发，但是和实例化在一个操作中）<br>参数：至少有一个self，接收对象<br>返回值：无<br>作用：初始化对象的成员<br>注意：使用该方式初始化的成员都是直接写入对象当中，类中无法具有</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">class = Human:</span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, kidname)</span>:</span></span><br><span class="line">        self.name = kidname</span><br><span class="line">        </span><br><span class="line">one = Human(<span class="string">'修特拉'</span>)</span><br><span class="line">print(one.__dict__)</span><br><span class="line"><span class="comment"># &#123;'name': '修特拉'&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>__new__</code></p>
+<p>实例化魔术方法</p>
+<p>触发时机： 在实例化对象触发<br>参数：至少一个<code>cls</code>接收当前类<br>返回值：必须返回一个对象实例<br>作用：实例化对象<br>注意：实例化对象是Object类底层实现，其他类继承了Object的<code>__new__</code>才能够实现实例化对象。<br>没事别碰这个魔术方法，先触发<code>__new__</code>才会触发<code>__init__</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Human</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__new__</span><span class="params">(cls, sex)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> sex == <span class="string">'女'</span>:</span><br><span class="line">            <span class="keyword">return</span> object.__new__(cls)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">one = Human(<span class="string">'男'</span>)</span><br><span class="line">print(one)</span><br><span class="line">one = Human(<span class="string">'女'</span>)</span><br><span class="line">print(one)</span><br><span class="line"><span class="comment"># None</span></span><br><span class="line"><span class="comment"># &lt;__main__.Human object at 0x00C81FA0&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>实例化对象：1.制作一个对象<code>__new__</code> 2.初始化对象<code>__init__</code></p>
+<p><code>__del__</code></p>
+<p>析构模式方法</p>
+<p>触发时机：当对象没有用（没有任何变量引用）的时候被触发<br>参数：一个self 接受当前对象<br>返回值：无<br>作用：使用完对象是回收资源<br>注意：del不一定会触发当前方法，只有当前对象没有任何变量接收时才会触发</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Human</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__del__</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'del触发'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">one = Human()</span><br><span class="line">print(<span class="string">'========='</span>)</span><br><span class="line"><span class="comment"># =========</span></span><br><span class="line"><span class="comment"># del触发</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>__call__</code></p>
+<p>调用对象的魔术方法</p>
+<p>触发时机：将对象当作函数调用时触发<code>对象()</code><br>参数：至少一个self接收对象，其余根据调用时参数决定<br>返回值：根据情况而定<br>作用：可以将复杂的步骤进行合并操作，减少调用的步骤，方便使用<br>注意：无</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">MakeCake</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">zuodangao</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'做蛋糕'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">muonaiyou</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'抹奶油'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">fangshuiguo</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'放水果'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__call__</span><span class="params">(self, kouwei)</span>:</span></span><br><span class="line">        self.zuodangao()</span><br><span class="line">        self.muonaiyou()</span><br><span class="line">        self.fangshuiguo()</span><br><span class="line">        print(<span class="string">'&#123;&#125;口味的'</span>.format(kouwei))</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'蛋糕'</span></span><br><span class="line">    </span><br><span class="line">mk = MakeCake()</span><br><span class="line">result = mk(<span class="string">'巧克力'</span>)</span><br><span class="line">print(result)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 做蛋糕</span></span><br><span class="line"><span class="comment"># 抹奶油</span></span><br><span class="line"><span class="comment"># 放水果</span></span><br><span class="line"><span class="comment"># 巧克力口味的</span></span><br><span class="line"><span class="comment"># 蛋糕</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>__len__</code></p>
+<p>触发时机：使用<code>len(对象)</code>的时候触发<br>参数：一个参数self<br>返回值：必须是一个整型<br>作用：可以设置为检测对象成员个数，但是也可以进行其他任意操作<br>注意：返回值必须必须是整数，否则语法报错，另外该要求是格式要求。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">class Aa:</span><br><span class="line">    listvar = [1, 2, 3, 4, 5]</span><br><span class="line"></span><br><span class="line">    def __len__(self):</span><br><span class="line">        num = len(self.listvar)</span><br><span class="line">        return num</span><br><span class="line"></span><br><span class="line">aa = Aa()</span><br><span class="line">print(len(aa))</span><br><span class="line"># 5</span><br></pre></td></tr></table></figure></div>
+
+<p><code>__str__</code></p>
+<p>触发时机：使用<code>print(对象)</code>或者<code>str(对象)</code>的时候触发<br>参数：一个self接收对象<br>返回值：必须是字符串类型<br>作用：print（对象时）进行操作，得到字符串，通常用于快捷操作<br>注意：无</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Aa</span>:</span></span><br><span class="line">    name = <span class="string">'雅瞄'</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.name</span><br><span class="line"></span><br><span class="line">a = Aa()</span><br><span class="line">print(a)</span><br><span class="line"><span class="comment"># 雅瞄</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>__repr__</code></p>
+<p>触发时机：在使用<code>repr(对象)</code>的时候触发<br>参数：一个self接收对象<br>返回值：必须是字符串<br>作用：将对象转使用<code>repr</code>化为字符串时使用，也可以用于快捷操作</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Aa</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__repr__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">'repr的数据'</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__str__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> <span class="string">'str的数据'</span></span><br><span class="line"></span><br><span class="line">a = Aa()</span><br><span class="line">print(a)</span><br><span class="line">result = repr(a)</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># str的数据</span></span><br><span class="line"><span class="comment"># repr的数据</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>__bool__</code></p>
+<p>触发时机：使用bool(对象)的时候触发<br>参数：一个self接收对象<br>返回值：必须是布尔值<br>作用：根据实际情况决定，可以作为快捷方式使用<br>注意：仅适合于返回布尔值的操作，不添加这个方法一般默认为<code>True</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Aa</span>:</span></span><br><span class="line">    sex = <span class="string">'男'</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__bool__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.sex == <span class="string">'女'</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">True</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">False</span></span><br><span class="line"></span><br><span class="line">a = Aa()</span><br><span class="line">print(bool(a))</span><br><span class="line"><span class="comment"># False</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>__format__</code></p>
+<p>触发时机：使用字符串.format(对象)时候触发<br>参数：一个self接收对象，一个参数接收format的{}中的格式，例如:&gt;5<br>返回值:必须是字符串<br>作用：设置对象可以作为format的参数，并且自定义对象格式化的规则<br>注意：无</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Girl</span>:</span></span><br><span class="line">    name = <span class="string">'初墨'</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__format__</span><span class="params">(self, flag)</span>:</span></span><br><span class="line">        fillchar = flag[<span class="number">0</span>]</span><br><span class="line">        align = flag[<span class="number">1</span>]</span><br><span class="line">        length = int(flag[<span class="number">2</span>:])</span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> align == <span class="string">'&gt;'</span>:</span><br><span class="line">            <span class="keyword">return</span> self.name.rjust(length, fillchar)</span><br><span class="line">        <span class="keyword">elif</span> align == <span class="string">'^'</span>:</span><br><span class="line">            <span class="keyword">return</span> self.name.center(length, fillchar)</span><br><span class="line">        <span class="keyword">elif</span> align == <span class="string">'&lt;'</span>:</span><br><span class="line">            <span class="keyword">return</span> self.name.ljust(length, fillchar)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> <span class="string">''</span></span><br><span class="line"></span><br><span class="line">xcm = Girl()</span><br><span class="line"></span><br><span class="line">action = <span class="string">'我和我的闺蜜&#123;:*^10&#125;去逛街'</span></span><br><span class="line">result = action.format(xcm)</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># 我和我的闺蜜****初墨****去逛街</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="与属性操作相关的魔术方法"><a href="#与属性操作相关的魔术方法" class="headerlink" title="与属性操作相关的魔术方法"></a>与属性操作相关的魔术方法</h3><p>属性访问的顺序：</p>
+<ol>
+<li>调用<code>__getattribute__</code></li>
+<li>调用数据描述符</li>
+<li>调用当前对象的所属成员</li>
+<li>调用类的所属成员</li>
+<li>调用非数据描述符</li>
+<li>调用父类的所属成员</li>
+<li>调用<code>__getattr__</code></li>
+</ol>
+<p>注意：以上步骤是调用某个成员的访问顺序及优先级。前面的能获取成员，就不会向后面查找</p>
+<p><code>__getattribute__</code></p>
+<p>触发时机：使用对象成员时触发，无论成员是否存在<br>参数：1个接收当前对象self，一个是获取的成员的名称字符串<br>返回值：必须有<br>作用：在具有封装操作（私有化时），为程序开部分访问权限使用</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Human</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.name = <span class="string">'西门吹雪'</span></span><br><span class="line">        self.sex = <span class="string">'男'</span></span><br><span class="line">        self.age = <span class="number">18</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getattribute__</span><span class="params">(self, item)</span>:</span></span><br><span class="line">        <span class="comment"># 一定不能使用当前对象的成员访问，会再次触发当前魔术方法进入递归循环</span></span><br><span class="line">        result = object.__getattribute__(self, item)</span><br><span class="line">        <span class="keyword">return</span> result[<span class="number">0</span>] + <span class="string">'*'</span> + result[<span class="number">-1</span>]</span><br><span class="line"></span><br><span class="line">one = Human()</span><br><span class="line">print(one.name)</span><br><span class="line"><span class="comment"># 西*雪</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>__getattr__</code></p>
+<p>触发时机：获取不存在的对象成员时触发<br>参数：一个接收当前对象的self，一个是获取成员名称的字符串<br>返回值：必须有值<br>作用：为访问不存在的属性设置值<br>注意：<code>getattribute</code>无论何时都会在<code>getattr</code>之前触发，触发了<code>getattribute</code>就不会在触发<code>getattr</code>了</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Human</span>:</span></span><br><span class="line">    name = <span class="string">'西门吹雪'</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.age = <span class="number">18</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getattr__</span><span class="params">(self, item)</span>:</span></span><br><span class="line">        print(item)</span><br><span class="line">        <span class="keyword">return</span> <span class="string">'你访问的属性不存在'</span></span><br><span class="line"></span><br><span class="line">xm = Human()</span><br><span class="line">print(xm.sex)</span><br><span class="line"><span class="comment"># sex</span></span><br><span class="line"><span class="comment"># 你访问的属性不存在</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>__setattr__</code></p>
+<p>触发时机:设置对象成员值的时候触发<br>参数:1个当前对象的self,一个是要设置的成员名称字符串,一个是要设置的值<br>返回值:无 过程操作<br>作用:接管设置操作,可以在设置前之前进行判断验证等行为<br>注意:在当前方法中无法使用成员=值的方式直接设置成员，否则会无限递归，必须借助object的设置方法来完成</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Human</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.name = <span class="string">'西门吹雪'</span></span><br><span class="line">        self.age = <span class="number">18</span></span><br><span class="line">        self.sex = <span class="string">'男'</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__setattr__</span><span class="params">(self, key, value)</span>:</span></span><br><span class="line">        object.__setattr__(self, key, value)</span><br><span class="line">        print(<span class="string">'被触发了'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">one = Human()</span><br><span class="line">print(one.__dict__)</span><br><span class="line">one.name = <span class="string">'叶孤城'</span></span><br><span class="line">print(one.__dict__)</span><br><span class="line"><span class="comment"># 被触发了</span></span><br><span class="line"><span class="comment"># 被触发了</span></span><br><span class="line"><span class="comment"># 被触发了</span></span><br><span class="line"><span class="comment"># &#123;'name': '西门吹雪', 'age': 18, 'sex': '男'&#125;</span></span><br><span class="line"><span class="comment"># 被触发了</span></span><br><span class="line"><span class="comment"># &#123;'name': '叶孤城', 'age': 18, 'sex': '男'&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p><code>__delattr__</code></p>
+<p>触发时机：删除对象成员的时候自动触发<br>作用：1.可以限制对象成员的删除 2.删除不存在的属性时防止报错<br>参数：一个self接受当前对象，另外一个接受删除的成员属性名称的字符串<br>返回值：无<br>注意事项：如果要删除对象成员，要借助object中的<code>__delattr__</code>来操作。</p>
+<h3 id="描述符"><a href="#描述符" class="headerlink" title="描述符"></a>描述符</h3><p>如果一个类中包含了三个魔术方法<code>__get__</code>、<code>__set__</code>、<code>__delete__</code>之一或者全部的类这个类就是一个描述符</p>
+<h4 id="描述符的作用"><a href="#描述符的作用" class="headerlink" title="描述符的作用"></a>描述符的作用</h4><p>描述符的作用就是对类/对象中的某个成员进行详细的管理操作。</p>
+<h4 id="数据描述符"><a href="#数据描述符" class="headerlink" title="数据描述符"></a>数据描述符</h4><p>同时具备三个魔术方法的类就是数据描述符</p>
+<h4 id="非数据描述符"><a href="#非数据描述符" class="headerlink" title="非数据描述符"></a>非数据描述符</h4><p>没有同时具备三个魔术方法的类就是非数据描述符</p>
+<h4 id="三个魔术方法"><a href="#三个魔术方法" class="headerlink" title="三个魔术方法"></a>三个魔术方法</h4><p><code>__get__():</code></p>
+<p>触发时机：在访问对象成员属性（该成员已经交给描述符管理的时候）的时候触发<br>作用：设置当前属性获取的值<br>参数：self 描述符的对象  / 第二个 被管理成员的类的对象  / 第三个  被管理成员的类<br>返回值：可有可无，有的话就是获取的值<br>注意事项：无</p>
+<p><code>__set__():</code></p>
+<p>触发时机：在设置对象成员属性（该成员已经交给描述符管理的时候）的时候触发<br>作用：对成员的值进行设置管理<br>参数：self 描述符的对象  / 第二个 被管理成员的类的对象  / 第三个  要设置的值<br>返回值：无<br>注意事项：设置值的时候一定要设置当前描述符对象的临时变量</p>
+<p><code>__delete__():</code></p>
+<p>触发时机：在删除对象成员属性（该成员已经交给描述符管理的时候）的时候触发<br>作用：对成员的值进行删除管理<br>参数：self 描述符的对象  / 第二个 被管理成员的类的对象<br>返回值：无<br>注意事项：删除值的时候一定要删除当前描述符对象的临时变量</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Descriptor</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.tmpvar = <span class="string">'匿名用户'</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__get__</span><span class="params">(self, instance, owner)</span>:</span></span><br><span class="line">        <span class="comment"># print(self)   &lt;__main__.Descriptor object at 0x00ACE580&gt;</span></span><br><span class="line">        <span class="comment"># print(instance)   &lt;__main__.Email object at 0x02E3A388&gt;</span></span><br><span class="line">        <span class="comment"># print(owner)  &lt;class '__main__.Email'&gt;</span></span><br><span class="line">        <span class="keyword">return</span> self.tmpvar</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__set__</span><span class="params">(self, instance, value)</span>:</span></span><br><span class="line">        <span class="comment"># print(value)  新用户名</span></span><br><span class="line">        self.tmpvar = value</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__delete__</span><span class="params">(self, instance)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> instance.isallowdel_username:</span><br><span class="line">            <span class="keyword">del</span> self.tmpvar</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Email</span>:</span></span><br><span class="line">    username = Descriptor()</span><br><span class="line">    isallowdel_username = <span class="literal">False</span>    <span class="comment"># 设置是否允许删除用户名</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">login</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'登录'</span>)</span><br><span class="line"></span><br><span class="line">mail = Email()</span><br><span class="line">print(mail.username)</span><br><span class="line">mail.username = <span class="string">'新用户名'</span></span><br><span class="line">print(mail.username)</span><br><span class="line"><span class="keyword">del</span> mail.username</span><br><span class="line">print(mail.username)</span><br><span class="line"><span class="comment"># 匿名用户</span></span><br><span class="line"><span class="comment"># 新用户名</span></span><br><span class="line"><span class="comment"># 新用户名</span></span><br></pre></td></tr></table></figure></div>
+
+<p>属性魔术方法：针对当前类/对象所有成员的管理，属性魔术方法仅对当前类有效</p>
+<p>描述符：仅仅针对类/对象的某一个成员的设置，描述符可对不用的类使用</p>
+<h4 id="描述符的一种格式"><a href="#描述符的一种格式" class="headerlink" title="描述符的一种格式"></a>描述符的一种格式</h4><p>描述符的类和被管理的类分开</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#描述符的类</span></span><br><span class="line">	<span class="class"><span class="keyword">class</span> <span class="title">Manage</span><span class="params">()</span>:</span></span><br><span class="line">		<span class="keyword">pass</span></span><br><span class="line"><span class="comment">#被管理的成员的类</span></span><br><span class="line">	<span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">()</span>:</span></span><br><span class="line">		属性 = Mange()</span><br></pre></td></tr></table></figure></div>
+
+<p>例子：上面</p>
+<h4 id="描述符的第二种格式"><a href="#描述符的第二种格式" class="headerlink" title="描述符的第二种格式"></a>描述符的第二种格式</h4><p>描述符融合到被管理的成员类当中（使用property函数）</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#描述符融合到被管理的成员类当中（使用了property函数）</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">()</span>:</span></span><br><span class="line">	...</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">		<span class="keyword">pass</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">getusername</span><span class="params">(self)</span>:</span></span><br><span class="line">		<span class="keyword">pass</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">setusername</span><span class="params">(self,val)</span>:</span></span><br><span class="line">		<span class="keyword">pass</span></span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">deleteusername</span><span class="params">(self)</span>:</span></span><br><span class="line">		<span class="keyword">pass</span></span><br><span class="line">	<span class="comment"># property函数指定三个方法,进行管理操作</span></span><br><span class="line">	属性 = property(getusername,setusername,deleteusername)</span><br></pre></td></tr></table></figure></div>
+
+<p>例：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Email</span>:</span></span><br><span class="line">    <span class="comment"># username = '匿名用户'</span></span><br><span class="line">    isallowdel = <span class="literal">False</span>  <span class="comment"># 设置是否可以删除</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.tmpvar = <span class="string">'匿名用户'</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getusername</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.tmpvar</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">setusername</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        self.tmpvar = value + <span class="string">'sama'</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">deleteusername</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.isallowdel:</span><br><span class="line">            <span class="keyword">del</span> self.tmpvar</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">    username = property(getusername, setusername, deleteusername)</span><br><span class="line"></span><br><span class="line">mail = Email()</span><br><span class="line">print(mail.username)</span><br><span class="line">mail.username = <span class="string">'雅瞄'</span></span><br><span class="line">print(mail.username)</span><br><span class="line"><span class="keyword">del</span> mail.username</span><br><span class="line">print(mail.username)</span><br><span class="line"><span class="comment"># 匿名用户</span></span><br><span class="line"><span class="comment"># 雅瞄sama</span></span><br><span class="line"><span class="comment"># 雅瞄sama</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="描述符的第三种格式"><a href="#描述符的第三种格式" class="headerlink" title="描述符的第三种格式"></a>描述符的第三种格式</h4><p>描述符融合到被管理的成员当中（使用装饰器语法组合）</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 描述符融合到被管理的成员类当中（使用装饰器语法组合@property）</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span><span class="params">()</span>:</span></span><br><span class="line">	...</span><br><span class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.tmpvar = <span class="string">'匿名用户'</span></span><br><span class="line"><span class="meta">	@property #将用户名username交给描述符管理  【默认用作获取的方法】</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">username</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#管理获取操作</span></span><br><span class="line">        <span class="keyword">return</span> self.tmpvar[<span class="number">0</span>] + <span class="string">'*'</span> + self.tmpvar[<span class="number">-1</span>]</span><br><span class="line"><span class="meta">    @username.setter</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">username</span><span class="params">(self,val)</span>:</span><span class="comment">#用于设置的方法</span></span><br><span class="line">        self.tmpvar = val</span><br><span class="line"><span class="meta">    @username.deleter</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">username</span><span class="params">(self)</span>:</span><span class="comment">#用于删除的方法</span></span><br><span class="line">        <span class="keyword">del</span> self.tmpvar</span><br></pre></td></tr></table></figure></div>
+
+<p>例：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Email</span>:</span></span><br><span class="line">    <span class="comment"># username = '匿名用户'</span></span><br><span class="line">    isallowdel = <span class="literal">False</span>  <span class="comment"># 设置是否可以删除</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.tmpvar = <span class="string">'匿名用户'</span></span><br><span class="line"></span><br><span class="line"><span class="meta">    @property</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">username</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self.tmpvar</span><br><span class="line"></span><br><span class="line"><span class="meta">    @username.setter</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">username</span><span class="params">(self, value)</span>:</span></span><br><span class="line">        self.tmpvar = value</span><br><span class="line"></span><br><span class="line"><span class="meta">    @username.deleter</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">username</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">if</span> self.isallowdel:</span><br><span class="line">            <span class="keyword">del</span> self.tmpvar</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">mail = Email()</span><br><span class="line">print(mail.username)</span><br><span class="line">mail.username = <span class="string">'雅瞄'</span></span><br><span class="line">print(mail.username)</span><br><span class="line"><span class="keyword">del</span> mail.username</span><br><span class="line">print(mail.username)</span><br><span class="line"><span class="comment"># 匿名用户</span></span><br><span class="line"><span class="comment"># 雅瞄</span></span><br><span class="line"><span class="comment"># 雅瞄</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="装饰器"><a href="#装饰器" class="headerlink" title="装饰器"></a>装饰器</h3><p>装饰器就是对函数或者方法或者类进行修饰</p>
+<h4 id="扩展函数的功能"><a href="#扩展函数的功能" class="headerlink" title="扩展函数的功能"></a>扩展函数的功能</h4><p>基本实现装饰器</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">decor</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">()</span>:</span></span><br><span class="line">        func()</span><br><span class="line">        print(<span class="string">'抱抱'</span>)</span><br><span class="line">        print(<span class="string">'举高高'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">love</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'亲亲'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">love = decor(love)</span><br><span class="line">love()</span><br><span class="line"><span class="comment"># 亲亲</span></span><br><span class="line"><span class="comment"># 抱抱</span></span><br><span class="line"><span class="comment"># 举高高</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="扩展函数的功能，使用语法糖"><a href="#扩展函数的功能，使用语法糖" class="headerlink" title="扩展函数的功能，使用语法糖"></a>扩展函数的功能，使用语法糖</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">decor</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">()</span>:</span></span><br><span class="line">        func()</span><br><span class="line">        print(<span class="string">'抱抱'</span>)</span><br><span class="line">        print(<span class="string">'举高高'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line"></span><br><span class="line"><span class="meta">@decor  # 等于love = decor(love)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">love</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'亲亲'</span>)</span><br><span class="line"></span><br><span class="line">love()</span><br><span class="line"><span class="comment"># 亲亲</span></span><br><span class="line"><span class="comment"># 抱抱</span></span><br><span class="line"><span class="comment"># 举高高</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="为基本函数添加返回值"><a href="#为基本函数添加返回值" class="headerlink" title="为基本函数添加返回值"></a>为基本函数添加返回值</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">decor</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">()</span>:</span></span><br><span class="line">        result = func()</span><br><span class="line">        print(<span class="string">'抱抱'</span>)</span><br><span class="line">        print(<span class="string">'举高高'</span>)</span><br><span class="line">        <span class="keyword">return</span> result</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line"></span><br><span class="line"><span class="meta">@decor  # 等于love = decor(love)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">love</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'亲亲'</span>)</span><br><span class="line">    <span class="keyword">return</span> <span class="string">'❤'</span></span><br><span class="line"></span><br><span class="line">result = love()</span><br><span class="line">print(result)</span><br><span class="line"><span class="comment"># 亲亲</span></span><br><span class="line"><span class="comment"># 抱抱</span></span><br><span class="line"><span class="comment"># 举高高</span></span><br><span class="line"><span class="comment"># ❤</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="为基本函数添加参数"><a href="#为基本函数添加参数" class="headerlink" title="为基本函数添加参数"></a>为基本函数添加参数</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">decor</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">(w1, w2)</span>:</span></span><br><span class="line">        func(w1, w2)</span><br><span class="line">        print(<span class="string">'&#123;&#125;抱抱&#123;&#125;'</span>.format(w1, w2))</span><br><span class="line">        print(<span class="string">'&#123;&#125;举高高&#123;&#125;'</span>.format(w1, w2))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line"></span><br><span class="line"><span class="meta">@decor</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">love</span><span class="params">(who1, who2)</span>:</span></span><br><span class="line">    print(<span class="string">'&#123;&#125;亲亲&#123;&#125;'</span>.format(who1, who2))</span><br><span class="line"></span><br><span class="line">love(<span class="string">'妈妈'</span>, <span class="string">'女儿'</span>)</span><br><span class="line"><span class="comment"># 妈妈亲亲女儿</span></span><br><span class="line"><span class="comment"># 妈妈抱抱女儿</span></span><br><span class="line"><span class="comment"># 妈妈举高高女儿</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="加上收集参数（收集参数，关键字收集参数）"><a href="#加上收集参数（收集参数，关键字收集参数）" class="headerlink" title="加上收集参数（收集参数，关键字收集参数）"></a>加上收集参数（收集参数，关键字收集参数）</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">decor</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">(*prt, **cld)</span>:</span></span><br><span class="line">        func(*prt, **cld)</span><br><span class="line">        print(prt, <span class="string">'抱抱'</span>, cld)</span><br><span class="line">        print(<span class="string">'举高高'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line"></span><br><span class="line"><span class="meta">@decor</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">love</span><span class="params">(*parent, **child)</span>:</span></span><br><span class="line">    print(parent, <span class="string">'亲亲'</span>, child)</span><br><span class="line"></span><br><span class="line">love(<span class="string">'爸爸'</span>, <span class="string">'妈妈'</span>, son=<span class="string">'儿子'</span>, daughter=<span class="string">'女儿'</span>)</span><br><span class="line"><span class="comment"># ('爸爸', '妈妈') 亲亲 &#123;'son': '儿子', 'daughter': '女儿'&#125;</span></span><br><span class="line"><span class="comment"># ('爸爸', '妈妈') 抱抱 &#123;'son': '儿子', 'daughter': '女儿'&#125;</span></span><br><span class="line"><span class="comment"># 举高高</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="为装饰器添加参数"><a href="#为装饰器添加参数" class="headerlink" title="为装饰器添加参数"></a>为装饰器添加参数</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 为装饰器添加参数</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">outer</span><span class="params">(arg)</span>:</span></span><br><span class="line">    <span class="comment"># ----------装饰器开始----------</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">decor</span><span class="params">(func)</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">()</span>:</span></span><br><span class="line">            <span class="keyword">if</span> arg == <span class="string">'笑'</span>:</span><br><span class="line">                print(<span class="string">'我给你讲个笑话'</span>)</span><br><span class="line">                func()</span><br><span class="line">                print(<span class="string">'肚子疼了吧'</span>)</span><br><span class="line">            <span class="keyword">elif</span> arg == <span class="string">'哭'</span>:</span><br><span class="line">                func()</span><br><span class="line">                print(<span class="string">'不哭不哭'</span>)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> inner</span><br><span class="line"></span><br><span class="line">    <span class="comment"># ----------装饰器结束----------</span></span><br><span class="line">    <span class="keyword">return</span> decor  <span class="comment"># 返回装饰器</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@outer('笑')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">smile</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'哈哈哈哈'</span>)</span><br><span class="line"></span><br><span class="line">smile()</span><br><span class="line"></span><br><span class="line"><span class="meta">@outer('哭')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cry</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'呜呜呜呜'</span>)</span><br><span class="line"></span><br><span class="line">cry()</span><br><span class="line"><span class="comment"># 我给你讲个笑话</span></span><br><span class="line"><span class="comment"># 哈哈哈哈</span></span><br><span class="line"><span class="comment"># 肚子疼了吧</span></span><br><span class="line"><span class="comment"># 呜呜呜呜</span></span><br><span class="line"><span class="comment"># 不哭不哭</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="将类作为参数传入装饰器中使用"><a href="#将类作为参数传入装饰器中使用" class="headerlink" title="将类作为参数传入装饰器中使用"></a>将类作为参数传入装饰器中使用</h4><p>存在一个类，类中的方法是需要装饰的功能</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Parent</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">baobao</span><span class="params">()</span>:</span></span><br><span class="line">        print(<span class="string">'抱抱'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">jugao</span><span class="params">()</span>:</span></span><br><span class="line">        print(<span class="string">'举高高'</span>)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">outer</span><span class="params">(cls)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">decor</span><span class="params">(func)</span>:</span></span><br><span class="line">        <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">()</span>:</span></span><br><span class="line">            cls.baobao()</span><br><span class="line">            func()</span><br><span class="line">            cls.jugao()</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> inner</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> decor</span><br><span class="line"></span><br><span class="line"><span class="meta">@outer(Parent)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">love</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'亲亲'</span>)</span><br><span class="line"></span><br><span class="line">love()</span><br><span class="line"><span class="comment"># 抱抱</span></span><br><span class="line"><span class="comment"># 亲亲</span></span><br><span class="line"><span class="comment"># 举高高</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="将类作为装饰器"><a href="#将类作为装饰器" class="headerlink" title="将类作为装饰器"></a>将类作为装饰器</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Outer</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, arg)</span>:</span>  <span class="comment"># 相当于outer函数</span></span><br><span class="line">        self.arg = arg</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__call__</span><span class="params">(self, func)</span>:</span>  <span class="comment"># 相当于decor函数</span></span><br><span class="line">        self.func = func</span><br><span class="line">        <span class="keyword">return</span> self.inner</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.func()</span><br><span class="line">        print(<span class="string">'抱抱'</span>)</span><br><span class="line"></span><br><span class="line"><span class="meta">@Outer('a')</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">love</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'亲亲'</span>)</span><br><span class="line"></span><br><span class="line">love()</span><br><span class="line"><span class="comment"># 亲亲</span></span><br><span class="line"><span class="comment"># 抱抱</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="给类添加装饰器"><a href="#给类添加装饰器" class="headerlink" title="给类添加装饰器"></a>给类添加装饰器</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">decor</span><span class="params">(cls)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">()</span>:</span></span><br><span class="line">        obj = cls()</span><br><span class="line">        obj.name = <span class="string">'雅瞄'</span></span><br><span class="line">        obj.sex = <span class="number">18</span></span><br><span class="line">        <span class="keyword">return</span> obj</span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line"></span><br><span class="line"><span class="meta">@decor</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Huamn</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">one = Huamn()</span><br><span class="line">print(one.__dict__)</span><br><span class="line"><span class="comment"># &#123;'name': '雅瞄', 'sex': 18&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="多层装饰器嵌套"><a href="#多层装饰器嵌套" class="headerlink" title="多层装饰器嵌套"></a>多层装饰器嵌套</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">decor1</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">()</span>:</span></span><br><span class="line">        func()</span><br><span class="line">        print(<span class="string">'抱抱'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">decor2</span><span class="params">(func)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">inner</span><span class="params">()</span>:</span></span><br><span class="line">        func()</span><br><span class="line">        print(<span class="string">'举高高'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> inner</span><br><span class="line"></span><br><span class="line"><span class="meta">@decor2</span></span><br><span class="line"><span class="meta">@decor1</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">love</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'亲亲'</span>)</span><br><span class="line"></span><br><span class="line">love()</span><br><span class="line"><span class="comment"># 亲亲</span></span><br><span class="line"><span class="comment"># 抱抱</span></span><br><span class="line"><span class="comment"># 举高高</span></span><br></pre></td></tr></table></figure></div>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/14/DAY55/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            DAY55
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/13/DAY54/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">DAY54</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自米路可缇书"></img>
+    <h3 class="avatar-name">
+      
+        一颗酸菜
+      
+    </h3>
+    <p class="avatar-slogan">
+      又酸又菜，未来铲屎官，FF14er，zhihaoduonianjingzhuibing。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E6%8A%A5/">日报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/">课后练习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/" rel="tag">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/" rel="tag">sass</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/14/%E9%94%99%E8%AF%AF%E5%BC%82%E5%B8%B8/">错误异常</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/14/DAY55/">DAY55</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/13/%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95/">魔术方法</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/13/DAY54/">DAY54</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/12/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1III/">面向对象III</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://weibo.com/yorukosama?refer_flag=1005050005_&is_all=1" title target='_blank'
+        >米路可缇书</a>
+      
+        <a style="display: block;" href="https://victorfengming.github.io/" title target='_blank'
+        >小明同学</a>
+      
+        <a style="display: block;" href="https://caoyang7.github.io/" title target='_blank'
+        >我班一位可爱的同学说把她加上</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Cai Suan &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/play.html" class="mobile-nav-link">打飞机</a>
+  
+    <a href="/gd-index.html" class="mobile-nav-link">光之快递员</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

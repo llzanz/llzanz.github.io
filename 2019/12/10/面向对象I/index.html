@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>面向对象I | Zan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="面向对象Object Oriented 面向对象的学习：  面向对象的语法 面向对象的思想">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象I">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;10&#x2F;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1I&#x2F;index.html">
+<meta property="og:site_name" content="Zan">
+<meta property="og:description" content="面向对象Object Oriented 面向对象的学习：  面向对象的语法 面向对象的思想">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-12T08:56:30.234Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/play.html" title
+        
+        >打飞机</a>
+      
+        <a class="nav-item" href="/gd-index.html" title
+        
+        >光之快递员</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-面向对象I" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      面向对象I
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/12/10/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1I/" class="article-date">
+  <time datetime="2019-12-10T08:49:26.000Z" itemprop="datePublished">2019-12-10</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>Object Oriented</p>
+<p>面向对象的学习：</p>
+<ul>
+<li>面向对象的语法</li>
+<li>面向对象的思想</li>
+</ul>
+<a id="more"></a>
+
+<p>面向对象的优势：</p>
+<ul>
+<li>能够实现良好程序结构，方便程序的开发和管理维护</li>
+</ul>
+<p>效率：</p>
+<ul>
+<li>运行效率：面向对象效率不如过程化快</li>
+<li>开发效率：面向对象比过程化开发效率高</li>
+</ul>
+<p>面向对象的结构特色：</p>
+<ul>
+<li>高内聚：具有关联的功能放在一个结构中</li>
+<li>低耦合：没有关联的功能放在不同结构中</li>
+</ul>
+<p>面向对象相关单词：</p>
+<ul>
+<li>OO    面向对象</li>
+<li>OOP    面向对象的程序开发</li>
+<li>OOA    面向对象的分析</li>
+<li>OOD    面向对象的设计</li>
+<li>OOI    面向对象的实现</li>
+</ul>
+<p>OOA  -&gt;  OOD  -&gt;  OOI  面向对象的实现过程</p>
+<h3 id="类和对象"><a href="#类和对象" class="headerlink" title="类和对象"></a>类和对象</h3><p>类：唯心</p>
+<p>对象：唯物</p>
+<h4 id="类和对象的关系"><a href="#类和对象的关系" class="headerlink" title="类和对象的关系"></a>类和对象的关系</h4><p>类是由对象总结而来的。这个过程叫做抽象化</p>
+<p>对象是由类具体实施而来。这个过程叫做实例化</p>
+<h4 id="类的组成"><a href="#类的组成" class="headerlink" title="类的组成"></a>类的组成</h4><p>类中只有2中内容：成员属性和成员方法</p>
+<p>创建</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Human</span>:</span></span><br><span class="line">    name = <span class="string">'小一'</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">eat</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'一'</span>)</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="类的书写规则"><a href="#类的书写规则" class="headerlink" title="类的书写规则"></a>类的书写规则</h4><p>声明一个类必须使用<code>class</code>关键字</p>
+<p>命名使用大驼峰命名法</p>
+<p>类中只能存在两种内容，成员属性和成员方法。</p>
+<p>声明成员属性时必须赋值，没有赋值会报错，推荐用<code>None</code>代替</p>
+<p>声明成员方法时，按照函数的规则即可</p>
+<h3 id="实例化对象"><a href="#实例化对象" class="headerlink" title="实例化对象"></a>实例化对象</h3><p>实例化对象<br>格式：<code>对象变量 = 类()</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yi = Human()</span><br></pre></td></tr></table></figure></div>
+
+<p>类的类型为type</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(type(Human))</span><br><span class="line"><span class="comment"># &lt;class 'type'&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>类的值就是类本身</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(Human)</span><br><span class="line"><span class="comment"># &lt;class '__main__.Human'&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>对象的类型为类</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(type(yi))</span><br><span class="line"><span class="comment"># &lt;class '__main__.Human'&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>对象的值，对象本身</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(yi)</span><br><span class="line"><span class="comment"># &lt;__main__.Human object at 0x0307E580&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="类和对象成员的操作"><a href="#类和对象成员的操作" class="headerlink" title="类和对象成员的操作"></a>类和对象成员的操作</h3><p>已创建的类</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Computer</span>:</span></span><br><span class="line">    CPU = <span class="string">'I9-10980XE'</span></span><br><span class="line">    GPU = <span class="string">'TAITAN v'</span></span><br><span class="line">    SSD = <span class="string">'1T'</span></span><br><span class="line">    memory = <span class="string">'128G'</span></span><br><span class="line">    display = <span class="string">'144HZ'</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">play_game</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'FF14启动'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">play_music</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'LaHee~~~Don e la le li pho la~♪'</span>)</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="类成员操作"><a href="#类成员操作" class="headerlink" title="类成员操作"></a>类成员操作</h4><h5 id="检测类的成员"><a href="#检测类的成员" class="headerlink" title="检测类的成员"></a>检测类的成员</h5><p>格式：<code>类名.__dict__</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(Computer.__dict__)</span><br><span class="line"><span class="comment"># &#123;'__module__': '__main__', 'CPU': 'I9-10980XE', 'GPU': 'TAITAN v', 'SSD': '1T', 'memory': '128G', 'display': '144HZ', 'color': 'pink', 'play_game': &lt;function Computer.play_game at 0x0357B7C0&gt;, 'play_music': &lt;function Computer.play_music at 0x0357B778&gt;, '__dict__': &lt;attribute '__dict__' of 'Computer' objects&gt;, '__weakref__': &lt;attribute '__weakref__' of 'Computer' objects&gt;, '__doc__': None&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="访问类中成员"><a href="#访问类中成员" class="headerlink" title="访问类中成员"></a>访问类中成员</h5><p>格式：<code>类名.成员属性名</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(Computer.CPU)</span><br><span class="line"><span class="comment"># I9-10980XE</span></span><br></pre></td></tr></table></figure></div>
+
+<p>格式：<code>类名.成员方法名()</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Computer.play_music(<span class="literal">None</span>)</span><br><span class="line"><span class="comment"># LaHee~~~Don e la le li pho la~♪</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="修改类中成员"><a href="#修改类中成员" class="headerlink" title="修改类中成员"></a>修改类中成员</h5><p>格式：<code>类名.成员属性名 = 新值</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Computer.CPU = <span class="string">'I7-9800K'</span></span><br><span class="line">print(Computer.CPU)</span><br><span class="line"><span class="comment"># I7-9800K</span></span><br></pre></td></tr></table></figure></div>
+
+<p>格式：<code>类名.成员方法名 = 函数</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Computer.play_music(<span class="literal">None</span>)</span><br><span class="line">Computer.play_music = <span class="keyword">lambda</span>: print(<span class="string">'falalalala~~♪'</span>)</span><br><span class="line">Computer.play_music()</span><br><span class="line"><span class="comment"># LaHee~~~Don e la le li pho la~♪</span></span><br><span class="line"><span class="comment"># falalalala~~♪</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="添加类中成员"><a href="#添加类中成员" class="headerlink" title="添加类中成员"></a>添加类中成员</h5><p>格式：<code>类名.新成员属性名 = 值</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Computer.keyboard = <span class="string">'filco'</span></span><br><span class="line">print(Computer.__dict__)</span><br><span class="line"><span class="comment"># &#123;'__module__': '__main__', 'CPU': 'I7-9800K', 'GPU': 'TAITAN v', 'SSD': '1T', 'memory': '128G', 'display': '144HZ', 'play_game': &lt;function Computer.play_game at 0x0302B7C0&gt;, 'play_music': &lt;function Computer.play_music at 0x0302B778&gt;, '__dict__': &lt;attribute '__dict__' of 'Computer' objects&gt;, '__weakref__': &lt;attribute '__weakref__' of 'Computer' objects&gt;, '__doc__': None, 'keyboard': 'filco'&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>格式：<code>类名.新成员方法名 = 函数</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">work</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">'敲代码中......'</span>)</span><br><span class="line"></span><br><span class="line">Computer.work = work	</span><br><span class="line">print(Computer.__dict__)</span><br><span class="line"><span class="comment"># &#123;'__module__': '__main__', 'CPU': 'I9-10980XE', 'GPU': 'TAITAN v', 'SSD': '1T', 'memory': '128G', 'display': '144HZ', 'play_game': &lt;function Computer.play_game at 0x01CDB808&gt;, 'play_music': &lt;function Computer.play_music at 0x01CDB7C0&gt;, '__dict__': &lt;attribute '__dict__' of 'Computer' objects&gt;, '__weakref__': &lt;attribute '__weakref__' of 'Computer' objects&gt;, '__doc__': None, 'work': &lt;function work at 0x01CDB850&gt;&#125;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 也可以使用lambda</span></span><br><span class="line"></span><br><span class="line">Computer.work = <span class="keyword">lambda</span>: print(<span class="string">'敲代码中......'</span>)</span><br><span class="line">print(Computer.__dict__)</span><br><span class="line"><span class="comment"># &#123;'__module__': '__main__', 'CPU': 'I9-10980XE', 'GPU': 'TAITAN v', 'SSD': '1T', 'memory': '128G', 'display': '144HZ', 'play_game': &lt;function Computer.play_game at 0x034CB808&gt;, 'play_music': &lt;function Computer.play_music at 0x034CB7C0&gt;, '__dict__': &lt;attribute '__dict__' of 'Computer' objects&gt;, '__weakref__': &lt;attribute '__weakref__' of 'Computer' objects&gt;, '__doc__': None, 'work': &lt;function &lt;lambda&gt; at 0x034CB850&gt;&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="删除类中的成员"><a href="#删除类中的成员" class="headerlink" title="删除类中的成员"></a>删除类中的成员</h5><p>格式：<code>del 类名.成员属性名</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">del</span> Computer.display</span><br><span class="line">print(Computer.__dict__)</span><br><span class="line"><span class="comment"># &#123;'__module__': '__main__', 'CPU': 'I7-9800K', 'GPU': 'TAITAN v', 'SSD': '1T', 'memory': '128G', 'play_game': &lt;function Computer.play_game at 0x03A9B7C0&gt;, 'play_music': &lt;function Computer.play_music at 0x03A9B778&gt;, '__dict__': &lt;attribute '__dict__' of 'Computer' objects&gt;, '__weakref__': &lt;attribute '__weakref__' of 'Computer' objects&gt;, '__doc__': None, 'keyboard': 'filco'&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>格式：<code>del 类名.成员方法名</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">del</span> Computer.play_game</span><br><span class="line">print(Computer.__dict__)</span><br><span class="line"><span class="comment"># &#123;'__module__': '__main__', 'CPU': 'I9-10980XE', 'GPU': 'TAITAN v', 'SSD': '1T', 'memory': '128G', 'display': '144HZ', 'play_music': &lt;function Computer.play_music at 0x03C1B778&gt;, '__dict__': &lt;attribute '__dict__' of 'Computer' objects&gt;, '__weakref__': &lt;attribute '__weakref__' of 'Computer' objects&gt;, '__doc__': None&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="对象成员操作"><a href="#对象成员操作" class="headerlink" title="对象成员操作"></a>对象成员操作</h4><h5 id="检测对象成员"><a href="#检测对象成员" class="headerlink" title="检测对象成员"></a>检测对象成员</h5><p>格式：<code>对象名.__dict__</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(pc.__dict__)</span><br><span class="line"><span class="comment"># &#123;&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="访问对象中成员"><a href="#访问对象中成员" class="headerlink" title="访问对象中成员"></a>访问对象中成员</h5><p>格式：<code>对象名.成员属性名</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">print(pc.CPU)</span><br><span class="line"><span class="comment"># I9-10980XE</span></span><br></pre></td></tr></table></figure></div>
+
+<p>格式：<code>对象名.成员方法名</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pc.play_music()</span><br><span class="line"><span class="comment"># LaHee~~~Don e la le li pho la~♪</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="修改对象中成员"><a href="#修改对象中成员" class="headerlink" title="修改对象中成员"></a>修改对象中成员</h5><p>格式：<code>对象名.成员属性 = 新值</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pc.CPU = <span class="string">'I7-9800K'</span></span><br><span class="line">print(pc.__dict__)</span><br><span class="line">print(pc.CPU)</span><br><span class="line"><span class="comment"># &#123;'CPU': 'I7-9800K'&#125;</span></span><br><span class="line"><span class="comment"># I7-9800K</span></span><br></pre></td></tr></table></figure></div>
+
+<p>格式：<code>对象名.成员方法 = 函数</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pc.play_music = <span class="keyword">lambda</span>: print(<span class="string">'falalalala~~♪'</span>)</span><br><span class="line">print(pc.__dict__)</span><br><span class="line">pc.play_music()</span><br><span class="line"><span class="comment"># &#123;'play_music': &lt;function &lt;lambda&gt; at 0x02D7B850&gt;&#125;</span></span><br><span class="line"><span class="comment"># falalalala~~♪</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="添加对象中成员"><a href="#添加对象中成员" class="headerlink" title="添加对象中成员"></a>添加对象中成员</h5><p>格式：<code>对象名.新成员属性 = 值</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">print(pc.__dict__)</span><br><span class="line">pc.keyboard = <span class="string">'flico'</span></span><br><span class="line">print(pc.__dict__)</span><br><span class="line">print(pc.keyboard)</span><br><span class="line"><span class="comment"># &#123;&#125;</span></span><br><span class="line"><span class="comment"># &#123;'keyboard': 'flico'&#125;</span></span><br><span class="line"><span class="comment"># flico</span></span><br></pre></td></tr></table></figure></div>
+
+<p>格式：<code>对象名.新成员方法 = 值</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">pc.work = <span class="keyword">lambda</span>: print(<span class="string">'敲代码中......'</span>)</span><br><span class="line">print(pc.__dict__)</span><br><span class="line">pc.work()</span><br><span class="line"><span class="comment"># &#123;'work': &lt;function &lt;lambda&gt; at 0x03178808&gt;&#125;</span></span><br><span class="line"><span class="comment"># 敲代码中......</span></span><br></pre></td></tr></table></figure></div>
+
+<h5 id="删除对象中成员"><a href="#删除对象中成员" class="headerlink" title="删除对象中成员"></a>删除对象中成员</h5><p>格式：<code>del 对象名.成员属性</code><br>注意：只能删除属于当前对象的成员</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pc.keyboard = <span class="string">'flico'</span></span><br><span class="line">print(pc.__dict__)</span><br><span class="line"><span class="keyword">del</span> pc.keyboard</span><br><span class="line">print(pc.__dict__)</span><br><span class="line"><span class="comment"># &#123;'keyboard': 'flico'&#125;</span></span><br><span class="line"><span class="comment"># &#123;&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<p>格式：<code>del 对象名.成员方法名</code></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">pc.work = <span class="keyword">lambda</span>: print(<span class="string">'敲代码中......'</span>)</span><br><span class="line">print(pc.__dict__)</span><br><span class="line"><span class="keyword">del</span> pc.work</span><br><span class="line">print(pc.__dict__)</span><br><span class="line"><span class="comment"># &#123;'work': &lt;function &lt;lambda&gt; at 0x02F38808&gt;&#125;</span></span><br><span class="line"><span class="comment"># &#123;&#125;</span></span><br></pre></td></tr></table></figure></div>
+
+<h3 id="self"><a href="#self" class="headerlink" title="self"></a>self</h3><p>他不是关键字，是一个随意书写的字符串而已</p>
+<ul>
+<li>英文单词的意义 ：自己</li>
+<li>绑定类的方法，只能通过类来访问的方法，就是绑定类的方法</li>
+<li>非绑定类的方法，就是可以通过对象访问的方法就是非绑定的方法</li>
+<li>绑定类与非绑定类的方法不取决于语法，而取决于设计者如何设计该方法</li>
+<li>一般情况下非绑定类的方法第一个参数写单词self，但是这不是唯一的单词，写什么都行，self不是关键字，不是关键字，不是关键字！</li>
+</ul>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/11/DAY52/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            52
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/10/DAY51/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">DAY51</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自米路可缇书"></img>
+    <h3 class="avatar-name">
+      
+        一颗酸菜
+      
+    </h3>
+    <p class="avatar-slogan">
+      又酸又菜，未来铲屎官，FF14er，zhihaoduonianjingzhuibing。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E6%8A%A5/">日报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/">课后练习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/" rel="tag">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/" rel="tag">sass</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/14/%E9%94%99%E8%AF%AF%E5%BC%82%E5%B8%B8/">错误异常</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/14/DAY55/">DAY55</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/13/%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95/">魔术方法</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/13/DAY54/">DAY54</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/12/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1III/">面向对象III</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://weibo.com/yorukosama?refer_flag=1005050005_&is_all=1" title target='_blank'
+        >米路可缇书</a>
+      
+        <a style="display: block;" href="https://victorfengming.github.io/" title target='_blank'
+        >小明同学</a>
+      
+        <a style="display: block;" href="https://caoyang7.github.io/" title target='_blank'
+        >我班一位可爱的同学说把她加上</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Cai Suan &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/play.html" class="mobile-nav-link">打飞机</a>
+  
+    <a href="/gd-index.html" class="mobile-nav-link">光之快递员</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

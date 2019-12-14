@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>错误异常 | Zan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="错误和异常处理在python中一共有2种错误：一种是语法错误，另外一种是异常。">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="错误异常">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;14&#x2F;%E9%94%99%E8%AF%AF%E5%BC%82%E5%B8%B8&#x2F;index.html">
+<meta property="og:site_name" content="Zan">
+<meta property="og:description" content="错误和异常处理在python中一共有2种错误：一种是语法错误，另外一种是异常。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-12T08:58:19.680Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/play.html" title
+        
+        >打飞机</a>
+      
+        <a class="nav-item" href="/gd-index.html" title
+        
+        >光之快递员</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-错误异常" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      错误异常
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/12/14/%E9%94%99%E8%AF%AF%E5%BC%82%E5%B8%B8/" class="article-date">
+  <time datetime="2019-12-14T08:50:21.000Z" itemprop="datePublished">2019-12-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h2 id="错误和异常处理"><a href="#错误和异常处理" class="headerlink" title="错误和异常处理"></a>错误和异常处理</h2><p>在python中一共有2种错误：一种是语法错误，另外一种是异常。</p>
+<a id="more"></a>
+
+<h3 id="语法错误"><a href="#语法错误" class="headerlink" title="语法错误"></a>语法错误</h3><p>语法错误也叫做解析错误，是指python无法正确的识别代码的造成的。根本原因在于人的行为：手残，脑残和眼残的行为。</p>
+<p>解决方法：按照正确的语法进行书写就没这个错误了！</p>
+<h3 id="异常"><a href="#异常" class="headerlink" title="异常"></a>异常</h3><p>异常是指在语法正确的前提下，程序的报错就是异常。</p>
+<p>它是在程序异常时单独存在的一个对象，可以对其进行获取或其他操作</p>
+<h3 id="异常的分类"><a href="#异常的分类" class="headerlink" title="异常的分类"></a>异常的分类</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">AssertError               断言语句（assert）失败</span><br><span class="line">AttributeError            尝试访问未知的对象属性</span><br><span class="line">EOFError                  用户输入文件末尾标志EOF（Ctrl+d）</span><br><span class="line">FloatingPointError        浮点计算错误</span><br><span class="line">GeneratorExit             generator.close()方法被调用的时候</span><br><span class="line">ImportError               导入模块失败的时候</span><br><span class="line">IndexError                索引超出序列的范围</span><br><span class="line">KeyError                  字典中查找一个不存在的关键字</span><br><span class="line">KeyboardInterrupt         用户输入中断键（Ctrl+c）</span><br><span class="line">MemoryError               内存溢出（可通过删除对象释放内存）</span><br><span class="line">NameError                 尝试访问一个不存在的变量</span><br><span class="line">NotImplementedError       尚未实现的方法</span><br><span class="line">OSError                   操作系统产生的异常（例如打开一个不存在的文件）</span><br><span class="line">OverflowError             数值运算超出最大限制</span><br><span class="line">ReferenceError            弱引用（weak reference）试图访问一个已经被垃圾回收机制回收了的对象</span><br><span class="line">RuntimeError              一般的运行时错误</span><br><span class="line">StopIteration             迭代器没有更多的值</span><br><span class="line">SyntaxError               Python的语法错误</span><br><span class="line">IndentationError          缩进错误</span><br><span class="line">TabError                  Tab和空格混合使用</span><br><span class="line">SystemError               Python编译器系统错误</span><br><span class="line">SystemExit                Python编译器进程被关闭</span><br><span class="line">TypeError                 不同类型间的无效操作</span><br><span class="line">UnboundLocalError         访问一个未初始化的本地变量（NameError的子类）</span><br><span class="line">UnicodeError              Unicode相关的错误（ValueError的子类）</span><br><span class="line">UnicodeEncodeError        Unicode编码时的错误（UnicodeError的子类）</span><br><span class="line">UnicodeDecodeError        Unicode解码时的错误（UnicodeError的子类）</span><br><span class="line">UnicodeTranslateError     Unicode转换时的错误（UnicodeError的子类）</span><br><span class="line">ValueError                传入无效的参数</span><br><span class="line">ZeroDivisionError         除数为零</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="常见的错误操作："><a href="#常见的错误操作：" class="headerlink" title="常见的错误操作："></a>常见的错误操作：</h3><p>IndexError 索引错误</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">lists = [1,3,6]</span><br><span class="line">print(lists[3])</span><br></pre></td></tr></table></figure></div>
+
+<p>KeyError 键不存在</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">dicts = &#123;&apos;gp&apos;:&apos;高坡&apos;,&apos;cr&apos;:&apos;曹睿&apos;,&apos;tw&apos;:&apos;唐伟&apos;&#125;</span><br><span class="line">print(dicts[&apos;zj&apos;])</span><br></pre></td></tr></table></figure></div>
+
+<p>nameError 变量不存在</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">print(ch)</span><br></pre></td></tr></table></figure></div>
+
+<p>AssertError 断言错误</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">assert 1&gt;0</span><br><span class="line">assert 3&gt;5</span><br></pre></td></tr></table></figure></div>
+
+<p>IndentationError缩进错误</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">def myfunc():</span><br><span class="line">    print(&apos;眼残&apos;)</span><br><span class="line">   print(&apos;眼残&apos;)</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="错误异常处理"><a href="#错误异常处理" class="headerlink" title="错误异常处理"></a>错误异常处理</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">    #尝试实现某个操作，</span><br><span class="line">    #如果没出现异常，任务就可以完成</span><br><span class="line">    #如果出现异常，将异常从当前代码块扔出去尝试解决异常</span><br><span class="line"></span><br><span class="line">except 异常类型1:</span><br><span class="line">    #解决方案1：用于尝试在此处处理异常解决问题</span><br><span class="line"></span><br><span class="line">except 异常类型2：</span><br><span class="line">    #解决方案2：用于尝试在此处处理异常解决问题</span><br><span class="line"></span><br><span class="line">except (异常类型1,异常类型2...)</span><br><span class="line">    #解决方案：针对多个异常使用相同的处理方式</span><br><span class="line"></span><br><span class="line">excpet:</span><br><span class="line">    #解决方案：所有异常的解决方案</span><br><span class="line"></span><br><span class="line">else:</span><br><span class="line">    #如果没有出现任何异常，将会执行此处代码</span><br><span class="line"></span><br><span class="line">finally:</span><br><span class="line">    #管你有没有异常都要执行的代码</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="处理过程："><a href="#处理过程：" class="headerlink" title="处理过程："></a>处理过程：</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">    #尝试执行代码区域。</span><br><span class="line">    #如果没有错误，那就没啥事了，则执行else区域</span><br><span class="line">    #如果出现错误，抛出错误异常对象，由下面的其他块尝试接受错误</span><br><span class="line"></span><br><span class="line">except 异常类型1:</span><br><span class="line">    #如果try块扔出的异常类型和当前指定类型一直，那么则当前块接收错误，并且在当前区域给出错误的解决方案。（非必须）</span><br><span class="line">    #如果try块扔出的异常类型和当前指定类型不一直，则将异常扔到下一个代码块检测</span><br><span class="line"></span><br><span class="line">except 异常类型2:</span><br><span class="line">    #如果try块扔出的异常类型和当前指定类型一直，那么则当前块接收错误，并且在当前区域给出错误的解决方案。（非必须）</span><br><span class="line">    #如果try块扔出的异常类型和当前指定类型不一直，则将异常扔到下一个代码块检测</span><br><span class="line"></span><br><span class="line">except 异常类型3:</span><br><span class="line">    #如果try块扔出的异常类型和当前指定类型一直，那么则当前块接收错误，并且在当前区域给出错误的解决方案。（非必须）</span><br><span class="line">    #如果try块扔出的异常类型和当前指定类型不一直，则将异常扔到下一个代码块检测</span><br><span class="line"></span><br><span class="line">except (异常类型4，异常类型5，...)</span><br><span class="line">    #如果try块扔出的异常类型和当前指任意定类型一直，那么则当前块接收错误，并且在当前区域给出错误的解决方案。（非必须）</span><br><span class="line">    #如果try块扔出的异常类型和当前指定类型不一直，则将异常扔到下一个代码块检测</span><br><span class="line"></span><br><span class="line">except: #所有异常</span><br><span class="line">    #如果其他except块均不能接受异常对象，那么则当前块接受异常，并且进行处理即可（非必须）</span><br><span class="line"></span><br><span class="line">else:</span><br><span class="line">    #try区域代码没有任何异常，则else区域执行（非必须）</span><br><span class="line"></span><br><span class="line">finally:</span><br><span class="line">    #无论出现或者不出现异常，当前块都会执行</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="用户自定义错误和自定义抛出错误"><a href="#用户自定义错误和自定义抛出错误" class="headerlink" title="用户自定义错误和自定义抛出错误"></a>用户自定义错误和自定义抛出错误</h3><h4 id="用户自定义异常抛出操作"><a href="#用户自定义异常抛出操作" class="headerlink" title="用户自定义异常抛出操作"></a>用户自定义异常抛出操作</h4><p><code>raise 异常对象</code></p>
+<h4 id="用户自定义异常类"><a href="#用户自定义异常类" class="headerlink" title="用户自定义异常类"></a>用户自定义异常类</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> 异常类名<span class="params">(RuntimeError)</span>:</span></span><br><span class="line"><span class="comment">#定义用户抛出自定义异常对象时可以向对象中传入的内容信息（由用户自己决定）</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,errormsg...)</span>:</span></span><br><span class="line">    <span class="comment">#接收用户创建对象时传入的错误信息，并且存入对象，方便后期使用</span></span><br><span class="line">    self.errormsg = errormsg</span><br><span class="line">    <span class="comment">#...</span></span><br><span class="line"><span class="keyword">pass</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="在try-except中接收异常对象"><a href="#在try-except中接收异常对象" class="headerlink" title="在try..except中接收异常对象"></a>在try..except中接收异常对象</h4><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    <span class="comment">#尝试代码执行区域</span></span><br><span class="line"><span class="keyword">except</span> 异常类型 <span class="keyword">as</span> 异常对象变量:</span><br><span class="line">    <span class="comment">#解决方案</span></span><br><span class="line"><span class="keyword">except</span> 异常类型 <span class="keyword">as</span> 异常对象变量:</span><br><span class="line">    <span class="comment">#解决方案</span></span><br><span class="line"><span class="comment">#....</span></span><br></pre></td></tr></table></figure></div>
+
+<p>例：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 定义异常类型 (不幸运的异常类型)</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UnlockError</span><span class="params">(Exception)</span>:</span></span><br><span class="line">    <span class="comment"># 为当前异常类型添加更多的信息</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, errmsg, errno, errfile)</span>:</span></span><br><span class="line">        <span class="comment"># 记录错误信息</span></span><br><span class="line">        self.errmsg = errmsg</span><br><span class="line">        <span class="comment"># 记录错误编号</span></span><br><span class="line">        self.errno = errno</span><br><span class="line">        <span class="comment"># 记录错误文件</span></span><br><span class="line">        self.errfile = errfile</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># try语法</span></span><br><span class="line"><span class="keyword">try</span>:</span><br><span class="line">    nums = [<span class="number">123</span>, <span class="number">2</span>, <span class="number">312</span>, <span class="number">434</span>, <span class="number">5</span>, <span class="number">235</span>, <span class="number">6</span>, <span class="number">3</span>, <span class="number">46</span>, <span class="number">579</span>, <span class="number">345</span>, <span class="number">23</span>, <span class="number">4</span>, ]</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 遍历容器中每个元素</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> nums:</span><br><span class="line">        <span class="comment"># 检测容器中是否包含带有4的数据  【1.有没有异常需要自己判断】</span></span><br><span class="line">        <span class="keyword">if</span> <span class="string">'4'</span> <span class="keyword">in</span> str(i):</span><br><span class="line">            <span class="comment"># 出现不幸运的异常</span></span><br><span class="line">            <span class="keyword">raise</span> UnlockError(<span class="string">'容器中出现了不幸运的数字4'</span>, <span class="number">4444</span>, <span class="string">'c:/abc.py'</span>)  <span class="comment"># 手动将异常抛出到except块中了【2.有异常需要自己抛出】</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">except</span> UnlockError <span class="keyword">as</span> err:</span><br><span class="line">    print(<span class="string">'程序出现了异常！'</span>)</span><br><span class="line">    print(err, type(err))</span><br><span class="line"></span><br><span class="line"><span class="comment"># 程序出现了异常！</span></span><br><span class="line"><span class="comment"># ('容器中出现了不幸运的数字4', 4444, 'c:/abc.py') &lt;class '__main__.UnlockError'&gt;</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="with语法"><a href="#with语法" class="headerlink" title="with语法"></a>with语法</h4><p>在文件操作中用于监控文件的使用状态，在文件不使用时自动关闭文件操作。</p>
+<p>文件操作</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">try:</span><br><span class="line">    #程序监控打开的1.txt文件</span><br><span class="line">    with open(&apos;1.txt&apos;,&apos;r&apos;) as fp:</span><br><span class="line">        #读取文件</span><br><span class="line">        text = fp.read()</span><br><span class="line">        print(text)</span><br><span class="line">except:</span><br><span class="line">    print(&apos;文件操作出错！&apos;)</span><br></pre></td></tr></table></figure></div>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/14/DAY55/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">DAY55</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自米路可缇书"></img>
+    <h3 class="avatar-name">
+      
+        一颗酸菜
+      
+    </h3>
+    <p class="avatar-slogan">
+      又酸又菜，未来铲屎官，FF14er，zhihaoduonianjingzhuibing。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E6%8A%A5/">日报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/">课后练习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/" rel="tag">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/" rel="tag">sass</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/14/%E9%94%99%E8%AF%AF%E5%BC%82%E5%B8%B8/">错误异常</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/14/DAY55/">DAY55</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/13/%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95/">魔术方法</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/13/DAY54/">DAY54</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/12/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1III/">面向对象III</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://weibo.com/yorukosama?refer_flag=1005050005_&is_all=1" title target='_blank'
+        >米路可缇书</a>
+      
+        <a style="display: block;" href="https://victorfengming.github.io/" title target='_blank'
+        >小明同学</a>
+      
+        <a style="display: block;" href="https://caoyang7.github.io/" title target='_blank'
+        >我班一位可爱的同学说把她加上</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Cai Suan &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/play.html" class="mobile-nav-link">打飞机</a>
+  
+    <a href="/gd-index.html" class="mobile-nav-link">光之快递员</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>

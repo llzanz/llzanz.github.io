@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>面向对象II | Zan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="面向对象的三大特性面向对象都具有三大特性：封装、继承和多态。">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="面向对象II">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;11&#x2F;%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1II&#x2F;index.html">
+<meta property="og:site_name" content="Zan">
+<meta property="og:description" content="面向对象的三大特性面向对象都具有三大特性：封装、继承和多态。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-12T08:56:50.032Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/play.html" title
+        
+        >打飞机</a>
+      
+        <a class="nav-item" href="/gd-index.html" title
+        
+        >光之快递员</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-面向对象II" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      面向对象II
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/12/11/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1II/" class="article-date">
+  <time datetime="2019-12-11T08:49:39.000Z" itemprop="datePublished">2019-12-11</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h3 id="面向对象的三大特性"><a href="#面向对象的三大特性" class="headerlink" title="面向对象的三大特性"></a>面向对象的三大特性</h3><p>面向对象都具有三大特性：封装、继承和多态。</p>
+<a id="more"></a>
+
+<h4 id="封装特性"><a href="#封装特性" class="headerlink" title="封装特性"></a>封装特性</h4><p>封装就是对类和对象的成员访问进行限制，设定可以访问的方式和不可以访问的方式。</p>
+<h5 id="封装的三个级别"><a href="#封装的三个级别" class="headerlink" title="封装的三个级别"></a>封装的三个级别</h5><ul>
+<li>私有化封装         -&gt; private  英文单词而已不是关键字</li>
+<li>受保护的封装     -&gt; protected  英文单词而已不是关键字</li>
+<li>公共的封装         -&gt; public  英文单词而不是关键字</li>
+</ul>
+<h5 id="检测封装的三个位置"><a href="#检测封装的三个位置" class="headerlink" title="检测封装的三个位置"></a>检测封装的三个位置</h5><ul>
+<li>类中/对象中</li>
+<li>类外部/对象外部</li>
+<li>子类中</li>
+</ul>
+<h5 id="私有化封装"><a href="#私有化封装" class="headerlink" title="私有化封装"></a>私有化封装</h5><p>私有化封装是最高级别的封装。私有化封装之后的成员,只能在类中/对象中访问，类的外部，子类中都不可以访问到。</p>
+<p>私有化封装：在成员名称前添加2个下划线即可<code>__成员名</code></p>
+<p>封装后的访问限制：</p>
+<ul>
+<li>类中/对象中         可以访问</li>
+<li>类外/对象外         不可以访问</li>
+<li>子类/子类对象     不可以访问</li>
+</ul>
+<p><strong>注意：</strong>在python中实现的封装操作，不是通过权限限制而是通过改名(name mangling 改名策略)实现的，名字变了找不到而已。</p>
+<p>可以通过 对象.<em>类名 __方法或类名.</em>类名 __方法名访问到（但禁止这么干）</p>
+<h5 id="受保护的封装"><a href="#受保护的封装" class="headerlink" title="受保护的封装"></a>受保护的封装</h5><p>受保护的封装是一定级别的封装。封装之后，只有部分位置可以访问（类和子类），部分位置（类外）不可以访问</p>
+<p>受保护的封装：在成员名称前天津嘉1个下划线即可<code>_成员名</code></p>
+<p>例如：<code>money -&gt; _money</code></p>
+<p>封装后的访问限制：</p>
+<ul>
+<li>类中/对象中           可以访问</li>
+<li>类外/对象外           可以访问（原则上类外不行，但是没实现）</li>
+<li>子类/子类对象       可以访问</li>
+</ul>
+<p><strong>注意：</strong>受保护的封装依旧是通过name mangling的方式修改了成员的名称而已。</p>
+<p>可以通过对象.类名成员或者类名.类名成员的方式访问（也别这么干）</p>
+<h5 id="公共的封装"><a href="#公共的封装" class="headerlink" title="公共的封装"></a>公共的封装</h5><p>所有的成员默认都是公共的封装级别，可以在类中，类外，及子类中正常访问。</p>
+<p>公共封装的访问限制：</p>
+<ul>
+<li>类中/对象中         可以访问</li>
+<li>类外/对象外         可以访问</li>
+<li>子类/子类对象     可以访问</li>
+</ul>
+<h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><p>继承就是可以获取另外一个类中的成员属性和成员方法。</p>
+<p><strong>作用：</strong>继承的作用是增加代码的复用性，节省不必要的重复代码，提高开发效率，同时可以设置类之间的关系。</p>
+<p>继承的两个概念：</p>
+<p>父类：用于被继承的类，称之为父类，也叫做基类，或者超类</p>
+<p>子类：继承其他类的类，称之为子类，也叫做派生类</p>
+<p>继承的格式：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> 父类:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> 子类<span class="params">(父类)</span></span></span><br><span class="line"><span class="class">	<span class="title">pass</span></span></span><br></pre></td></tr></table></figure></div>
+
+<p>继承的特征：</p>
+<ul>
+<li><p>所有类都是继承自object类</p>
+</li>
+<li><p>子类继承父类就具有父类的所有成员，私有成员除外。</p>
+</li>
+<li><p>子类继承父类并不会将父类的所有成员复制到子类当中去，访问父类成员是间接通过父类来访问的。</p>
+</li>
+<li><p>子类可以具有自己独有的属性和方法</p>
+</li>
+<li><p>子类可以重载父类中的方法，只需要设置和父类指定成员相同的名称即可实现重载，重载之后的成员，子类只会访问当前类中的成员，而不会调用父类中同名的成员。</p>
+</li>
+<li><p>子类中如果重载父类的方法，并且还想将重载的父类方法借调过来使用，可以在重载的方法中使用如下方法：<code>父类名.方法()(适合类)</code>  或者  <code>super().方法()(适合对象)</code></p>
+</li>
+</ul>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Son</span><span class="params">(Computer)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">play_music</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'falalalala~~♪'</span>)</span><br><span class="line">        Computer.play_music()</span><br><span class="line"></span><br><span class="line">pcs = Son()</span><br><span class="line">pcs.play_music()</span><br><span class="line"></span><br><span class="line"><span class="comment"># falalalala~~♪</span></span><br><span class="line"><span class="comment"># LaHee~~~Don e la le li pho la~♪</span></span><br></pre></td></tr></table></figure></div>
+
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Son</span><span class="params">(Computer)</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">play_music</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'falalalala~~♪'</span>)</span><br><span class="line">        super().play_music()</span><br><span class="line"></span><br><span class="line">pcs = Son()</span><br><span class="line">pcs.play_music()</span><br><span class="line"></span><br><span class="line"><span class="comment"># falalalala~~♪</span></span><br><span class="line"><span class="comment"># LaHee~~~Don e la le li pho la~♪</span></span><br></pre></td></tr></table></figure></div>
+
+<h4 id="单继承和多继承"><a href="#单继承和多继承" class="headerlink" title="单继承和多继承"></a>单继承和多继承</h4><p>单继承：每个类只能继承一个类的方法称为单继承。</p>
+<p>多继承：每个类可以同时继承多个类的方法称为多继承。</p>
+<p>python属于多继承语言，但是一般不用</p>
+<p>多继承格式：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> 父类1:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> 父类2:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> 子类<span class="params">(父类<span class="number">1</span>,父类<span class="number">2</span>)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure></div>
+
+<p>多继承后，子类就具备了所有父类的成员（私有成员除外）</p>
+<p>多个父类具有相同的成员时，子类继承[继承列表]中第一个类的方法</p>
+<h5 id="菱形继承-砖石继承"><a href="#菱形继承-砖石继承" class="headerlink" title="菱形继承/砖石继承"></a>菱形继承/砖石继承</h5><p>菱形继承格式</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">B</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">C</span><span class="params">(A)</span>:</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">D</span><span class="params">(B, C)</span>：</span></span><br><span class="line"><span class="class">	<span class="title">pass</span></span></span><br></pre></td></tr></table></figure></div>
+
+<p>菱形继承存在的问题</p>
+<p>如果BD类同时继承了A类，D类又继承了BC两个类的情况下（菱形继承），在调用BC中某个同名方法（改方法都继承自A类）时会导致继承自A类的该方法被多次调用。产生逻辑问题！</p>
+<p>所以python使用super()类来解决了多继承的菱形继承问题。</p>
+<h5 id="MRO列表"><a href="#MRO列表" class="headerlink" title="MRO列表"></a>MRO列表</h5><p><code>Method Realtion Order</code> 用来制作一个继承关系的列表</p>
+<p>当我们定义一个菱形继承关系的时候，程序会自动生成一个新的MRO列表</p>
+<p>python3中使用C3算法来计算MRO列表。</p>
+<p>C3算法的原则：</p>
+<ul>
+<li>子类永远在父类的前面</li>
+<li>如果继承了多个父类，那么按照（）中的顺序在列表中摆放</li>
+<li>如果多个类同时继承了一个父类，孙子类中只会选取第一个父类中的父类的该方法</li>
+</ul>
+<h5 id="super"><a href="#super" class="headerlink" title="super()"></a>super()</h5><ul>
+<li>super()不是一个关键字，也不是一个函数。他是个类</li>
+<li>super()的作用不是查找父类，而是找MRO列表的上一个类</li>
+<li>super()和父类没有任何实质性的关系，只是有时候能调用到父类而已</li>
+<li>在单继承的情况下，super()永远调用的事父类/父对象</li>
+</ul>
+<p>格式：</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">super().方法()	<span class="comment"># python3的格式</span></span><br></pre></td></tr></table></figure></div>
+
+<p>多继承按需操作，在没有必要的时候避免强行使用！</p>
+<h5 id="mixin设计模式"><a href="#mixin设计模式" class="headerlink" title="mixin设计模式"></a><code>mixin</code>设计模式</h5><p>设计模式只是一种开发思想。</p>
+<p><code>mixin</code>设计模式主要作用是采用多继承方式，进行类的拓展。</p>
+<p>优点：</p>
+<ul>
+<li><code>mixin</code>可以在对类不做任何修改的情况下，拓展类的功能（添加父类）</li>
+<li>可以方便的组织和维护各种不同组件的划分</li>
+<li>可以根据需要任意调整</li>
+<li>可以避免创建更多的类，也可以避免继承导致的混乱</li>
+</ul>
+<h4 id="多态"><a href="#多态" class="headerlink" title="多态"></a>多态</h4><p>多种状态，就是一个类，根据不同的情况，相同的方法产生不同的结果。</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#设定抽象类 定义动物规则</span></span><br><span class="line"><span class="keyword">import</span> abc</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span><span class="params">(metaclass = abc.ABCMeta)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#设定抽象方法 叫</span></span><br><span class="line"><span class="meta">    @abc.abstractmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">say</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">#设定抽象方法 跑</span></span><br><span class="line"><span class="meta">    @abc.abstractmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#声明小狗的类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span><span class="params">(Animal)</span>:</span></span><br><span class="line">    <span class="comment">#设定抽象方法 叫</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">say</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'小狗汪汪叫'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">#设定抽象方法 跑</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'小狗四条腿跑~'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#声明小猫的类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cat</span><span class="params">(Animal)</span>:</span></span><br><span class="line">    <span class="comment">#设定抽象方法 叫</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">say</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'小猫喵喵叫~'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">#设定抽象方法 跑</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'小猫撒腿就跑~'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment">#声明小鸡的类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Chick</span><span class="params">(Animal)</span>:</span></span><br><span class="line">    <span class="comment">#设定抽象方法 叫</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">say</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'小鸡咯咯叫'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="comment">#设定抽象方法 跑</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">run</span><span class="params">(self)</span>:</span></span><br><span class="line">        print(<span class="string">'小鸡两条腿跑'</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#实例化小狗，小猫和小鸡的对象</span></span><br><span class="line">xiaohei = Dog()<span class="comment">#小狗</span></span><br><span class="line">xiaohua = Cat()<span class="comment">#小猫</span></span><br><span class="line">xiaofei = Chick()<span class="comment">#小鸡</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#声明行为类</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Action</span>:</span></span><br><span class="line">    <span class="comment">#初始化方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self,animal)</span>:</span></span><br><span class="line">        <span class="comment">#将接受的动物 保存到当前对象中</span></span><br><span class="line">        self.animal = animal</span><br><span class="line"></span><br><span class="line">    <span class="comment">#叫的方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">jiao</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="comment">#调用动物的叫的方法</span></span><br><span class="line">        self.animal.say()</span><br><span class="line"></span><br><span class="line">    <span class="comment">#跑的方法</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">pao</span><span class="params">(self)</span>:</span></span><br><span class="line">        self.animal.run()</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">#实例化行为类的对象</span></span><br><span class="line">action = Action(xiaohei)</span><br><span class="line"></span><br><span class="line"><span class="comment">#调用行为对象的方法</span></span><br><span class="line">action.jiao()</span><br><span class="line">action.pao()</span><br><span class="line"></span><br><span class="line"><span class="comment">#修改传入的动物</span></span><br><span class="line">action.animal = xiaohua</span><br><span class="line"><span class="comment">#调用行为对象的方法</span></span><br><span class="line">action.jiao()</span><br><span class="line">action.pao()</span><br><span class="line"></span><br><span class="line"><span class="comment">#修改传入的动物</span></span><br><span class="line">action.animal = xiaofei</span><br><span class="line"><span class="comment">#调用行为对象的方法</span></span><br><span class="line">action.jiao()</span><br><span class="line">action.pao()</span><br><span class="line"></span><br><span class="line"><span class="comment"># 小狗汪汪叫</span></span><br><span class="line"><span class="comment"># 小狗四条腿跑~</span></span><br><span class="line"><span class="comment"># 小猫喵喵叫~</span></span><br><span class="line"><span class="comment"># 小猫撒腿就跑~</span></span><br><span class="line"><span class="comment"># 小鸡咯咯叫</span></span><br><span class="line"><span class="comment"># 小鸡两条腿跑</span></span><br></pre></td></tr></table></figure></div>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/12/DAY53/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            DAY53
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/11/DAY52/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">52</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自米路可缇书"></img>
+    <h3 class="avatar-name">
+      
+        一颗酸菜
+      
+    </h3>
+    <p class="avatar-slogan">
+      又酸又菜，未来铲屎官，FF14er，zhihaoduonianjingzhuibing。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E6%8A%A5/">日报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/">课后练习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/" rel="tag">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/" rel="tag">sass</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/14/%E9%94%99%E8%AF%AF%E5%BC%82%E5%B8%B8/">错误异常</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/14/DAY55/">DAY55</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/13/%E9%AD%94%E6%9C%AF%E6%96%B9%E6%B3%95/">魔术方法</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/13/DAY54/">DAY54</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/12/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1III/">面向对象III</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://weibo.com/yorukosama?refer_flag=1005050005_&is_all=1" title target='_blank'
+        >米路可缇书</a>
+      
+        <a style="display: block;" href="https://victorfengming.github.io/" title target='_blank'
+        >小明同学</a>
+      
+        <a style="display: block;" href="https://caoyang7.github.io/" title target='_blank'
+        >我班一位可爱的同学说把她加上</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Cai Suan &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/play.html" class="mobile-nav-link">打飞机</a>
+  
+    <a href="/gd-index.html" class="mobile-nav-link">光之快递员</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
