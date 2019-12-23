@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>tkinter | Zan</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+  
+  
+  <meta name="description" content="tkinter介绍tkinter是python自带的GUI库，是对图形库TK的封装 tkinter是一个跨平台的GUI库，开发的程序可以在win，linux或者mac下运行 除此之外还存在很多图形库，例如 pythonWin 仅适合window的界面编程库 wxPython  第三方界面编程库">
+<meta name="keywords" content="python">
+<meta property="og:type" content="article">
+<meta property="og:title" content="tkinter">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;12&#x2F;19&#x2F;tkinter&#x2F;index.html">
+<meta property="og:site_name" content="Zan">
+<meta property="og:description" content="tkinter介绍tkinter是python自带的GUI库，是对图形库TK的封装 tkinter是一个跨平台的GUI库，开发的程序可以在win，linux或者mac下运行 除此之外还存在很多图形库，例如 pythonWin 仅适合window的界面编程库 wxPython  第三方界面编程库">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2019-12-23T01:22:02.841Z">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Zan" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/images/default-avatar.jpg">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/highlight.css">
+</head>
+
+<body>
+  <div id="fullpage" class="mobile-nav-right">
+    
+      <div id="wrapper" title="图片来自网络">
+    
+    
+      <header id="header">
+  <div id="nav-toggle" class="nav-toggle"></div>
+  <div class="head-box global-width">
+    <nav class="nav-box nav-right">
+      
+        <a class="nav-item" href="/" title
+        
+        >首页</a>
+      
+        <a class="nav-item" href="/archives" title
+        
+        >归档</a>
+      
+        <a class="nav-item" href="/play.html" title
+        
+        >打飞机</a>
+      
+        <a class="nav-item" href="/gd-index.html" title
+        
+        >光之快递员</a>
+      
+    </nav>
+  </div>
+</header>
+      <div id="middlecontent" title class="global-width sidebar-right">
+        <section id="main"><article id="post-tkinter" class="article global-container article-type-post" itemscope itemprop="blogPost">
+  
+    <header class="article-header">
+      
+  
+    <h1 class="article-title" itemprop="name">
+      tkinter
+    </h1>
+  
+
+    </header>
+  
+  <div class="article-meta">
+    <a href="/2019/12/19/tkinter/" class="article-date">
+  <time datetime="2019-12-19T14:18:45.000Z" itemprop="datePublished">2019-12-19</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a>
+  </div>
+
+    
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/" rel="tag">python</a></li></ul>
+
+  </div>
+  
+    <span id="busuanzi_container_page_pv">
+      本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+    </span>
+  
+
+  <div class="article-inner">
+    
+    <div class="article-content article-content-cloud" itemprop="articleBody">
+      
+        <h2 id="tkinter介绍"><a href="#tkinter介绍" class="headerlink" title="tkinter介绍"></a>tkinter介绍</h2><p>tkinter是python自带的GUI库，是对图形库TK的封装</p>
+<p>tkinter是一个跨平台的GUI库，开发的程序可以在win，linux或者mac下运行</p>
+<p>除此之外还存在很多图形库，例如</p>
+<p>pythonWin 仅适合window的界面编程库</p>
+<p>wxPython  第三方界面编程库</p>
+<a id="more"></a>
+
+<h3 id="组件概念"><a href="#组件概念" class="headerlink" title="组件概念"></a>组件概念</h3><p>一个窗口中任意内容都可以称之为一个组件</p>
+<h4 id="tkinter的组件包含以下几种"><a href="#tkinter的组件包含以下几种" class="headerlink" title="tkinter的组件包含以下几种"></a>tkinter的组件包含以下几种</h4><p>按钮组件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Button           按钮组件</span><br><span class="line">RadioButton      单选框组件</span><br><span class="line">CheckButton      选择按钮组件</span><br><span class="line">Listbox          列表框组件</span><br></pre></td></tr></table></figure></div>
+
+<p>文本输入框组件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Entry            单行文本框组件</span><br><span class="line">Text             多行文本框组件</span><br></pre></td></tr></table></figure></div>
+
+<p>标签组件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Label            标签组件，可以显示图片和文字</span><br><span class="line">Message          标签组件，可以根据内容将文字换行</span><br></pre></td></tr></table></figure></div>
+
+<p>菜单组件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Menu             菜单组件</span><br><span class="line">MenuButton       菜单按钮组件，可以使用Menu代替</span><br></pre></td></tr></table></figure></div>
+
+<p>滚动条组件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">scale            滑块组件</span><br><span class="line">Scrollbar        滚动条组件</span><br></pre></td></tr></table></figure></div>
+
+<p>其他组件</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Canvas           画布组件</span><br><span class="line">Frame            框架组件，将多个组件编组</span><br><span class="line">Toplevel         创建子窗口容器组件</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="创建简单的窗口"><a href="#创建简单的窗口" class="headerlink" title="创建简单的窗口"></a>创建简单的窗口</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">import tkinter</span><br><span class="line">#生成主窗口对象</span><br><span class="line">root = tkinter.Tk()</span><br><span class="line">#保持主窗口一直消息循环中。。</span><br><span class="line">root.mainloop()</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="带有组件的窗口"><a href="#带有组件的窗口" class="headerlink" title="带有组件的窗口"></a>带有组件的窗口</h3><div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">import tkinter</span><br><span class="line">#生成主窗口对象</span><br><span class="line">root = tkinter.Tk()</span><br><span class="line">#创建标签 并且添加到主窗口中</span><br><span class="line">label = tkinter.Label(root,text = &apos;爷来了&apos;)</span><br><span class="line">label.pack()</span><br><span class="line">#创建按钮，并且添加到主窗口中</span><br><span class="line">btn1 = tkinter.Button(root,text = &apos;按钮1&apos;)</span><br><span class="line">btn1.pack()</span><br><span class="line">btn2 = tkinter.Button(root,text = &apos;按钮2&apos;)</span><br><span class="line">btn2.pack()</span><br><span class="line">#保持主窗口一直消息循环中。。</span><br><span class="line">root.mainloop()</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="组件布局"><a href="#组件布局" class="headerlink" title="组件布局"></a>组件布局</h3><p>组件布局一共三种方式</p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pack()     按照方位布局</span><br><span class="line">place()    按照坐标布局</span><br><span class="line">grid()     按照网格布局</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="pack布局方法"><a href="#pack布局方法" class="headerlink" title="pack布局方法"></a>pack布局方法</h4><p>所有的Tkinter组件都包含专用的几何管理方法，这些方法是用来组织和管理整个父配件区中子配件的布局的。Tkinter提供了截然不同的三种几何管理类：pack、grid和place。</p>
+<p>pack几何管理采用块的方式组织配件，在快速生成界面设计中广泛采用，若干组件简单的布局，采用pack的代码量最少。pack几何管理程序根据组件创建生成的顺序将组件添加到父组件中去。通过设置相同的锚点（anchor）可以将一组配件紧挨一个地方放置，如果不指定任何选项，默认在父窗体中自顶向下添加组件。</p>
+<h5 id="pack-布局的通用公式"><a href="#pack-布局的通用公式" class="headerlink" title="pack()布局的通用公式"></a>pack()布局的通用公式</h5><p><code>组件对象.pack(设置, …)</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>expand</td>
+<td>当值为“yes”时，side选项无效。组件显示在父配件中心位置；若fill选项为”both”,则填充父组件的剩余空间。</td>
+<td>“yes”, 自然数, “no”, 0（默认值为“no”或0）</td>
+</tr>
+<tr>
+<td>fill</td>
+<td>填充x(y)方向上的空间，当属性side=”top”或”bottom”时，填充x方向；当属性side=”left”或”right”时，填充”y”方向；当expand选项为”yes”时，填充父组件的剩余空间。</td>
+<td>“x”, “y”, “both”（默认值为待选）</td>
+</tr>
+<tr>
+<td>ipadx, ipady</td>
+<td>组件内部在x(y)方向上填充的空间大小，默认单位为像素，可选单位为c（厘米）、m（毫米）、i（英寸）、p（打印机的点，即1/27英寸），用法为在值后加以上一个后缀既可。</td>
+<td>非负浮点数（默认值为0.0）</td>
+</tr>
+<tr>
+<td>padx, pady</td>
+<td>组件外部在x(y)方向上填充的空间大小，默认单位为像素，可选单位为c（厘米）、m（毫米）、i（英寸）、p（打印机的点，即1/27英寸），用法为在值后加以上一个后缀既可。</td>
+<td>非负浮点数（默认值为0.0）</td>
+</tr>
+<tr>
+<td>side</td>
+<td>定义停靠在父组件的哪一边上。</td>
+<td>“top”, “bottom”, “left”, “right”（默认为”top”）</td>
+</tr>
+<tr>
+<td>before</td>
+<td>将本组件于所选组建对象之前pack，类似于先创建本组件再创建选定组件。</td>
+<td>已经pack后的组件对象</td>
+</tr>
+<tr>
+<td>after</td>
+<td>将本组件于所选组建对象之后pack，类似于先创建选定组件再本组件。</td>
+<td>已经pack后的组件对象</td>
+</tr>
+<tr>
+<td>in_</td>
+<td>将本组件作为所选组建对象的子组件，类似于指定本组件的master为选定组件。</td>
+<td>已经pack后的组件对象</td>
+</tr>
+<tr>
+<td>anchor</td>
+<td>相对于摆放组件的位置的对齐方式，左对齐”w”，右对齐”e”，顶对齐”n”，底对齐”s”</td>
+<td>“n”, “s”, “w”, “e”, “nw”, “sw”, “se”, “ne”, “center”(默认为” center”)</td>
+</tr>
+</tbody></table>
+<p><strong>注：以上选项中可以看出expand、fill和side是相互影响的。</strong></p>
+<h5 id="pack类提供了一下函数"><a href="#pack类提供了一下函数" class="headerlink" title="pack类提供了一下函数"></a>pack类提供了一下函数</h5><table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>slaves()</td>
+<td>以列表方式返回本组件的所有子组件对象。</td>
+</tr>
+<tr>
+<td>propagate(boolean)</td>
+<td>设置为True表示父组件的几何大小由子组件决定（默认值），反之则无关。</td>
+</tr>
+<tr>
+<td>info()</td>
+<td>返回pack提供的选项所对应得值。</td>
+</tr>
+<tr>
+<td>forget()</td>
+<td>Unpack组件，将组件隐藏并且忽略原有设置，对象依旧存在，可以用pack(option, …)，将其显示。</td>
+</tr>
+<tr>
+<td>location(x, y)</td>
+<td>x, y为以像素为单位的点，函数返回此点是否在单元格中，在哪个单元格中。返回单元格行列坐标，(-1, -1)表示不在其中。</td>
+</tr>
+<tr>
+<td>size()</td>
+<td>返回组件所包含的单元格，揭示组件大小。</td>
+</tr>
+</tbody></table>
+<h4 id="grid布局方法"><a href="#grid布局方法" class="headerlink" title="grid布局方法"></a>grid布局方法</h4><p>grid几何管理采用类似表格的结构组织配件，使用起来非常灵活，用其设计对话框和带有滚动条的窗体效果最好。grid采 用行列确定位置，行列交汇处为一个单元格。每一列中，列宽由这一列中最宽的单元格确定。每一行中，行高由这一行中最高的单元格决定。组件并不是充满整个单 元格的，你可以指定单元格中剩余空间的使用。你可以空出这些空间，也可以在水平或竖直或两个方向上填满这些空间。你可以连接若干个单元格为一个更大空间， 这一操作被称作跨越。创建的单元格必须相临。</p>
+<h5 id="grid-布局的通用公式为"><a href="#grid-布局的通用公式为" class="headerlink" title="grid()布局的通用公式为"></a>grid()布局的通用公式为</h5><p><code>组件对象.grid(option, …)</code></p>
+<h5 id="grid类提供了下列设置属性"><a href="#grid类提供了下列设置属性" class="headerlink" title="grid类提供了下列设置属性"></a>grid类提供了下列设置属性</h5><table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>column</td>
+<td>组件所置单元格的列号。</td>
+<td>自然数（起始默认值为0，而后累加）</td>
+</tr>
+<tr>
+<td>columnspan</td>
+<td>从组件所置单元格算起在列方向上的跨度。</td>
+<td>自然数（起始默认值为0）</td>
+</tr>
+<tr>
+<td>ipadx, ipady</td>
+<td>组件内部在x(y)方向上填充的空间大小，默认单位为像素，可选单位为c（厘米）、m（毫米）、i（英寸）、p（打印机的点，即1/27英寸），用法为在值后加以上一个后缀既可。</td>
+<td>非负浮点数（默认值为0.0）</td>
+</tr>
+<tr>
+<td>padx, pady</td>
+<td>组件外部在x(y)方向上填充的空间大小，默认单位为像素，可选单位为c（厘米）、m（毫米）、i（英寸）、p（打印机的点，即1/27英寸），用法为在值后加以上一个后缀既可。</td>
+<td>非负浮点数（默认值为0.0）</td>
+</tr>
+<tr>
+<td>row</td>
+<td>组件所置单元格的行号。</td>
+<td>自然数（起始默认值为0，而后累加）</td>
+</tr>
+<tr>
+<td>rowspan</td>
+<td>从组件所置单元格算起在行方向上的跨度。</td>
+<td>自然数（起始默认值为0）</td>
+</tr>
+<tr>
+<td>in_</td>
+<td>将本组件作为所选组建对象的子组件，类似于指定本组件的master为选定组件。</td>
+<td>已经pack后的组件对象</td>
+</tr>
+<tr>
+<td>sticky</td>
+<td>组件紧靠所在单元格的某一边角。</td>
+<td>“n”, “s”, “w”, “e”, “nw”, “sw”, “se”, “ne”, “center”(默认为” center”)</td>
+</tr>
+</tbody></table>
+<h5 id="grid类提供了下列函数"><a href="#grid类提供了下列函数" class="headerlink" title="grid类提供了下列函数"></a>grid类提供了下列函数</h5><table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>slaves()</td>
+<td>以列表方式返回本组件的所有子组件对象。</td>
+</tr>
+<tr>
+<td>propagate(boolean)</td>
+<td>设置为True表示父组件的几何大小由子组件决定（默认值），反之则无关。</td>
+</tr>
+<tr>
+<td>info()</td>
+<td>返回pack提供的选项所对应得值。</td>
+</tr>
+<tr>
+<td>forget()</td>
+<td>Unpack组件，将组件隐藏并且忽略原有设置，对象依旧存在，可以用pack(option, …)，将其显示。</td>
+</tr>
+<tr>
+<td>grid_remove()</td>
+<td>从网格管理器中删除此小部件。小部件不会被销毁，并且可以由网格或任何其他管理器重新显示。</td>
+</tr>
+</tbody></table>
+<h4 id="place布局方法"><a href="#place布局方法" class="headerlink" title="place布局方法"></a>place布局方法</h4><p>这个的几何管理器组织放置在一个特定的位置，在他们的父widget部件.</p>
+<h5 id="place-布局的通用公式为："><a href="#place-布局的通用公式为：" class="headerlink" title="place()布局的通用公式为："></a>place()布局的通用公式为：</h5><p><code>组件对象.place(option, …)</code></p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>描述</th>
+<th>取值范围</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>anchor</td>
+<td>相对于摆放组件的坐标的位置</td>
+<td>请参阅：可能是N，E，S，W，东北，西北，东南或西南，罗盘方向指示的widget的角落，双方默认是净重（部件上左上角）</td>
+</tr>
+<tr>
+<td>height</td>
+<td>以像素为单位的高度.（绝对布局专用）</td>
+<td>像素</td>
+</tr>
+<tr>
+<td>width</td>
+<td>以像素为单位的宽度.（绝对布局专用）</td>
+<td>像素</td>
+</tr>
+<tr>
+<td>relheight</td>
+<td>组件相对于窗口的的高度（相对布局专用）</td>
+<td>0～1</td>
+</tr>
+<tr>
+<td>relwidth</td>
+<td>组件相对于窗口的的宽度（相对布局专用）</td>
+<td>0～1</td>
+</tr>
+<tr>
+<td>relx</td>
+<td>水平偏移为0.0和1.0之间浮动，父widget的一小部分的高度和宽度.（相对布局专用）</td>
+<td>0～1</td>
+</tr>
+<tr>
+<td>rely</td>
+<td>垂直偏移为0.0和1.0之间浮动，父widget的一小部分的高度和宽度.（相对布局专用）</td>
+<td>0～1</td>
+</tr>
+<tr>
+<td>x</td>
+<td>组件距离左上角的x坐标（绝对布局专用）</td>
+<td>像素</td>
+</tr>
+<tr>
+<td>y</td>
+<td>组件距离左上角的y坐标（绝对布局专用）</td>
+<td>像素</td>
+</tr>
+</tbody></table>
+<h5 id="place类提供了下列函数（使用组件实例对象调用）"><a href="#place类提供了下列函数（使用组件实例对象调用）" class="headerlink" title="place类提供了下列函数（使用组件实例对象调用）"></a>place类提供了下列函数（使用组件实例对象调用）</h5><table>
+<thead>
+<tr>
+<th>函数名</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>place_slaves()</td>
+<td>以列表方式返回本组件的所有子组件对象。</td>
+</tr>
+<tr>
+<td>place_configure(option=value)</td>
+<td>给pack布局管理器设置属性，使用属性（option）= 取值（value）方式设置</td>
+</tr>
+<tr>
+<td>propagate(boolean)</td>
+<td>设置为True表示父组件的几何大小由子组件决定（默认值），反之则无关。</td>
+</tr>
+<tr>
+<td>place_info()</td>
+<td>返回pack提供的选项所对应得值。</td>
+</tr>
+<tr>
+<td>grid_forget()</td>
+<td>Unpack组件，将组件隐藏并且忽略原有设置，对象依旧存在，可以用pack(option, …)，将其显示。</td>
+</tr>
+<tr>
+<td>location(x, y)</td>
+<td>x, y为以像素为单位的点，函数返回此点是否在单元格中，在哪个单元格中。返回单元格行列坐标，(-1, -1)表示不在其中</td>
+</tr>
+<tr>
+<td>size()</td>
+<td>返回组件所包含的单元格，揭示组件大小。</td>
+</tr>
+</tbody></table>
+<h3 id="组件"><a href="#组件" class="headerlink" title="组件"></a>组件</h3><h4 id="组件1-按钮-button"><a href="#组件1-按钮-button" class="headerlink" title="组件1 按钮(button)"></a>组件1 按钮(button)</h4><hr>
+<p><strong>用于定义gui界面中的按钮组件</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tkinter.Button（用于存放的父组件,属性参数...）</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>具备以下属性</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">anchor             设置按钮中文字的对其方式，相对于按钮的中心位置</span><br><span class="line">background(bg)     设置按钮的背景颜色</span><br><span class="line">foreground(fg)     设置按钮的前景色（文字的颜色）</span><br><span class="line">borderwidth(bd)    设置按钮边框宽度</span><br><span class="line">cursor             设置鼠标在按钮上的样式</span><br><span class="line">command            设定按钮点击时触发的函数</span><br><span class="line">bitmap             设置按钮上显示的位图</span><br><span class="line">font               设置按钮上文本的字体</span><br><span class="line">width              设置按钮的宽度  (字符个数)</span><br><span class="line">height             设置按钮的高度  (字符个数)</span><br><span class="line">state              设置按钮的状态</span><br><span class="line">text               设置按钮上的文字</span><br><span class="line">image              设置按钮上的图片</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="组件2-文本框-Entry-和多行文本-Text"><a href="#组件2-文本框-Entry-和多行文本-Text" class="headerlink" title="组件2 文本框(Entry)和多行文本(Text)"></a>组件2 文本框(Entry)和多行文本(Text)</h4><hr>
+<p><strong>用于定义页面中文本的单行输入框</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">#单行文本</span><br><span class="line">tkinter.Entry(用于存放的父组件,属性参数...)</span><br><span class="line"></span><br><span class="line">#多行文本</span><br><span class="line">tkinter.Text(用于存放的父组件,属性参数...)</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>具备以下属性</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">background(bg)        设置文本框的背景色</span><br><span class="line">foreground(bg)        设置文本框的前景色</span><br><span class="line">borderwidth(bd)       设置文本输入框的边框</span><br><span class="line">font                  设置文本框中的字体</span><br><span class="line">width                 设置文本框的宽度(字符个数）</span><br><span class="line">height                设置文本框的高度(字符个数),仅限于text</span><br><span class="line">state                 设置文本框的状态</span><br><span class="line">selectbackground      选中文字时文本框的背景色</span><br><span class="line">selectforeground      选中文字时文字的颜色</span><br><span class="line">show                  指定文本框显示的字符，若为*，则表示为密码框</span><br><span class="line">textvariable          设置文本对应的变量，可以通过修改变量改变文字显示。必须使用tkinter.IntVar() 或 tkinter.StringVar()产生的变量  entry可以使用</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="组件3-标签-Lebal"><a href="#组件3-标签-Lebal" class="headerlink" title="组件3 标签(Lebal)"></a>组件3 标签(Lebal)</h4><hr>
+<p><strong>标签用语在页面中显示文字或者图片</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">tkinter.Label(用于存放的父组件,属性参数...)</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>具备以下属性</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">anchor                设置文本相对于标签中心的位置</span><br><span class="line">background            设置标签的背景色</span><br><span class="line">foreground            设置标签的前景色</span><br><span class="line">borderwidth           设置标签的边框宽度</span><br><span class="line">width                 设置标签的宽度(字符个数）</span><br><span class="line">height                设置标签的高度(字符个数）</span><br><span class="line">text                  设置标签中文本内容</span><br><span class="line">font                  设置标签中文字的字体类型</span><br><span class="line">bitmap                设置标签的现实的位图</span><br><span class="line">image                 设置标签中显示的图片</span><br><span class="line">justify               是设置标签中多行文本的对其方式</span><br><span class="line">textvariable          设置文本对应的变量，可以通过修改变量改变文字显示，必须使用tkinter.IntVar() 或者tkinter.StringVar()产生的变量</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="组件4-菜单-Menu）"><a href="#组件4-菜单-Menu）" class="headerlink" title="组件4 菜单(Menu）"></a>组件4 菜单(Menu）</h4><hr>
+<blockquote>
+<p><strong>菜单用语在界面中设置菜单，和多级子菜单</strong></p>
+<p><strong>在tkinter中，菜单组件的添加与其他组件有所不同。 菜单需要使用所创建的主窗口的 config方法添加到窗口中。</strong></p>
+<p><strong>这个小工具的目标是，让我们来创建我们的应用程序，可以通过使用各种菜单。核心功能，提供的方式来创建三个菜单类型：弹出式，顶层，和下拉</strong></p>
+</blockquote>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thinter.Menu(用于存放的父组件,属性参数...)</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>具有以下属性</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">activebackground           背景颜色，当它在鼠标下时将出现在选择上。</span><br><span class="line">activeborderwidth          指定在鼠标下方选择的边框的宽度。默认值为1像素。</span><br><span class="line">activeforeground           当它在鼠标下方时，将出现在选择上的前景色。</span><br><span class="line">background(bg)             用于不在鼠标下的选择的背景颜色。</span><br><span class="line">borderwidth(bd)            围绕所有选择的边框的宽度。默认值为1。</span><br><span class="line">cursor                     当鼠标在选项上方时出现的光标，但仅当菜单已被关闭时显示。</span><br><span class="line">disabledforeground         状态为DISABLED的项目的文本颜色。</span><br><span class="line">font                       设置文本的字体</span><br><span class="line">foreground(fd)             用于不在鼠标下的选择的前景色。</span><br><span class="line">postcommand                您可以将此选项设置为过程，并且每当有人启动此菜单时，将调用该过程。</span><br><span class="line">relief                     菜单的默认3-D效果为relief = RAISED。</span><br><span class="line">image                      在这个menubutton上显示一个图像。</span><br><span class="line">selectcolor                指定在检查按钮和单选按钮中显示的颜色。</span><br><span class="line">tearoff                    通常情况下，菜单可以被拆除，如果设置tearoff = 0，菜单将不会有撕纸功能，并且从0位置开始添加选择。</span><br><span class="line">title                      通常，撕下菜单窗口的标题将与导致此菜单的menubutton或级联文本相同。如果要更改该窗口的标题，请将标题选项设置为该字符串。</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>具有以下方法</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">add_command（选项）               在菜单中添加一个菜单项。</span><br><span class="line">add_radiobutton（选项）           创建单选按钮菜单项。</span><br><span class="line">add_checkbutton（选项）           创建一个检查按钮菜单项。</span><br><span class="line">add_cascade（选项）               通过将给定的菜单与父菜单相关联来创建新的分层菜单</span><br><span class="line">add_separator（）                在菜单中添加分隔线。</span><br><span class="line">add（类型，选项）                  在菜单中添加一个特定类型的菜单项。</span><br><span class="line">delete（startindex [，endindex]） 删除从startindex到endindex的菜单项。</span><br><span class="line">entryconfig（index，options）     允许您修改由索引标识的菜单项，并更改其选项。</span><br><span class="line">index(item)                      返回给定菜单项标签的索引号。</span><br><span class="line">insert_separator(index)          在index指定的位置插入一个新的分隔符。</span><br><span class="line">invoke（index）                   调用与位置索引选择相关联的命令回调。如果一个检查按钮，其状态在设置和清除之间切换; 如果一个单选按钮，那个选择是设置的。</span><br><span class="line">type（index）                     返回由index指定的选项的类型：“cascade”，“checkbutton”，“command”，“radiobutton”，“separator”或“tearoff”。</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>万能实例</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PYTHON"><figure class="iseeu highlight /python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span>  tkinter <span class="keyword">import</span> *</span><br><span class="line">root = Tk()</span><br><span class="line"><span class="comment">#定义点击菜单触发的方法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hello</span><span class="params">()</span>:</span></span><br><span class="line">    print(<span class="string">"hello!"</span>)</span><br><span class="line"><span class="comment">#创建总菜单</span></span><br><span class="line">menubar = Menu(root)</span><br><span class="line"><span class="comment"># 创建一个下拉菜单，并且加入文件菜单</span></span><br><span class="line">filemenu = Menu(menubar)</span><br><span class="line"><span class="comment">#创建下来菜单的选项</span></span><br><span class="line">filemenu.add_command(label=<span class="string">"Open"</span>, command=hello)</span><br><span class="line">filemenu.add_command(label=<span class="string">"Save"</span>, command=hello)</span><br><span class="line"><span class="comment">#创建下拉菜单的分割线</span></span><br><span class="line">filemenu.add_separator()</span><br><span class="line">filemenu.add_command(label=<span class="string">"Exit"</span>, command=root.quit)</span><br><span class="line"><span class="comment">#将文件菜单作为下拉菜单添加到总菜单中，并且将命名为File</span></span><br><span class="line">menubar.add_cascade(label=<span class="string">"File"</span>, menu=filemenu)</span><br><span class="line"><span class="comment"># 显示总菜单</span></span><br><span class="line">root.config(menu=menubar)</span><br><span class="line">root.mainloop()</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="组件5-单选框（Radiobutton）与复选框（Checkbutton）"><a href="#组件5-单选框（Radiobutton）与复选框（Checkbutton）" class="headerlink" title="组件5 单选框（Radiobutton）与复选框（Checkbutton）"></a>组件5 单选框（Radiobutton）与复选框（Checkbutton）</h4><hr>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">thinter.Radiobutton(用于存放的父组件,属性参数...)</span><br><span class="line">thinter.Checkbutton(用于存放的父组件,属性参数...)</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>具有以下属性</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">anchor             设置组件中文字的对其方式</span><br><span class="line">background(bg)     指定组件的背景色。  　 </span><br><span class="line">borderwidth(bd)    指定组件边框的宽度。  　 </span><br><span class="line">bitmap             指定组件中的位图。  　 </span><br><span class="line">font               指定组件中文本的字体。  　 </span><br><span class="line">foreground(fg)     指定组件的前 </span><br><span class="line">height             指定组件的高度。  　 </span><br><span class="line">image              指定组件中的图片。  　 </span><br><span class="line">justify            指定组件中多行文本的对齐方式。  　 </span><br><span class="line">text               指定组件中的文本，可以 使用“\ n” 表示换行。  　 </span><br><span class="line">value              指定组件被选中后(单选框)</span><br><span class="line">onvalue            组件勾选状态值（复选框）</span><br><span class="line">offvalue           组件取消勾选状态的值（复选框）</span><br><span class="line">variable           指定组件所关联的变量。需要使用tkinter. IntVar()或者tkinter. StringVar()创建的值 </span><br><span class="line">width              指定组件的宽度。</span><br><span class="line">command            设置复选框操作的触发命令（复选框）</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="组件6-消息对话框-messagebox"><a href="#组件6-消息对话框-messagebox" class="headerlink" title="组件6 消息对话框(messagebox)"></a>组件6 消息对话框(messagebox)</h4><hr>
+<p><strong>用于界面提示成功，失败，警告等相关信息提示框</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">tkinter。messagebox.FunctionName(title, message [, options])</span><br><span class="line"></span><br><span class="line">参数:</span><br><span class="line">FunctionName: 这是相应的消息框函数的名称.</span><br><span class="line"></span><br><span class="line">title: 这是在一个消息框，标题栏显示的文本.</span><br><span class="line"></span><br><span class="line">message: 这是要显示的文字作为消息.</span><br><span class="line"></span><br><span class="line">options: 选项有替代的选择，你可以用它来定制一个标准的消息框。一些可以使用的选项是默认和家长。默认选项是用来指定默认的按钮，如中止，重试，或忽略在消息框中。父选项是用来指定要显示的消息框上的顶层窗口.</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>你可以使用以下功能之一</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">showinfo()            显示信息对话框</span><br><span class="line">showwarning()         提示警告对话框</span><br><span class="line">showerror()           显示错误对话</span><br><span class="line">askquestion()         问题对话框</span><br><span class="line">askokcancel()         确定还是取消对话框</span><br><span class="line">askyesno()            是不是对话框</span><br><span class="line">askretrycancel()      重试或者取消对话框</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>除了上述6个标准消息框外，还可以使用tkinter.messagebox._show函数创建其他类型 的消息框。tkinter.messagebox._show函数的控制参数如下。</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">　 default      指定消息框的按钮。 </span><br><span class="line">　 icon         指定消息框的图标。　 </span><br><span class="line">　 message      指定消息框所显示的消息。 </span><br><span class="line">　 parent       指定消息框的父组件。 </span><br><span class="line">　 title        指定消息框的标题。 </span><br><span class="line">　 type         指定消息框的类型。</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="使用标准对话框（简单对话-文件对话-颜色对话）"><a href="#使用标准对话框（简单对话-文件对话-颜色对话）" class="headerlink" title="使用标准对话框（简单对话/文件对话/颜色对话）"></a>使用标准对话框（简单对话/文件对话/颜色对话）</h4><hr>
+<p><strong>使用 tkinter.simpledialog 模块、tkinter.filedialog 模块、 tkinter.colorchooser 模块可以创建标准的对话框。</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">tkinter.simpledialog模块       可以创建标准的输入对话框。</span><br><span class="line">tkinter.filedialog模块         可以创建文件打开和保存文件对话框。</span><br><span class="line">tkinter.colorchooser模块       可以创建颜色选择对话框。</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="tkinter-simpledialog模块"><a href="#tkinter-simpledialog模块" class="headerlink" title="tkinter.simpledialog模块"></a>tkinter.simpledialog模块</h5><p><strong>tkinter.simpledialog模块可以使用函数创建三种类型的对话框</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">tkinter.simpledialog.askstring(标题,提示文字,初始值）          输入字符串            </span><br><span class="line">tkinter.simpledialog.askinteger(title,prompt,initialvalue)    输入整数</span><br><span class="line">tkinter.simpledialog.askfloat(title,prompt,initialvalue)    输入浮点型         </span><br><span class="line"></span><br><span class="line">注意：第三个参数为关键字参数</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="tkinter-filedialog模块"><a href="#tkinter-filedialog模块" class="headerlink" title="tkinter.filedialog模块"></a>tkinter.filedialog模块</h5><p><strong>tkinter.filedialog模块中可以使用两种类型的对话框</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">tkinter.filedialog.askopenfilename(关键字参数传入)        创建标准的【 打开 文件】对话框。</span><br><span class="line">tkinter.filedialog.askdirectory(关键字参数传入)        创建标准的【 打开 文件夹】对话框。</span><br><span class="line">tkinter.filedialog.asksaveasfilename(关键字参数传入)    可以创建标准的【 保存 文件】对话框。</span><br><span class="line"></span><br><span class="line">askdirectory(**options)</span><br><span class="line">    Ask for a directory, and return the file name</span><br><span class="line"></span><br><span class="line">askopenfile(mode=&apos;r&apos;, **options)</span><br><span class="line">    Ask for a filename to open, and returned the opened file</span><br><span class="line"></span><br><span class="line">askopenfilename(**options)</span><br><span class="line">    Ask for a filename to open</span><br><span class="line"></span><br><span class="line">askopenfilenames(**options)</span><br><span class="line">    Ask for multiple filenames to open</span><br><span class="line"></span><br><span class="line">Returns a list of filenames or empty list if</span><br><span class="line">    cancel button selected</span><br><span class="line"></span><br><span class="line">askopenfiles(mode=&apos;r&apos;, **options)</span><br><span class="line">    Ask for multiple filenames and return the open file</span><br><span class="line">    objects</span><br><span class="line">    returns a list of open file objects or an empty list if</span><br><span class="line">    cancel selected</span><br><span class="line"></span><br><span class="line">asksaveasfile(mode=&apos;w&apos;, **options)</span><br><span class="line">    Ask for a filename to save as, and returned the opened file</span><br><span class="line"></span><br><span class="line">asksaveasfilename(**options)</span><br><span class="line">    Ask for a filename to save as</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>其具有以下几个相同的可选参数</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">　 filetypes           指定文件类型。 　 </span><br><span class="line">　 initialdir          指定默认目录。 　 </span><br><span class="line">　 initialfile         指定默认文件。 　 </span><br><span class="line">　 title               指定对话框标题。</span><br></pre></td></tr></table></figure></div>
+
+<h5 id="tkinter-colorchooser模块"><a href="#tkinter-colorchooser模块" class="headerlink" title="tkinter.colorchooser模块"></a>tkinter.colorchooser模块</h5><p><strong>tkinter.colorchooser模块中的askcolor函数可以创建标准的【颜色 选择】对话框， 其具有以下几个可选参数</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">tkinter.colorchooser.askcolor(关键字参数传入)</span><br><span class="line"></span><br><span class="line">initialcolor           指定 初始化 颜色。 　 </span><br><span class="line">title                  指定 对话框 标题。</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="组件6-Frame-框架"><a href="#组件6-Frame-框架" class="headerlink" title="组件6 Frame 框架"></a>组件6 Frame 框架</h4><hr>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thinter.Menu(用于存放的父组件,属性参数...)</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>具有以下属性</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">background(bg)          正常的背景颜色显示在标签和指示器后面。</span><br><span class="line">borderwidth(bd)         指标周围边界的大小。默认值为2像素。</span><br><span class="line">cursor                  如果将此选项设置为光标名称（箭头，点等），则鼠标光标将在检查按钮上方更改为该模式。</span><br><span class="line">height                  新框架的垂直尺寸。</span><br><span class="line">highlightbackground     当框架没有焦点时，焦点的颜色突出显示。</span><br><span class="line">highlightcolor          当框架具有焦点时，焦点突出显示的颜色。</span><br><span class="line">highlightthickness      焦点亮点的厚度。</span><br><span class="line">relief                  使用默认值，relief = FLAT，检查按钮不会从背景中脱颖而出。您可以将此选项设置为任何其他样式</span><br><span class="line">width                   checkbutton的默认宽度取决于所显示的图像或文字的大小。你可以设置此选项的字符数和checkbutton的，总是有许多字符的空间。</span><br></pre></td></tr></table></figure></div>
+
+<h4 id="组件7-Toplevel"><a href="#组件7-Toplevel" class="headerlink" title="组件7 Toplevel"></a>组件7 Toplevel</h4><hr>
+<p><strong>顶层部件的工作，直接由窗口管理器管理的窗口</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">thinter.Toplevel ( option, ... )</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>具有以下属性</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">background(bg)        窗口的背景颜色。</span><br><span class="line">borderwidth(bd)       边框宽度（以像素为单位）默认为0。</span><br><span class="line">cursor                当鼠标在此窗口中时出现的光标。</span><br><span class="line">class_                通常，文本窗口小部件中选择的文本将导出为窗口管理器中的选择。如果您不想要该行为，请设置exportselection = 0。</span><br><span class="line">font                  插入窗口小部件的文本的默认字体。</span><br><span class="line">froeground(fg)        在窗口小部件中用于文本（和位图）的颜色。您可以更改标记区域的颜色; 这个选项只是默认值。</span><br><span class="line">height                窗口高度</span><br><span class="line">relief                通常，顶级窗口将不会有三维边框。要获得阴影边框，请将bd选项设置为较大的默认值为零，并将relief选项设置为其中一个常量。</span><br><span class="line">width                 所需的窗口宽度。</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>具有以下方法</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">deiconify（）           在使用iconify或提取方法后显示窗口。</span><br><span class="line">frame（）               返回系统特定的窗口标识符。</span><br><span class="line">group（window）         将窗口添加到给定窗口管理的窗口组中。</span><br><span class="line">iconify（）             将窗口转换为图标，而不会破坏它。</span><br><span class="line">协议（名称，函数）         将函数注册为将为给定协议调用的回调函数。</span><br><span class="line">iconify（）             将窗口转换为图标，而不会破坏它。</span><br><span class="line">state（）               返回窗口的当前状态。可能的值是正常的，标志性的，撤销的和图标。</span><br><span class="line">transient（[master]）   当没有给出参数时，将窗口转换为给定主机或窗口的父级的临时（瞬态）窗口。</span><br><span class="line">withdraw（）            从屏幕中删除窗口，而不会破坏它。</span><br><span class="line">maxsize（width，height) 定义此窗口的最大大小。</span><br><span class="line">minsize（width，height) 定义此窗口的最小大小。</span><br><span class="line">positionfrom（who)      定义位置控制器。</span><br><span class="line">resizable（width，height)定义resize标志，用于控制窗口是否可以调整大小。</span><br><span class="line">sizefrom（who）          定义大小控制器。</span><br><span class="line">title（string）          定义窗口标题。</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="事件绑定"><a href="#事件绑定" class="headerlink" title="事件绑定"></a>事件绑定</h3><hr>
+<blockquote>
+<p>之前能够触发操作的只有2个组件，一个按钮一个菜单的选项卡 command属性 设置操作对应的函数</p>
+</blockquote>
+<p><strong>鼠标事件类型</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">&lt;Button-1&gt;          按下了鼠标左键        &lt;ButtonPress-1&gt;</span><br><span class="line">&lt;Button-2&gt;          按下了鼠标中键        &lt;ButtonPress-2&gt;</span><br><span class="line">&lt;Button-3&gt;          按下了鼠标右键        &lt;ButtonPress-3&gt;</span><br><span class="line">&lt;Enter&gt;             鼠标进入组件区域</span><br><span class="line">&lt;Leave&gt;             鼠标离开组件区域</span><br><span class="line">&lt;ButtonRelease-1&gt;   释放了鼠标左键</span><br><span class="line">&lt;ButtonRelease-2&gt;   释放了鼠标中键</span><br><span class="line">&lt;ButtonRelease-3&gt;   释放了鼠标右键</span><br><span class="line">&lt;B1-Moion&gt;          按住鼠标左键移动</span><br><span class="line">&lt;B2-Moion&gt;          按住鼠标中键移动</span><br><span class="line">&lt;B3-Moion&gt;          按住鼠标右键移动 </span><br><span class="line">&lt;Double-Button-1&gt;   双击鼠标左键</span><br><span class="line">&lt;Double-Button-2&gt;   双击鼠标中键</span><br><span class="line">&lt;Double-Button-3&gt;   双击鼠标右键</span><br><span class="line">&lt;MouseWheel&gt;        滚动鼠标滚轮</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>键盘事件类型</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;KeyPress&gt;                 表示任何键盘按下</span><br><span class="line">&lt;KeyPress-A&gt;               表示按下键盘A键    A可以设置为其他的按键</span><br><span class="line">&lt;Alt-KeyPress-A&gt;           表示同时按下Alt和A键    A可以设置为其他的按键</span><br><span class="line">&lt;Control-KeyPress-A&gt;       表示同时按下Ctrl和A键    A可以设置为其他的按键</span><br><span class="line">&lt;Shift-KeyPress-A&gt;         表示同时按下Shift和A键    A可以设置为其他的按键</span><br><span class="line">&lt;Double-KeyPress-A&gt;        表示双击键盘A键    A可以设置为其他的按键</span><br><span class="line">&lt;Lock-KeyPress-A&gt;          表示开启大写之后键盘A键    A可以设置为其他的按键</span><br><span class="line">&lt;Alt-Control-KeyPress-A&gt;   表示同时按下alt+Ctrl和A键    A可以设置为其他的按键</span><br><span class="line"></span><br><span class="line">注意：键盘事件除了entry和text组件其他组件的事件最好绑定在主界面上</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>事件对象中包含的信息</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">x,y              当前触发事件时鼠标相对触发事件的组件的坐标值</span><br><span class="line">x_root,y_root    当前触发事件时鼠标相对于屏幕的坐标值</span><br><span class="line">char             获取当前键盘事件时按下的键对应的字符</span><br><span class="line">keycode          获取当前键盘事件时按下的键对应的的ascii码</span><br><span class="line">type             获取事件的类型</span><br><span class="line">num              获取鼠标按键类型  123 左中右</span><br><span class="line">widget           触发事件的组件</span><br><span class="line">width/height     组件改变之后的大小和configure()相关</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>窗口和组件相关事件类型</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Activate         当中组件由不可以用变为可用时  针对于state的变值</span><br><span class="line">Deactivate       当组件由可用变为不可用时触发</span><br><span class="line">Configure        当组件大小发生变化时触发</span><br><span class="line">Destory          当组件销毁时触发</span><br><span class="line">FocusIn          当组件获取焦点时触发 针对于Entry和Text有效</span><br><span class="line">Map              当组件由隐藏变为显示时触发</span><br><span class="line">UnMap            当组件由显示变为隐藏时触发</span><br><span class="line">Perproty         当窗口属性发生变化时触发</span><br></pre></td></tr></table></figure></div>
+
+<h3 id="事件绑定函数"><a href="#事件绑定函数" class="headerlink" title="事件绑定函数"></a>事件绑定函数</h3><hr>
+<p><strong>组件.bind(‘事件类型’，事件函数)</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">为一个组件绑定一个操作</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>组件.bind_class(‘组件类型’,’事件类型’,事件函数)</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">为一类组件绑定一个操作</span><br><span class="line">组件类型就是创建组件的方法名  例如按钮组件:Button</span><br></pre></td></tr></table></figure></div>
+
+<p><strong>组件.bind_all(‘事件类型’，事件函数)</strong></p>
+<div class="highlight-box"autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" contenteditable="true"data-rel="PLAIN"><figure class="iseeu highlight /plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">为所有组件绑定一个操作(所有操作都会当作对主界面的操作)</span><br></pre></td></tr></table></figure></div>
+
+<hr>
+
+      
+    </div>
+    
+      <footer class="article-footer">
+        完
+      </footer>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/20/DAY60/" id="article-nav-newer" class="article-nav-link-wrap">
+        <strong class="article-nav-caption"></strong>
+        <div class="article-nav-title">
+          
+            DAY60
+          
+        </div>
+      </a>
+    
+  </div>
+  <div class="article-nav-block">
+    
+      <a href="/2019/12/19/DAY59/" id="article-nav-older" class="article-nav-link-wrap">
+        <div class="article-nav-title">DAY59</div>
+        <strong class="article-nav-caption"></strong>
+      </a>
+    
+  </div>
+</nav>
+
+    <link rel="stylesheet" href="/css/gitment.css"> 
+<script src="/js/gitment.js"></script>
+
+<div id="gitmentContainer"></div>
+
+<script>
+var gitment = new Gitment({
+  owner: '',
+  repo: '',
+  oauth: {
+    client_id: '',
+    client_secret: '',
+  },
+})
+gitment.render('gitmentContainer')
+</script>
+
+  
+  
+</article>
+</section>
+        <aside id="sidebar">
+  
+    <div class="widget-box">
+  <div class="avatar-box">
+    <img class="avatar" src="/images/default-avatar.jpg" title="头像来自米路可缇书"></img>
+    <h3 class="avatar-name">
+      
+        一颗酸菜
+      
+    </h3>
+    <p class="avatar-slogan">
+      又酸又菜，未来铲屎官，FF14er，zhihaoduonianjingzhuibing。
+    </p>
+  </div>
+</div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E6%97%A5%E6%8A%A5/">日报</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E7%AC%94%E8%AE%B0/">笔记</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%AF%BE%E5%90%8E%E7%BB%83%E4%B9%A0/">课后练习</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">标签</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Bootstrap/" rel="tag">Bootstrap</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/" rel="tag">CSS</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/" rel="tag">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/" rel="tag">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Linux/" rel="tag">Linux</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MarkDown/" rel="tag">MarkDown</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Node-js/" rel="tag">Node.js</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vue/" rel="tag">Vue</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/jQuery/" rel="tag">jQuery</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/python/" rel="tag">python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/sass/" rel="tag">sass</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">归档</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/12/">十二月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/11/">十一月 2019</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">十月 2019</a></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-box">
+    <h3 class="widget-title">最新文章</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/12/21/DAY61/">DAY61</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/20/DAY60/">DAY60</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/19/tkinter/">tkinter</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/19/DAY59/">DAY59</a>
+          </li>
+        
+          <li>
+            <a href="/2019/12/18/DAY58/">DAY58</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+      <div class="widget-box">
+    <h3 class="widget-title">友链</h3>
+    <div class="widget">
+      
+        <a style="display: block;" href="https://weibo.com/yorukosama?refer_flag=1005050005_&is_all=1" title target='_blank'
+        >米路可缇书</a>
+      
+        <a style="display: block;" href="https://victorfengming.github.io/" title target='_blank'
+        >小明同学</a>
+      
+        <a style="display: block;" href="https://caoyang7.github.io/" title target='_blank'
+        >我班一位可爱的同学说把她加上</a>
+      
+    </div>
+  </div>
+
+  
+</aside>
+      </div>
+      <footer id="footer">
+  <div class="foot-box global-width">
+    &copy; 2019 Cai Suan &nbsp;&nbsp;
+    驱动于 <a href="http://hexo.io/" target="_blank">Hexo</a>
+    &nbsp;|&nbsp;主题 <a href="https://github.com/yiluyanxia/hexo-theme-antiquity" target="_blank" rel="noopener">antiquity</a>
+    <br>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span id="busuanzi_container_site_pv">不蒜子告之   阁下是第<span id="busuanzi_value_site_pv"></span>个访客</span>
+  </div>
+</footer>
+      <script src="https://code.jquery.com/jquery-2.0.3.min.js"></script>
+<script>
+if (!window.jQuery) {
+var script = document.createElement('script');
+script.src = "/js/jquery-2.0.3.min.js";
+document.body.write(script);
+}
+</script>
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+    </div>
+    <nav id="mobile-nav" class="mobile-nav-box">
+  <div class="mobile-nav-img mobile-nav-top"></div>
+  
+    <a href="/" class="mobile-nav-link">首页</a>
+  
+    <a href="/archives" class="mobile-nav-link">归档</a>
+  
+    <a href="/play.html" class="mobile-nav-link">打飞机</a>
+  
+    <a href="/gd-index.html" class="mobile-nav-link">光之快递员</a>
+  
+  <div class="mobile-nav-img  mobile-nav-bottom"></div>
+</nav>    
+  </div>
+</body>
+</html>
